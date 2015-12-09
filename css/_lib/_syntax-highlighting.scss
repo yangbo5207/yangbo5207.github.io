@@ -1,22 +1,22 @@
 /**
  * Syntax highlighting styles
  */
+
 .highlight {
     background: #fff;
-    @extend %vertical-rhythm;
+    font-family: consolas;
 
     .highlighter-rouge & {
       background: #eef;
     }
-    pre, code { background-color: #f7f7f7; border: 0; font-size: 14px; }
 
-    .c     { color: #998; font-style: italic; font-size: 12px; } // Comment
+    .c     { color: #998; font-size: 12px; } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
     .k     { font-weight: bold } // Keyword
     .o     { font-weight: bold } // Operator
     .cm    { color: #998; font-style: italic } // Comment.Multiline
     .cp    { color: #999; font-weight: bold } // Comment.Preproc
-    .c1    { color: #998; font-style: italic; font-size: 12px; } // Comment.Single
+    .c1    { color: #998; font-size: 12px; } // Comment.Single
     .cs    { color: #999; font-weight: bold; font-style: italic } // Comment.Special
     .gd    { color: #000; background-color: #fdd } // Generic.Deleted
     .gd .x { color: #000; background-color: #faa } // Generic.Deleted.Specific

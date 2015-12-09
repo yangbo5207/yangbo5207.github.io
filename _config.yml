@@ -19,12 +19,14 @@ github_username:  jekyll
 
 # Build settings
 markdown: redcarpet
+# markdown: rdiscount
+highlighter: pygments
 
 Regeneration: -w
 
 kramdown:
   input: GFM
 
-paginate: 5
+paginate: 12
 paginate_path: "blog/page:num"
 

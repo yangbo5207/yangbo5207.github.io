@@ -1,0 +1,217 @@
+.top-container {
+	width: 100%;
+	max-width: 1026px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 50px 20px 48px;
+}
+.details {
+	float: left;
+
+	.section-title {
+		color: #fff;
+	}
+
+	.section-meta {
+		font-family: proxima-light;
+		font-size: 22px;
+		color: #afafaf;
+	}
+}
+.sorting {
+	float: right;
+	top: 44px;
+	right: 0;
+
+	.sort-container {
+		min-width: 120px;
+		padding: 0 20px;
+		line-height: 38px;
+		height: 38px;
+		background-color: #484848;
+		border-radius: 2px;
+		position: relative;
+		z-index: -100;
+
+		&:hover {
+			.options { display: block; }
+		}
+
+		.active-option { color: #fff; }
+
+		.options {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 38px;
+			width: 100%;
+
+			li {
+				background: #222;
+				box-sizing: border-box;
+				padding-left: 20px;
+				line-height: 38px;
+				cursor: pointer;
+				font-size: 80%;
+				color: #afafaf;
+				&:hover {
+					color: #fff;
+					background: #333;
+				}
+			}
+		}
+	}
+}
+
+.cards {
+	width: 100%;
+	max-width: 1026px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.card {
+	float: left;
+	width: 342px;
+	box-sizing: border-box;
+	padding: 0 20px;
+	margin-bottom: 40px;
+
+	.card-img {
+		width: 100%;
+		height: 210px;
+		border-radius: 4px;
+		background-color: #ccc;
+	}
+
+	.card-info {
+		width: 100%;
+		height: 50px;
+		margin-top: 10px;
+		box-sizing: border-box;
+
+		.card-title {
+			font-size: 16px;
+			line-height: 30px;
+			word-break: keep-all;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.in {
+			width: 100%;
+			overflow: hidden;
+
+			.tags {
+				float: left;
+				span {
+					margin-right: 5px;
+					width: 20px;
+					display: inline-block;
+					height: 20px;
+					font-size: 13px;
+					line-height: 20px;
+					border-radius: 2px;
+					&.javascript {
+						background: url('/images/icon-js-0.png') center center no-repeat, #666;
+						background-size: 10px;
+					}
+					&.gulp {
+						background: url('/images/icon-gulp-0.png') center center no-repeat, #666;
+						background-size: 10px;
+					}
+					&.node {
+						background: url('/images/icon-node-0.png') center center no-repeat, #666;
+						background-size: 10px;
+					}
+					&.mongodb {
+						background: url('/images/icon-mgdb-0.png') center center no-repeat, #666;
+						background-size: 10px;
+					}
+					&.css {
+						background: url('/images/icon-css-0.png') center center no-repeat, #666;
+						background-size: 10px;
+					}
+					&.git {
+						background: url('/images/icon-git-0.png') center center no-repeat, #666;
+						background-size: 10px;
+					}
+					&.github {
+						background: url('/images/icon-github-0.png') center center no-repeat, #666;
+						background-size: 10px;
+					}
+					&.html {
+						background: url('/images/icon-html-0.png') center center no-repeat, #666;
+						background-size: 10px;
+					}
+					&.jq {
+						background: url('/images/icon-jq-0.png') center center no-repeat, #666;
+						background-size: 10px;
+					}
+				}
+			}
+			.time {
+				float: right;
+				font-size: 14px;
+				line-height: 1;
+				padding-top: 6px;
+				color: #afafaf;
+			}
+		}
+	}
+}
+
+.page-split {
+	width: 100%;
+	max-width: 1026px;
+	margin: 30px auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+
+	.page-prev {
+		display: block;
+		float: left;
+		width: 110px;
+		height: 38px;
+		line-height: 38px;
+		background-color: #484848;
+		border-radius: 2px;
+		text-align: center;
+	}
+
+	span.page-prev {
+		color: #afafaf;
+	}
+
+	.page-next {
+		display: block;
+		float: right;
+		width: 110px;
+		height: 38px;
+		line-height: 38px;
+		background-color: #484848;
+		border-radius: 2px;
+		text-align: center;
+	}
+
+	.page-count {
+		height: 38px;
+		margin: 0 auto;
+		box-sizing: border-box;
+		text-align: center;
+
+		a {
+			display: inline-block;
+			box-sizing: border-box;
+			border-radius: 2px;
+			border: 1px solid #484848;
+			width: 38px;
+			height: 38px;
+			text-align: center;
+			line-height: 38px;
+		}
+		a.active {
+			background-color: #2f8be6;
+			border: 1px solid #2f8be6;
+		}
+	}
+
+}

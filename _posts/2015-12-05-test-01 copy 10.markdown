@@ -3,7 +3,7 @@ layout: post
 title:  "获取元素的正确样式"
 date:   2015-12-05
 categories: jekyll update
-tags: javascript css html jQuery
+tags: javascript css3 html5 jquery
 ---
 在学习js初期，就一直有一个疑问，获取元素样式的值，不是直接使用
 `obj.style.left`之类的就可以得到了吗？可是使用这样的方式，有的时候能够获取得到，有的时候又不能获取，一直疑惑不已，但是由于以前学习态度的问题，也没有深究，今天专门花了点时间整理了一下这方面的知识。

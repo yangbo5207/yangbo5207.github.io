@@ -1,0 +1,55 @@
+.site-footer {
+	width: 100%;
+	background-size: contain;
+	background: url('/images/footer-bg.png') center bottom no-repeat, #222;
+
+	.wrap {
+		width: 1026px;
+		box-sizing: border-box;
+		padding: 40px 20px;
+		margin: 0 auto;
+	}
+}
+
+.most-link {
+	float: left;
+	width: 50%;
+	.title {
+		color: #fff;
+		font-size: 24px;
+	}
+
+	p {
+		margin: 15px 0;
+		span {
+			font-size: 12px;
+			margin-left: 20px;
+			color: #666;
+		}
+	}
+}
+
+.profile {
+	float: right;
+	width: 50%;
+
+	.title {
+		color: #fff;
+		font-size: 24px;
+	}
+
+	p {
+		margin: 15px 0;
+		span {
+			display: inline-block;
+			width: 16px; 
+			height: 16px;
+			background-size: contain;
+			background: url('/images/icon-mgdb-0.png') center center no-repeat;
+		}
+		a {
+			line-height: 14px;
+			padding-left: 20px;
+		}
+	}
+}

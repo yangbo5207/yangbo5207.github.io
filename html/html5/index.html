@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<div class="index-content">
+	<div class="wrapper">
+		<div class="top-container clearfix">
+			<div class="details">
+				<h2 class="section-title">Javascript Articles</h2>
+				<p class="section-meta">所有跟javascript相关的文章列表，其中主要是javascript原生代码的技术知识为主</p>
+			</div>
+
+			<div class="sorting">
+				<div class="sort-container">
+					<span class="active-option">Most Recent</span>
+					<i class="icon-arrow-dowm"></i>
+					<ul class="options">
+						<li class="option">Popular</li>
+						<li class="option">Price High</li>
+						<li class="option">Price Low</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="cards clearfix">
+			<!-- 文章列表 -->
+			{% for post in site.tags.html5 %}
+				<div class="card">
+					<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-img"></div></a>
+					<div class="card-info">
+						<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-title">{{ post.title }}</div></a>
+						<div class="in">
+							<div class="tags">
+								{% for tag in post.tags %}
+									<span class="{{ tag }}"></span>
+								{% endfor %}
+							</div>
+							<div class="time">{{ post.date | date: "%b %-d, %Y" }}</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

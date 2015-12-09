@@ -2,48 +2,77 @@
 layout: default
 ---
 
-<div class="home">
-	
-	<h1 class="page-heading">Posts</h1>
+<div class="index-content">
+	<div class="wrapper">
+		<div class="top-container clearfix">
+			<div class="details">
+				<h2 class="section-title">All Articles</h2>
+				<p class="section-meta">All about javascript articles, notes, issues here.</p>
+			</div>
 
-	<ul class="post-list">
-		{% for post in paginator.posts %}
-			<li>
-				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-				<h2><a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a></h2>
-			</li>
-		{% endfor %}
+			<div class="sorting">
+				<div class="sort-container">
+					<span class="active-option">Most Recent</span>
+					<i class="icon-arrow-dowm"></i>
+					<ul class="options">
+						<li class="option">Popular</li>
+						<li class="option">Price High</li>
+						<li class="option">Price Low</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
-		<!-- 分页链接 -->
+		<div class="cards clearfix">
+			<!-- 文章列表 -->
+			{% for post in paginator.posts %}
+				<div class="card">
+					<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-img"></div></a>
+					<div class="card-info">
+						<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-title">{{ post.title }}</div></a>
+						<div class="in">
+							<div class="tags">
+								{% for tag in post.tags %}
+									<span class="{{ tag }}"></span>
+								{% endfor %}
+							</div>
+							<div class="time">{{ post.date | date: "%b %-d, %Y" }}</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
 
-		<!-- prev 按钮 -->
-		{% if paginator.total_pages > 1 %}
-			<div class="pagination">
+		<!-- 分页按钮 -->
+		<div class="page-split clearfix">
+			{% if paginator.total_pages > 1 %}
+				<!-- prev -->
 				{% if paginator.previous_page %}
-					<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+					<a class="page-prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
 				{% else %}
-					<span>&laquo; Prev</span>
+					<span class="page-prev">&laquo; Prev</span>
+				{% endif %}
+
+				<!-- next -->
+				{% if paginator.next_page %}
+					<a class="page-next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+				{% else %}
+					<span class="page-next">Next &raquo;</span>
 				{% endif %}
 
 				<!-- 数字按钮 -->
-				{% for page in (1..paginator.total_pages) %}
-					{% if page == paginator.page %}
-						<em>{{ page }}</em>
-					{% elsif page == 1 %}
-						<a href="{{ site.baseurl }}/index.html">{{ page }}</a>
-					{% else %}
-						<a href="../../{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-					{% endif %}
-				{% endfor %}
-
-				<!-- next 按钮 -->
-				{% if paginator.next_page %}
-					<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-				{% else %}
-					<span>Next &raquo;</span>
-				{% endif %}
-			</div>
-		{% endif %}
-	</ul>
-	<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" }}">via RSS</a></p>
+				<div class="page-count">
+					{% for page in (1..paginator.total_pages) %}
+						{% if page == paginator.page %}
+							<a class="active">{{ page }}</a>
+						{% elsif page == 1 %}
+							<a href="{{ site.baseurl }}/index.html">{{ page }}</a>
+						{% else %}
+							<a href="../../{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+						{% endif %}
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
 </div>
