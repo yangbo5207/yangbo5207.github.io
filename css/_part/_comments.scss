@@ -1,0 +1,13 @@
+.comments {
+	width: 100%;
+	.wrapper {
+		width: 100%;
+		max-width: 700px;
+		box-sizing: border-box;
+		margin: 0 auto;
+	}
+
+	.ds-thread {
+		z-index: -100;
+	}
+}

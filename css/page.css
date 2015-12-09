@@ -595,6 +595,23 @@ header.site-header {
     box-shadow: 0 0 8px #ccc;
 }
 
+.comments {
+    width: 100%;
+}
+
+.comments .wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.comments .ds-thread {
+    z-index: -100;
+}
+
 @font-face {
     font-family:proxima;src:url(//:) format('no404');src:url('font/Proxima Nova/ProximaNova-Reg.otf');
 }
