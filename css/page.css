@@ -294,6 +294,7 @@ a:hover {
 
 header.site-header {
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
     -webkit-box-sizing: border-box;
@@ -606,10 +607,6 @@ header.site-header {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
-}
-
-.comments .ds-thread {
-    z-index: -100;
 }
 
 @font-face {
