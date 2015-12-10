@@ -307,6 +307,12 @@ header.site-header {
     background-color: #2a2a2a;
 }
 
+@media (max-width:684px) {
+    header.site-header {
+        height: 48px;
+    }
+}
+
 .header-left {
     float: left;
     -webkit-box-sizing: border-box;
@@ -325,6 +331,14 @@ header.site-header {
 
 .header-left .header-logo img {
     width: 100%;
+}
+
+@media (max-width:684px) {
+    .header-left .header-logo {
+        width: 28px;
+        height: 28px;
+        margin: 10px;
+    }
 }
 
 .header-nav {
@@ -426,6 +440,14 @@ header.site-header {
     background-image: url(/images/icon-search-hover.png);
 }
 
+@media (max-width:684px) {
+    .search {
+        width: 28px;
+        height: 28px;
+        margin: 10px 0;
+    }
+}
+
 .sli-button {
     position: relative;
     float: left;
@@ -464,9 +486,27 @@ header.site-header {
     bottom: 30%;
 }
 
+@media (max-width:684px) {
+    .sli-button {
+        width: 28px;
+        height: 28px;
+        margin: 10px;
+    }
+
+    .sli-button span {
+        width: 15px;
+    }
+}
+
 .header-space {
     width: 100%;
     height: 78px;
+}
+
+@media (max-width:684px) {
+    .header-space {
+        height: 48px;
+    }
 }
 
 .site-footer {

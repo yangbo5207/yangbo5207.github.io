@@ -15,6 +15,9 @@ header.site-header {
 	z-index: 1000;
 	top: 0;
 	left: 0;
+	@include screen_ph {
+		height: 48px;
+	}
 }
 .header-left {
 	float: left;
@@ -29,6 +32,13 @@ header.site-header {
 		float: left;
 
 		img { width: 100%; }
+	}
+	@include screen_ph {
+		.header-logo {
+			width: 28px;
+			height: 28px;
+			margin: 10px;
+		}
 	}
 }
 
@@ -114,6 +124,11 @@ header.site-header {
 			background-image: url('/images/icon-search-hover.png');
 		}
 	}
+	@include screen_ph {
+		width: 28px;
+		height: 28px;
+		margin: 10px 0;
+	};
 }
 .sli-button {
 	float: left;
@@ -136,9 +151,20 @@ header.site-header {
 		&.m { top: 50%; transform: translate(-50%, -50%); }
 		&.b { bottom: 30%; }
 	}
+	@include screen_ph {
+		width: 28px;
+		height: 28px;
+		margin: 10px;
+		span {
+			width: 15px;
+		}
+	};
 }
 
 .header-space {
 	width: 100%;
 	height: 78px;
+	@include screen_ph {
+		height: 48px;
+	}
 }

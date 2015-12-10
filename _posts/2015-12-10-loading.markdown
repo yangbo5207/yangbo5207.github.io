@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Loading图片"
+date:   2015-12-08 18:48:18 +0800
+categories: jekyll update
+tags: git html5 css3
+image: /images/post/loading.gif
+---
+这是一个测试loading的帖子。
+
+```js
+// 如何实现图片预加载
+```
