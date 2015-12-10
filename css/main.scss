@@ -2,7 +2,10 @@
 @import "_part/_index_header";
 @import "_part/_index_footer";
 @import "_part/_index_content";
+@import "_part/_proxima";
 
 body {
 	background-color: #353535;
+	font-family: proxima;
+	line-height: 1.6;
 }

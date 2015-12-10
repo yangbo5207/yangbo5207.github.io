@@ -2,9 +2,11 @@
 	width: 100%;
 	background-size: contain;
 	background: url('/images/footer-bg.png') center bottom no-repeat, #222;
+	font-family: proxima;
 
 	.wrap {
-		width: 1026px;
+		max-width: 1026px;
+		width: 100%;
 		box-sizing: border-box;
 		padding: 40px 20px;
 		margin: 0 auto;
@@ -42,7 +44,7 @@
 		margin: 15px 0;
 		span {
 			display: inline-block;
-			width: 16px; 
+			width: 16px;
 			height: 16px;
 			background-size: contain;
 			background: url('/images/icon-mgdb-0.png') center center no-repeat;
@@ -52,4 +54,9 @@
 			padding-left: 20px;
 		}
 	}
+}
+
+@include screen_ph {
+	.most-link { float: none; width: 100%; }
+	.profile { float: none; width: 100%; margin-top: 40px; }
 }

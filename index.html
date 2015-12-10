@@ -5,21 +5,20 @@ layout: default
 <div class="index-content">
 	<div class="wrapper">
 		<div class="top-container clearfix">
-			<div class="details">
-				<h2 class="section-title">All Articles</h2>
-				<p class="section-meta">All about javascript articles, notes, issues here.</p>
-			</div>
-
-			<div class="sorting">
+			<!-- <div class="sorting">
 				<div class="sort-container">
 					<span class="active-option">Most Recent</span>
-					<i class="icon-arrow-dowm"></i>
+					<i class="icon-arrow-down"></i>
 					<ul class="options">
 						<li class="option">Popular</li>
 						<li class="option">Price High</li>
 						<li class="option">Price Low</li>
 					</ul>
 				</div>
+			</div> -->
+			<div class="details">
+				<h2 class="section-title">所有文章</h2>
+				<p class="section-meta">In the spirit of open source software development, jQuery always encourages community code contribution. To help you get started and before you jump into writing code, be sure to read these important contribution guidelines thoroughly <a href="https://github.com/jquery/jquery">jquery</a>.</p>
 			</div>
 		</div>
 
@@ -27,7 +26,9 @@ layout: default
 			<!-- 文章列表 -->
 			{% for post in paginator.posts %}
 				<div class="card">
-					<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-img"></div></a>
+					<a  class="card-img" href="{{ post.url | prepend: site.baseurl }}">
+						<img src="{{ post.image }}" >
+					</a>
 					<div class="card-info">
 						<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-title">{{ post.title }}</div></a>
 						<div class="in">

@@ -1,3 +1,59 @@
+/* 普通字体颜色 */
+$color-font: #333;
+
+/* 主页背景颜色 */
+$color-indexbg: #353535;
+
+/* 文章背景颜色 */
+$color-pagebg: #FFF;
+
+/* 头部 */
+$color-header-bg: #2A2A2A;
+$color-header-font: #AFAFAF;
+$color-header-font-hover: #FFF;
+$FSize-header: 13px;
+
+/* 高亮按钮 */
+$color-btn-bg: #2F8BE6;
+$color-btn-hover: #1b7ee1;
+$color-btn-font: #FFF;
+
+/* 灰度按钮 */
+$color1-btn-bg: #484848;
+$color1-btn-font: #AFAFAF;
+$color1-btn-font-hover: #FFF;
+
+/* 屏幕宽度 */
+$screen-pad: 1026px;
+$screen-ph: 684px;
+
+/* 单个方块宽度 */
+$item-width: 342px;
+
+/* 字体：自定义|无衬线|更多 */
+$font-me: proxima;
+$font-en: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fonts: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+
+/* 透明度 */
+@mixin opacity($opacity:.5) {
+    opacity:$opacity;
+    filter:alpha(opacity=$opacity*100);
+}
+
+/* 宽度适配函数 */
+@mixin screen_pad {
+    @media (max-width: $screen-pad) {
+        @content;
+    }
+}
+@mixin screen_ph {
+    @media (max-width: $screen-ph) {
+        @content;
+    }
+}
+
+/* 样式重置 */
 body, ul, ol, li, p {
 	margin: 0;
 	padding: 0;
@@ -18,10 +74,11 @@ a {
 	&:hover { color: #fff; }
 }
 
+/* 清除浮动 */
 .clear {
 	content: '';
 	display: block;
-	height: 0; 
+	height: 0;
 	font-size: 0;
 	clear: both;
 }

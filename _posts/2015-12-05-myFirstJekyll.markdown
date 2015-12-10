@@ -3,7 +3,8 @@ layout: post
 title:  "获取元素的正确样式"
 date:   2015-12-05
 categories: jekyll update
-tags: javascript css html jQuery
+tags: javascript css3 html5 jQuery
+image: https://d13yacurqjgara.cloudfront.net/users/32512/screenshots/2397726/untitled-5.gif
 ---
 I think i should write some english owrd to show what is proxima style.
 在学习js初期，就一直有一个疑问，获取元素样式的值，不是直接使用
@@ -131,9 +132,9 @@ var getStyle = function(obj, key) {
 
 ```js
 function showButton() {
-    var 
+    var
         $numb = $('.numb'),
-        min = (btn_cur-1)*5 + 1, 
+        min = (btn_cur-1)*5 + 1,
         max = 0;
 
      if (btn_cur == btn_acount) {
@@ -151,7 +152,7 @@ function showButton() {
             $numb.eq(i%5 - 1).html(i);
         }();
      }
-} 
+}
 ```
 当我没有使用脑图写出来的代码是这样的  - -！，完全没逻辑可言有木有
 
@@ -250,7 +251,7 @@ $('.pos_page').on('click', function(e) {
             showButton();
             setFocus();
             break;
-        case 'more': 
+        case 'more':
             if (btn_cur < btn_acount) {
                 btn_cur += 1;
                 index = 0;

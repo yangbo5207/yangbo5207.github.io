@@ -1,5 +1,7 @@
 .post {
 	width: 100%;
+	box-sizing: border-box;
+	padding: 0 20px;
 	.wrapper {
 		width: 100%;
 		max-width: 700px;
@@ -61,4 +63,3 @@
 		box-shadow: 0px 0px 8px #ccc;
 	}
 }
-
