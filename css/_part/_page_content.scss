@@ -4,7 +4,7 @@
 	padding: 0 20px;
 	.wrapper {
 		width: 100%;
-		max-width: 700px;
+		max-width: 900px;
 		margin: 0 auto;
 	}
 }
@@ -19,7 +19,43 @@
 	}
 }
 
+#position-wrap {
+	width: 200px;
+	position: absolute;
+	&.nav-fixed {
+		position: fixed;
+		top: 78px;
+	}
+}
+
+.post-side { 
+	width: 200px;
+	padding-right: 20px;
+	float: left;
+	position: relative;
+	margin: 20px;
+	margin-top: 0;
+	a:hover {
+		color: #ccc;
+	}
+
+	#nav-list {
+		li {
+			height: 40px;
+			border-bottom: 1px solid #ccc;
+			line-height: 40px;
+			text-indent: 20px;
+
+			&.active {
+				a {color: red;}
+			}
+		}
+	}
+}
+
+
 .post-content {
+	overflow: hidden;
 	font-size: 14px;
 	p { margin: 20px 0; }
 	blockquote {
@@ -50,6 +86,8 @@
 		background-color: #f7f7f7;
 		line-height: 1.3;
 		border-radius: 2px;
+		font-family: 'Source Code Pro Black';
+		// font-family: $fonts;
 		code {
 			padding: 0;
 			border: 0;

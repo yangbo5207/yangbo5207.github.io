@@ -4,11 +4,13 @@
 @import "_part/_page_content";
 @import "_part/_comments";
 @import "_part/_proxima";
+@import "_part/_font_fzlt";
+@import "_part/_font_sourceCodePro";
 
 body {
 	font-family: $fonts;
 	font-size: 16px;
-	line-height: 1.6;
+	line-height: 2.0;
 	text-align: justify;
 }
 p {

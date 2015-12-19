@@ -1,15 +1,29 @@
 ---
 layout: default-post
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post">
 	<div class="wrapper">
 		<div class="post-header">
 			<h2 class="post-title">{{ page.title }}</h2>
-			<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
 		</div>
-
-		<div class="post-content">
-			{{ content }}
+		
+		<div class="whole-content clearfix">
+			<div class="post-side">
+				<div id="position-wrap">
+					<h3 class="">文章目录</h3>
+					<ul id="nav-list">
+						<li class="active"><a href="#header1">header1</a></li>
+						<li><a href="#header2">header2</a></li>
+						<li><a href="#header3">header3</a></li>
+						<li><a href="#header4">header4</a></li>
+						<li><a href="#header5">header5</a></li>
+						<li><a href="#header2">header2</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="post-content">
+				{{ content }}
+			</div>
 		</div>
 	</div>
 </article>
