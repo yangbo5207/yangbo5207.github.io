@@ -4,7 +4,7 @@
 	padding: 0 20px;
 	.wrapper {
 		width: 100%;
-		max-width: 900px;
+		max-width: 1200px;
 		margin: 0 auto;
 	}
 }
@@ -19,45 +19,10 @@
 	}
 }
 
-#position-wrap {
-	width: 200px;
-	position: absolute;
-	&.nav-fixed {
-		position: fixed;
-		top: 78px;
-	}
-}
-
-.post-side { 
-	width: 200px;
-	padding-right: 20px;
-	float: left;
-	position: relative;
-	margin: 20px;
-	margin-top: 0;
-	a:hover {
-		color: #ccc;
-	}
-
-	#nav-list {
-		li {
-			height: 40px;
-			border-bottom: 1px solid #ccc;
-			line-height: 40px;
-			text-indent: 20px;
-
-			&.active {
-				a {color: red;}
-			}
-		}
-	}
-}
-
-
 .post-content {
 	overflow: hidden;
 	font-size: 14px;
-	p { margin: 20px 0; }
+	p { margin: 10px 0; line-height: 1.6 }
 	blockquote {
 		color: grey;
 		border-left: 4px solid grey;
@@ -74,24 +39,23 @@
 	}
 	code {
 		padding: 1px 5px;
-		background-color: #f7f7f7;
 		border-radius: 2px;
 		font-size: 13px;
 		margin: 0 2px;
+		font-family: Source Code Pro;
 	}
 	pre  {
 		padding: 8px 12px;
-		margin: 20px 0;
+		border: 1px solid #e5e5e5;
+		margin: 10px 0;
 		overflow-x: auto;
-		background-color: #f7f7f7;
 		line-height: 1.3;
 		border-radius: 2px;
-		font-family: 'Source Code Pro Black';
-		// font-family: $fonts;
 		code {
 			padding: 0;
 			border: 0;
 			background: none;
+			font-family: 'Source Code Pro';
 		}
 	}
 	img {
@@ -100,4 +64,77 @@
 		margin: 0 auto;
 		box-shadow: 0px 0px 8px #ccc;
 	}
+}
+
+.middle {
+	border: 1px solid #e5e5e5;
+	margin: 20px auto;
+	box-sizing: border-box;
+	padding: 20px;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.left {
+	width: 250px;
+	float: left;
+	border: 1px solid #e5e5e5;
+	margin-right: 10px;
+	max-height: 100%;
+	overflow-y: auto;
+	background-color: #fff;
+
+	.left-part {
+		padding-left: 10px;
+		height: 50px;
+		line-height: 50px;
+	}
+
+	.post-item {
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		padding: 10px;
+		border-top: 1px solid #e5e5e5;
+
+		&:hover {
+			
+		}
+
+		.post-img {
+			float: left;
+			width: 50px;
+			height: 50px;
+			overflow: hidden;
+			margin-right: 10px;
+			img { max-width: 100%; min-height: 100% }
+		}
+		.post-title {
+			font-size: 14px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			color: #666;
+		}	
+		.post-tags {
+			font-size: 10px;
+			overflow: hidden;
+			text-align: left;
+
+			span {
+				font-family: Source Code Pro;
+				padding: 2px 4px;
+				background-color: #eee;
+				border-radius: 20px;
+			}
+		}	
+	}
+}
+.right {
+	float: right;
+	width: 200px;
+	border: 1px solid #ccc;
+	height: 100%;
+	margin-left: 10px;
+
 }

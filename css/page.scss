@@ -8,10 +8,11 @@
 @import "_part/_font_sourceCodePro";
 
 body {
-	font-family: $fonts;
+	font-family: proxima;
 	font-size: 16px;
 	line-height: 2.0;
 	text-align: justify;
+	background-color: #f7f7f7;
 }
 p {
 	word-wrap: break-word;
