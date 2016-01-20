@@ -4,76 +4,60 @@ layout: default
 
 <div class="index-content">
 	<div class="wrapper">
-		<div class="top-container clearfix">
-			<!-- <div class="sorting">
-				<div class="sort-container">
-					<span class="active-option">Most Recent</span>
-					<i class="icon-arrow-down"></i>
-					<ul class="options">
-						<li class="option">Popular</li>
-						<li class="option">Price High</li>
-						<li class="option">Price Low</li>
-					</ul>
-				</div>
-			</div> -->
-			<div class="details">
-				<h2 class="section-title">所有文章</h2>
-				<p class="section-meta">In the spirit of open source software development, jQuery always encourages community code contribution. To help you get started and before you jump into writing code, be sure to read these important contribution guidelines thoroughly <a href="https://github.com/jquery/jquery">jquery</a>.</p>
-			</div>
-		</div>
 
-		<div class="cards clearfix">
-			<!-- 文章列表 -->
-			{% for post in paginator.posts %}
-				<div class="card">
-					<a  class="card-img" href="{{ post.url | prepend: site.baseurl }}">
-						<img src="{{ post.image }}" >
-					</a>
-					<div class="card-info">
-						<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-title">{{ post.title }}</div></a>
-						<div class="in">
-							<div class="tags">
-								{% for tag in post.tags %}
-									<span class="{{ tag }}"></span>
-								{% endfor %}
+		<div class="articleList">
+			<div class="top-container clearfix">POST</div>
+
+			<div class="cards clearfix">
+				<!-- 文章列表 -->
+				{% for post in paginator.posts %}
+					<div class="card">
+						<div class="card-info">
+							<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-title">{{ post.title }}</div></a>
+							<div class="in">
+								<div class="tags">
+									{% for tag in post.tags %}
+										<span>{{ tag }}</span>
+									{% endfor %}
+								</div>
+								<div class="time">{{ post.date | date: "%b %-d, %Y" }}</div>
 							</div>
-							<div class="time">{{ post.date | date: "%b %-d, %Y" }}</div>
 						</div>
 					</div>
-				</div>
-			{% endfor %}
-		</div>
+				{% endfor %}
+			</div>
 
-		<!-- 分页按钮 -->
-		<div class="page-split clearfix">
-			{% if paginator.total_pages > 1 %}
-				<!-- prev -->
-				{% if paginator.previous_page %}
-					<a class="page-prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-				{% else %}
-					<span class="page-prev">&laquo; Prev</span>
+			<!-- 分页按钮 -->
+			<div class="page-split clearfix">
+				{% if paginator.total_pages > 1 %}
+					<!-- prev -->
+					{% if paginator.previous_page %}
+						<a class="page-prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+					{% else %}
+						<span class="page-prev">&laquo; Prev</span>
+					{% endif %}
+
+					<!-- next -->
+					{% if paginator.next_page %}
+						<a class="page-next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+					{% else %}
+						<span class="page-next">Next &raquo;</span>
+					{% endif %}
+
+					<!-- 数字按钮 -->
+					<div class="page-count">
+						{% for page in (1..paginator.total_pages) %}
+							{% if page == paginator.page %}
+								<a class="active">{{ page }}</a>
+							{% elsif page == 1 %}
+								<a href="{{ site.baseurl }}/index.html">{{ page }}</a>
+							{% else %}
+								<a href="../../{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+							{% endif %}
+						{% endfor %}
+					</div>
 				{% endif %}
-
-				<!-- next -->
-				{% if paginator.next_page %}
-					<a class="page-next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-				{% else %}
-					<span class="page-next">Next &raquo;</span>
-				{% endif %}
-
-				<!-- 数字按钮 -->
-				<div class="page-count">
-					{% for page in (1..paginator.total_pages) %}
-						{% if page == paginator.page %}
-							<a class="active">{{ page }}</a>
-						{% elsif page == 1 %}
-							<a href="{{ site.baseurl }}/index.html">{{ page }}</a>
-						{% else %}
-							<a href="../../{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-						{% endif %}
-					{% endfor %}
-				</div>
-			{% endif %}
+			</div>
 		</div>
 	</div>
 </div>
