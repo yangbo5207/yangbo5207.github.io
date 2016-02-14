@@ -5,6 +5,7 @@ date:   2015-12-05
 categories: jekyll update
 tags: javascript css3 html5 jQuery
 image: https://d13yacurqjgara.cloudfront.net/users/32512/screenshots/2397726/untitled-5.gif
+desc: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes...
 ---
 I think i should write some english owrd to show what is proxima style.
 在学习js初期，就一直有一个疑问，获取元素样式的值，不是直接使用

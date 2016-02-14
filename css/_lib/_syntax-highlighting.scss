@@ -4,6 +4,17 @@
 
 .highlight {
     background: #fff;
+    border: 1px solid #dedede;
+    margin: 16px 0;
+
+    pre {
+        padding: 0 16px;
+        overflow-x: auto;
+    }
+
+    code { 
+        font-family: SourceCodePro;
+    }
 
 
     .highlighter-rouge & {

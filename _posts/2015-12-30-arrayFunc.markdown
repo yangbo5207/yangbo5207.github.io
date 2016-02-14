@@ -5,6 +5,7 @@ date:   2015-12-30
 categories: javascript array
 tags: javascript
 image: http://img.ui.cn/data/file/7/2/6/430627.png
+desc: 本文主要是针对自己复习的时候浏览使用，如果要查看详细说明，请阅读`javascript高级编程`
 ---
 
 #### 原生javascript方法

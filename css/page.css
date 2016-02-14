@@ -1,7 +1,22 @@
 @charset 'UTF-8';
 
+@font-face {
+    font-family:SourceCodePro;src:url(//:) format('no404');src:url(font/SourceCodePro/SourceCodePro-Regular.otf);src:url(font/SourceCodePro/SourceCodePro-Regular.ttf);
+}
+
 .highlight {
+    margin: 16px 0;
+    border: 1px solid #dedede;
     background: #fff;
+}
+
+.highlight pre {
+    overflow-x: auto;
+    padding: 0 16px;
+}
+
+.highlight code {
+    font-family: SourceCodePro;
 }
 
 .highlighter-rouge .highlight {
@@ -309,10 +324,10 @@ a {
 
 .site-header {
     height: 80px;
-    border-bottom: #f5f8f9;
+    border-bottom: #eceff2;
     background-color: #fff;
-    -webkit-box-shadow: 0 1px 3px #c8d5d9;
-    box-shadow: 0 1px 3px #c8d5d9;
+    -webkit-box-shadow: 0 1px 3px #dfe7eb;
+    box-shadow: 0 1px 3px #dfe7eb;
 }
 
 .header-left {
@@ -328,7 +343,7 @@ a {
     width: 80px;
     height: 80px;
     padding: 20px;
-    border-right: 1px solid #c8d5d9;
+    border-right: 1px solid #eceff2;
 }
 
 .header-left .header-logo a {
@@ -367,7 +382,7 @@ a {
     float: right;
     height: 80px;
     padding: 0 10px;
-    border-left: 1px solid #c8d5d9;
+    border-left: 1px solid #eceff2;
 }
 
 .header-right .contact {
@@ -405,17 +420,116 @@ a {
     background-size: contain;
 }
 
+footer {
+    font-family: proxima;
+    font-size: 12px;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    color: #ccc;
+    border-top: 1px solid #eceff2;
+}
+
+article {
+    width: 90%;
+    max-width: 700px;
+    margin: 16px auto;
+    padding: 0 16px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 3px #dfe7eb;
+    box-shadow: 0 1px 3px #dfe7eb;
+}
+
+article .post-header {
+    font-size: 18px;
+    line-height: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #eceff2;
+}
+
+article .post-content {
+    font-size: 14px;
+}
+
+article h1,article h2,article h3,article h4,article h5,article h6,article p {
+    line-height: 2;
+}
+
+article h1,article h2,article h3,article h4,article h5,article h6 {
+    font-weight: 700;
+}
+
+article h1 {
+    font-size: 20px;
+}
+
+article h2 {
+    font-size: 18px;
+}
+
+article h3 {
+    font-size: 17px;
+}
+
+article h4 {
+    font-size: 16px;
+}
+
+article h5 {
+    font-size: 14px;
+}
+
+article h6 {
+    font-size: 13px;
+}
+
+article blockquote {
+    margin: 0;
+    padding: 8px 16px;
+    color: #8f8f8f;
+    border: 1px solid #ccc;
+    border-left: 4px solid #ccc;
+}
+
+article code {
+    font-family: SourceCodePro;
+}
+
+article img {
+    display: block;
+    width: 100%;
+    margin: 16px 0;
+}
+
+article p {
+    margin: 16px 0;
+}
+
+article a {
+    color: #43b0ee;
+}
+
 .comments {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
-    margin: 0 auto;
+    margin: 30px auto;
     padding-bottom: 30px;
 }
 
-.ds-powered-by {
+.comments .ds-powered-by {
     display: none;
+}
+
+.comments #ds-thread #ds-reset li.ds-post {
+    border-top: 1px solid #ddd;
+}
+
+.comments #ds-thread #ds-reset .ds-comments,.comments #ds-thread #ds-reset .ds-paginator {
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ddd;
 }
 
 @font-face {
@@ -434,19 +548,9 @@ a {
     font-family:fzlt-qianhei;src:url(//:) format('no404');src:url(font/Fonts/fzlt-qianhei.otf);
 }
 
-@font-face {
-    font-family:'Source Code Pro Black';src:url(//:) format('no404');src:url(font/SourceCodePro/OTF/SourceCodePro-Black.oft);
-}
-
 body {
     font-family: proxima;
     font-size: 16px;
     line-height: 2;
-    text-align: justify;
     background-color: #f7f7f7;
-}
-
-p {
-    word-wrap: break-word;
-    word-break: break-all;
 }

@@ -1,7 +1,18 @@
 @charset 'UTF-8';
 
 .highlight {
+    margin: 16px 0;
+    border: 1px solid #dedede;
     background: #fff;
+}
+
+.highlight pre {
+    overflow-x: auto;
+    padding: 0 16px;
+}
+
+.highlight code {
+    font-family: SourceCodePro;
 }
 
 .highlighter-rouge .highlight {
@@ -309,10 +320,10 @@ a {
 
 .site-header {
     height: 80px;
-    border-bottom: #f5f8f9;
+    border-bottom: #eceff2;
     background-color: #fff;
-    -webkit-box-shadow: 0 1px 3px #c8d5d9;
-    box-shadow: 0 1px 3px #c8d5d9;
+    -webkit-box-shadow: 0 1px 3px #dfe7eb;
+    box-shadow: 0 1px 3px #dfe7eb;
 }
 
 .header-left {
@@ -328,7 +339,7 @@ a {
     width: 80px;
     height: 80px;
     padding: 20px;
-    border-right: 1px solid #c8d5d9;
+    border-right: 1px solid #eceff2;
 }
 
 .header-left .header-logo a {
@@ -367,7 +378,7 @@ a {
     float: right;
     height: 80px;
     padding: 0 10px;
-    border-left: 1px solid #c8d5d9;
+    border-left: 1px solid #eceff2;
 }
 
 .header-right .contact {
@@ -405,6 +416,239 @@ a {
     background-size: contain;
 }
 
+footer {
+    font-family: proxima;
+    font-size: 12px;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    color: #ccc;
+    border-top: 1px solid #eceff2;
+}
+
+.index-content {
+    padding-top: 1px;
+}
+
+.index-content .myself {
+    float: left;
+    width: 250px;
+    margin: 20px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 3px #dfe7eb;
+    box-shadow: 0 1px 3px #dfe7eb;
+}
+
+.index-content .myself img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 40px auto 0;
+    border-radius: 200px;
+}
+
+.index-content .myself h2 {
+    font-size: 18px;
+    margin: 10px auto;
+    text-align: center;
+    color: #3d4347;
+}
+
+.index-content .myself p {
+    font-family: fzlt-qianhei;
+    font-size: 12px;
+    text-align: center;
+}
+
+.index-content .myself p.desc1 {
+    color: #565a5f;
+}
+
+.index-content .myself p.desc1 a {
+    color: #38b7ea;
+}
+
+.index-content .myself p.desc2 {
+    color: #b3b6b8;
+}
+
+.index-content .myself .weibo {
+    font-family: fzlt-qianhei;
+    font-size: 13px;
+    line-height: 32px;
+    display: block;
+    width: 150px;
+    height: 30px;
+    margin: 15px auto 0;
+    text-align: center;
+    color: #fff;
+    border-radius: 15px;
+    background-color: #38b7ea;
+}
+
+.index-content .myself .front {
+    font-size: 13px;
+    line-height: 50px;
+    margin-top: 20px;
+    text-align: center;
+    color: #b3b6b8;
+    border-top: 1px solid #eceff2;
+    border-bottom: 1px solid #eceff2;
+}
+
+.index-content .myself .front .year {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    border-right: 1px solid #eceff2;
+}
+
+.index-content .myself .front .worki {
+    float: right;
+    width: 50%;
+}
+
+.index-content .myself .otherlike {
+    font-size: 12px;
+    line-height: 34px;
+    padding: 10px 0;
+    color: #b3b6b8;
+    border-bottom: 1px solid #eceff2;
+}
+
+.index-content .myself .otherlike .qq {
+    width: 160px;
+    height: 30px;
+    margin: 0 auto;
+    text-indent: 30px;
+    background: url(/images/icon-QQ.png) 6px center no-repeat;
+    background-size: 18px 18px;
+}
+
+.index-content .myself .otherlike .github {
+    overflow: hidden;
+    width: 160px;
+    height: 30px;
+    margin: 0 auto;
+    text-indent: 30px;
+    text-overflow: ellipsis;
+    background: url(/images/icon-github-1.png) 8px center no-repeat;
+    background-size: 14px 14px;
+}
+
+.index-content .myself .ercode {
+    border-radius: 0;
+}
+
+.index-content .mylovefile {
+    font-family: fzlt-qianhei;
+    float: right;
+    width: 250px;
+    margin: 20px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 3px #dfe7eb;
+    box-shadow: 0 1px 3px #dfe7eb;
+}
+
+.index-content .mylovefile .top {
+    line-height: 50px;
+    height: 50px;
+    padding-left: 16px;
+    border-bottom: 1px solid #eceff2;
+}
+
+.index-content .mylovefile .list {
+    font-size: 14px;
+    padding: 16px;
+}
+
+.index-content .mylovefile .list p {
+    padding: 16px 0;
+    border-bottom: 1px solid #eceff2;
+}
+
+.index-content .mylovefile .list p:first-child {
+    padding-top: 0;
+}
+
+.index-content .mylovefile .list p a {
+    color: #3d4347;
+}
+
+.index-content .content {
+    overflow: hidden;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 1px 3px #dfe7eb;
+    box-shadow: 0 1px 3px #dfe7eb;
+}
+
+.index-content .section {
+    font-family: fzlt-qianhei;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.index-content .section .top {
+    line-height: 50px;
+    height: 50px;
+    padding-left: 16px;
+    border-bottom: 1px solid #eceff2;
+}
+
+.index-content .cards {
+    padding: 16px;
+}
+
+.index-content .cards .card {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eceff2;
+}
+
+.index-content .cards .card .card-img {
+    display: block;
+    float: left;
+    width: 120px;
+    height: 90px;
+    margin-right: 16px;
+}
+
+.index-content .cards .card .card-img img {
+    width: 100%;
+}
+
+.index-content .cards .card .card-info {
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+    height: 90px;
+}
+
+.index-content .cards .card .card-info .card-title {
+    font-weight: 700;
+    line-height: 1;
+    color: #3d4347;
+}
+
+.index-content .cards .card .card-info .time {
+    font-family: proxima;
+    font-size: 12px;
+    line-height: 1;
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    text-align: right;
+    color: #ccc;
+}
+
+.index-content .cards .card .card-info .desc {
+    margin-top: 8px;
+    color: #ccc;
+}
+
 @font-face {
     font-family:proxima;src:url(//:) format('no404');src:url('font/Proxima Nova/ProximaNova-Reg.otf');
 }
@@ -415,6 +659,10 @@ a {
 
 @font-face {
     font-family:proxima-bold;src:url(//:) format('no404');src:url('font/Proxima Nova/ProximaNova-Bold.otf');
+}
+
+@font-face {
+    font-family:fzlt-qianhei;src:url(//:) format('no404');src:url(font/Fonts/fzlt-qianhei.otf);
 }
 
 body {

@@ -1,3 +1,4 @@
+@import "_part/_font_sourceCodePro";
 @import "_lib/_syntax-highlighting";
 @import "_part/_index_header";
 @import "_part/_index_footer";
@@ -5,16 +6,10 @@
 @import "_part/_comments";
 @import "_part/_proxima";
 @import "_part/_font_fzlt";
-@import "_part/_font_sourceCodePro";
 
 body {
 	font-family: proxima;
 	font-size: 16px;
 	line-height: 2.0;
-	text-align: justify;
 	background-color: #f7f7f7;
-}
-p {
-	word-wrap: break-word;
-	word-break: break-all;
 }

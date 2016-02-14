@@ -2,41 +2,13 @@
 layout: default-post
 ---
 <article class="post">
-	<div class="wrapper clearfix">
-		<div class="left">
-			<div class="left-part">最近文章</div>
-			{% for post in site.posts %}
-				<a class="post-item clearfix" href="{{ post.url | prepend: site.baseurl }}">
-					<div class="post-img"><img src="{{ post.image }}" ></div>
-					<div class="post-title">{{ post.title }}</div>
-					<div class="post-tags">
-						{% for tag in post.tags %}
-							<span class="{{ tag }}">{{ tag }}</span>
-						{% endfor %}
-					</div>
-				</a>
-			{% endfor %}
-		</div>
-		<div class="right"></div>
-		<div class="middle">
-			<div class="post-header">
-				<h2 class="post-title">{{ page.title }}</h2>
-				<p>{{ page.desc }}</p>
-				<p>{{ page.date | date: "%b %-d, %Y"}}</p>
-			</div>
-			
-			<div class="whole-content">
-				<div class="post-content">
-					{{ content }}
-				</div>
-
-				
-				<div class="comments">
-					<!-- 多说评论框 start -->
-					<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
-					<!-- 多说评论框 end -->
-				</div>
-			</div>
-		</div>
+	<div class="post-header">{{ page.title }}</div>
+	<div class="post-content">
+		{{ content }}
+	</div>
+	<div class="comments">
+		<!-- 多说评论框 start -->
+		<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
+		<!-- 多说评论框 end -->
 	</div>
 </article>

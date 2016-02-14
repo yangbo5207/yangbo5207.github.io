@@ -3,8 +3,8 @@
 .site-header {
 	height: 80px;
 	background-color: #fff;
-	border-bottom: #f5f8f9;
-	box-shadow: 0 1px 3px #c8d5d9; 
+	border-bottom: #eceff2;
+	box-shadow: 0 1px 3px #dfe7eb; 
 }
 .header-left {
 	float: left;
@@ -14,7 +14,7 @@
 		float: left;
 		width: 80px;
 		height: 80px;
-		border-right: 1px solid #c8d5d9;
+		border-right: 1px solid #eceff2;
 		box-sizing: border-box;
 		padding: 20px;
 
@@ -50,7 +50,7 @@
 .header-right {
 	float: right;
 	height: 80px;
-	border-left: 1px solid #c8d5d9;
+	border-left: 1px solid #eceff2;
 	padding: 0 10px;
 
 	.contact {

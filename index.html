@@ -2,61 +2,56 @@
 layout: default
 ---
 
-<div class="index-content">
-	<div class="wrapper">
-
-		<div class="articleList">
-			<div class="top-container clearfix">POST</div>
-
-			<div class="cards clearfix">
+<div class="index-content clear">
+	<div class="myself">
+		<img src="/images/myself/me.png" />
+		<h2>Yangbo</h2>
+		<p class="desc1">我在<a href="https://www.tigerbrokers.com/">老虎证劵</a></p>
+		<p class="desc2">毕业于四川师范大学</p>
+		<a class="weibo" href="http://weibo.com/2349329522/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1">在微博关注我</a>
+		<div class="front clear">
+			<div class="year">设计/前端</div>
+			<div class="worki">3年</div>
+		</div>
+		<div class="otherlike">
+			<div class="qq">1832064870</div>
+			<div class="github">https://github.com/yangbo5207</div>
+		</div>
+		<img class="ercode" src="/images/myself/ercode.png" />
+	</div>
+	<div class="mylovefile">
+		<div class="top">
+			<div class="name">我爱的鸡汤文</div>
+		</div>
+		<div class="list">
+			<p><a href="http://www.jianshu.com/p/e63fa4ffd610">别闹，你真以为早起早睡每天跑步能改变你的生活？</a></p>
+			<p><a href="http://www.jianshu.com/p/0ca1b4e0f56f">单身狗过好情人节详细攻略（恋人勿进，切记）</a></p>
+			<p><a href="http://www.jianshu.com/p/4ae0370638ed">请不要打扰一个正在走弯路的人</a></p>
+			<p><a href="http://www.jianshu.com/p/948c03338be9">恭喜你，终于变成了自己讨厌的样子</a></p>
+			<p><a href="http://www.jianshu.com/p/cd8137316327">你有什么资格不努力</a></p>
+			<p><a href="http://www.jianshu.com/p/9bf2472acd0b">你不是人长的丑 而是你心无一物</a></p>
+			<p><a href="http://www.jianshu.com/p/f9bf49aad151">生命无需退缩：不要羞怯、勇敢尝试、然后收获和成长</a></p>
+		</div>
+	</div>
+	<div class="content">
+		<div class="section article-list">
+			<div class="top">
+				<div class="name">文章列表</div>
+			</div>
+			<div class="cards">
 				<!-- 文章列表 -->
-				{% for post in paginator.posts %}
-					<div class="card">
+				{% for post in site.posts %}
+					<div class="card clear">
+						<a  class="card-img" href="{{ post.url | prepend: site.baseurl }}">
+							<img src="{{ post.image }}" >
+						</a>
 						<div class="card-info">
 							<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-title">{{ post.title }}</div></a>
-							<div class="in">
-								<div class="tags">
-									{% for tag in post.tags %}
-										<span>{{ tag }}</span>
-									{% endfor %}
-								</div>
-								<div class="time">{{ post.date | date: "%b %-d, %Y" }}</div>
-							</div>
+							<div class="desc">{{ post.desc }}</div>
+							<div class="time">{{ post.date | date: "%b %-d, %Y" }}</div>
 						</div>
 					</div>
 				{% endfor %}
-			</div>
-
-			<!-- 分页按钮 -->
-			<div class="page-split clearfix">
-				{% if paginator.total_pages > 1 %}
-					<!-- prev -->
-					{% if paginator.previous_page %}
-						<a class="page-prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-					{% else %}
-						<span class="page-prev">&laquo; Prev</span>
-					{% endif %}
-
-					<!-- next -->
-					{% if paginator.next_page %}
-						<a class="page-next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-					{% else %}
-						<span class="page-next">Next &raquo;</span>
-					{% endif %}
-
-					<!-- 数字按钮 -->
-					<div class="page-count">
-						{% for page in (1..paginator.total_pages) %}
-							{% if page == paginator.page %}
-								<a class="active">{{ page }}</a>
-							{% elsif page == 1 %}
-								<a href="{{ site.baseurl }}/index.html">{{ page }}</a>
-							{% else %}
-								<a href="../../{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-							{% endif %}
-						{% endfor %}
-					</div>
-				{% endif %}
 			</div>
 		</div>
 	</div>

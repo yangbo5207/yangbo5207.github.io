@@ -1,0 +1,204 @@
+.index-content {
+	padding-top: 1px;
+
+	.myself {
+		// visibility: hidden;
+		float: left;
+		width: 250px;
+		padding-bottom: 40px;
+		background-color: #fff;
+		margin: 20px;
+		box-shadow: 0 1px 3px #dfe7eb;
+
+		img {
+			display: block;
+			width: 120px;
+			height: 120px;
+			margin: 40px auto 0;
+			border-radius: 200px;
+		}
+		h2 {
+			margin: 10px auto;
+			text-align: center;
+			color: #3d4347;
+			font-size: 18px;
+		}
+		p {
+			text-align: center;
+			font-size: 12px;
+			font-family: fzlt-qianhei;
+			&.desc1 {
+				color: #565a5f;
+				a {
+					color: #38b7ea;
+				}
+			}
+
+			&.desc2 {
+				color: #b3b6b8;
+			}
+		}
+		.weibo {
+			font-family: fzlt-qianhei;
+			font-size: 13px;
+			text-align: center;
+			display: block;
+			width: 150px;
+			height: 30px;
+			line-height: 32px;
+			background-color: #38b7ea;
+			color: #fff;
+			margin: 15px auto 0;
+			border-radius: 15px;
+		}
+		.front {
+			text-align: center;
+			margin-top: 20px;
+			font-size: 13px;
+			color: #b3b6b8;
+			border-top: 1px solid #eceff2;
+			border-bottom: 1px solid #eceff2;
+			line-height: 50px;
+			.year {
+				width: 50%;
+				float: left;
+				border-right: 1px solid #eceff2;
+				box-sizing: border-box;
+			}
+			.worki {
+				width: 50%;
+				float: right;
+			}
+		}
+		.otherlike {
+			border-bottom: 1px solid #eceff2;
+			font-size: 12px;
+			color: #b3b6b8;
+			line-height: 34px;
+			padding: 10px 0;
+
+			.qq {
+				width: 160px;
+				margin: 0 auto;
+				height: 30px;
+				background: url('/images/icon-QQ.png') 6px center no-repeat;
+				text-indent: 30px;
+				background-size: 18px 18px;
+			}
+			.github {
+				width: 160px;
+				margin: 0 auto;
+				height: 30px;
+				text-indent: 30px;
+				background: url('/images/icon-github-1.png') 8px center no-repeat;
+				background-size: 14px 14px;
+				overflow:hidden;
+				text-overflow:ellipsis;
+			}
+		}
+
+		.ercode {
+			border-radius: 0;
+		}
+	}
+	.mylovefile {
+		float: right;
+		width: 250px;
+		background-color: #fff;
+		margin: 20px;
+		box-shadow: 0 1px 3px #dfe7eb;
+		font-family: fzlt-qianhei;
+
+		.top {
+			height: 50px;
+			border-bottom: 1px solid #eceff2;
+			padding-left: 16px;
+			line-height: 50px;
+		}
+		.list {
+			padding: 16px;
+			font-size: 14px;
+
+			p {
+				border-bottom: 1px solid #eceff2;
+				padding: 16px 0;
+
+				&:first-child {
+					padding-top: 0;
+				}
+
+				a {
+					color: #3d4347;
+				}
+			}
+		}
+	}
+
+	// middle part
+	.content {
+		margin-bottom: 20px;
+		overflow: hidden;
+		box-shadow: 0 1px 3px #dfe7eb;
+	}
+	.section {
+		margin-top: 20px;
+		font-family: fzlt-qianhei;
+		background-color: #fff;
+
+		.top {
+			height: 50px;
+			border-bottom: 1px solid #eceff2;
+			padding-left: 16px;
+			line-height: 50px;
+		}
+	}
+	.article-list {
+	}
+
+	.cards {
+		padding: 16px;
+
+		.card {
+			border-bottom: 1px solid #eceff2;
+			margin-bottom: 16px;
+			padding-bottom: 16px;
+
+			.card-img {
+				display: block;
+				width: 120px;
+				height: 90px;
+				margin-right: 16px;
+				float: left;
+				img {
+					width: 100%;
+				}
+			}
+
+			.card-info {
+				font-size: 14px;
+				overflow: hidden;
+				height: 90px;
+				position: relative;
+				.card-title {
+					font-weight: bold;
+					color: #3d4347;
+					line-height: 1;
+				}
+				.time {
+					font-size: 12px;
+					font-family: proxima;
+					color: #ccc;
+					text-align: right;
+					line-height: 1;
+					position: absolute;
+					bottom: -2px;
+					right: 0;
+				}
+				.desc {
+					margin-top: 8px;
+					color: #ccc;
+				}
+			}
+		}
+	}
+}
