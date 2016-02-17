@@ -1,0 +1,24 @@
+.demo-box {
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.sub {
+    padding: 1%;
+    float: left;
+    width: 31%;
+    margin: .1%;
+    color: #fff;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+}
+
+.sub1 {
+    background-color: #ccc;
+}
+.sub2 {
+    background-color: orange;
+}
+.sub3 {
+    background-color: green;
+}

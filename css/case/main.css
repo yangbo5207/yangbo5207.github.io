@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-size: 14px;
+    font-family: fzlt-qianhei, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    background-color: #fff;
+    -webkit-text-size-adjust: none;
+    -webkit-text-size-adjust: 100%!important;
+}
+
+a, img {
+    -webkit-touch-callout: none; /*禁止长按链接与图片弹出菜单*/
+}
+
+/* 去掉a、input和button点击时的蓝色外边框和灰色半透明背景 */
+a, button, input, select, textarea {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input {
+    outline: none;
+}
+
+ol, ul, li {
+    padding: 0;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #afafaf;
+}
+
+.clear {
+    zoom: 1;
+}
+.clear::after {
+    content: '';
+    display: block;
+    height: 0;
+    font-size: 0;
+    clear: both;
+}
+
+.main {
+    width: 90%;
+    box-sizing: border-box;
+    max-width: 760px;
+    margin: 0 auto;
+
+    @media (max-wid)
+}
+
+header {
+    padding-top: 10px;
+    height: 200px;
+    box-sizing: border-box;
+    background-color: rgb(59, 157, 228);
+}
+header .back {
+    display: block;
+    color: #fff;
+    text-indent: 30px;
+    background: url('/images/case/index.png') no-repeat;
+    background-size: contain;
+}
+header .title {
+    color: #fff;
+    font-size: 24px;
+    margin-top: 90px;
+}
+
+.content {
+    margin: 50px auto;
+}
+.content .case-box {
+    border: 1px solid rgb(59, 157, 228);
+    padding: 10px;
+}
+
+.tab {
+    border: 1px solid rgb(59, 157, 228);
+    /* border-bottom: transparent; */
+}
+.tab-header {
+    background-color: rgb(59, 157, 228);
+}
+.tab-header .bar {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    color: #fff;
+}
+.tab-header .active {
+    background-color: #fff;
+    color: rgb(59, 157, 228);
+}
+
+.tab-content {
+    height: 200px;
+}
+
+
+
+.comments {
+    margin: 50px auto;
+}
+
+footer {
+    height: 50px;
+    color: #fff;
+    background-color: rgb(59, 157, 228);
+    text-align: center;
+    line-height: 50px;
+}
