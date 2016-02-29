@@ -85,20 +85,6 @@ header .title {
     padding: 10px;
 }
 
-.tab {
-    border: 1px solid rgb(59, 157, 228);
-    /* border-bottom: transparent; */
-}
-.tab-header {
-    background-color: rgb(59, 157, 228);
-}
-.tab-header .bar {
-    float: left;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 15px;
-    color: #fff;
-}
 .tab-header .active {
     background-color: #fff;
     color: rgb(59, 157, 228);

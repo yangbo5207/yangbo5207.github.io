@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<div class="index-content clear">
-	<div class="myself">
-		<img src="/images/myself/me.png" />
+<div class="index-content">
+	<div class="item myself">
+	<img src="/images/myself/me.png" />
 		<h2>Yangbo</h2>
 		<p class="desc1">我在<a href="https://www.tigerbrokers.com/">老虎证劵</a></p>
 		<p class="desc2">毕业于四川师范大学</p>
@@ -19,7 +19,28 @@ layout: default
 		</div>
 		<img class="ercode" src="/images/myself/ercode.png" />
 	</div>
-	<div class="mylovefile">
+
+	<div class="item content">
+		<div class="top">
+			<div class="name">文章列表</div>
+		</div>
+		<div class="cards">
+			{% for post in site.posts %}
+				<div class="card">
+					<a  class="card-img" href="{{ post.url | prepend: site.baseurl }}">
+						<img src="{{ post.image }}" >
+					</a>
+					<div class="card-info">
+						<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-title">{{ post.title }}</div></a>
+						<div class="desc">{{ post.desc }}</div>
+						<div class="time">{{ post.date | date: "%b %-d, %Y" }}</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="item mylovefile">
 		<div class="top">
 			<div class="name">我爱的鸡汤文</div>
 		</div>
@@ -31,28 +52,6 @@ layout: default
 			<p><a href="http://www.jianshu.com/p/cd8137316327">你有什么资格不努力</a></p>
 			<p><a href="http://www.jianshu.com/p/9bf2472acd0b">你不是人长的丑 而是你心无一物</a></p>
 			<p><a href="http://www.jianshu.com/p/f9bf49aad151">生命无需退缩：不要羞怯、勇敢尝试、然后收获和成长</a></p>
-		</div>
-	</div>
-	<div class="content">
-		<div class="section article-list">
-			<div class="top">
-				<div class="name">文章列表</div>
-			</div>
-			<div class="cards">
-				<!-- 文章列表 -->
-				{% for post in site.posts %}
-					<div class="card clear">
-						<a  class="card-img" href="{{ post.url | prepend: site.baseurl }}">
-							<img src="{{ post.image }}" >
-						</a>
-						<div class="card-info">
-							<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-title">{{ post.title }}</div></a>
-							<div class="desc">{{ post.desc }}</div>
-							<div class="time">{{ post.date | date: "%b %-d, %Y" }}</div>
-						</div>
-					</div>
-				{% endfor %}
-			</div>
 		</div>
 	</div>
 </div>

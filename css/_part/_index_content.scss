@@ -1,14 +1,26 @@
+@mixin screen_w768 {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
 .index-content {
-	padding-top: 1px;
+	max-width: 1200px;
+	margin: 10px auto;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+
+	.item {
+		background: #fff;
+		box-shadow: 0 1px 1px #dfe7eb;
+
+		&:nth-of-type(1) { width: 24%; }
+		&:nth-of-type(2) { width: 50%; }
+		&:nth-of-type(3) { width: 24%; }
+	}
 
 	.myself {
-		// visibility: hidden;
-		float: left;
-		width: 250px;
-		padding-bottom: 40px;
-		background-color: #fff;
-		margin: 20px;
-		box-shadow: 0 1px 3px #dfe7eb;
 
 		img {
 			display: block;
@@ -102,11 +114,8 @@
 		}
 	}
 	.mylovefile {
-		float: right;
-		width: 250px;
 		background-color: #fff;
-		margin: 20px;
-		box-shadow: 0 1px 3px #dfe7eb;
+		/* box-shadow: 0 1px 3px #dfe7eb; */
 		font-family: fzlt-qianhei;
 
 		.top {
@@ -135,24 +144,13 @@
 	}
 
 	// middle part
-	.content {
-		margin-bottom: 20px;
-		overflow: hidden;
-		box-shadow: 0 1px 3px #dfe7eb;
-	}
-	.section {
-		margin-top: 20px;
-		font-family: fzlt-qianhei;
-		background-color: #fff;
 
-		.top {
-			height: 50px;
-			border-bottom: 1px solid #eceff2;
-			padding-left: 16px;
-			line-height: 50px;
-		}
-	}
-	.article-list {
+	.top {
+		height: 40px;
+		border-bottom: 1px solid #eceff2;
+		padding-left: 16px;
+		line-height: 43px;
+		font-size: 14px;
 	}
 
 	.cards {
@@ -160,44 +158,68 @@
 
 		.card {
 			border-bottom: 1px solid #eceff2;
-			margin-bottom: 16px;
+			padding-top: 25px;
 			padding-bottom: 16px;
+			display: flex;
+
+			&:first-child {
+				padding-top: 9px;
+			}
 
 			.card-img {
 				display: block;
-				width: 120px;
-				height: 90px;
+				flex-grow: 0;
+				width: 90px;
+				height: 65px;
 				margin-right: 16px;
-				float: left;
 				img {
 					width: 100%;
+					height: 100%;
 				}
 			}
 
 			.card-info {
+				flex: 1;
 				font-size: 14px;
-				overflow: hidden;
-				height: 90px;
-				position: relative;
 				.card-title {
 					font-weight: bold;
-					color: #3d4347;
+					color: #333;
 					line-height: 1;
 				}
 				.time {
 					font-size: 12px;
 					font-family: proxima;
 					color: #ccc;
-					text-align: right;
-					line-height: 1;
-					position: absolute;
-					bottom: -2px;
-					right: 0;
+					/* text-align: right; */
 				}
 				.desc {
 					margin-top: 8px;
-					color: #ccc;
+					color: #5b5b5b;
+					line-height: 1.8;
 				}
+			}
+		}
+	}
+
+	@include screen_w768 {
+		flex-direction: column;
+
+		.item {
+			&:nth-of-type(1) {
+				width: 100%;
+				order: 3;
+				margin-top: 20px;
+				padding-bottom: 20px;
+			}
+			&:nth-of-type(2) {
+				width: 100%;
+				order: 1;
+				margin-top: 10px;
+			}
+			&:nth-of-type(3) {
+				width: 100%;
+				order: 2;
+				margin-top: 20px;
 			}
 		}
 	}

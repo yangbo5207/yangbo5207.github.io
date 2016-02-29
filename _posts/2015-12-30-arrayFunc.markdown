@@ -11,14 +11,14 @@ desc: 本文主要是针对自己复习的时候浏览使用，如果要查看�
 #### 原生javascript方法
 #####创建数组
 > 本文主要是针对自己复习的时候浏览使用，如果要查看详细说明，请阅读`javascript高级编程`
-> 
+>
 
 ``` javascript
 var colors = [];
 var colors = ['red', 'blue'];
 ```
 
-##### 检测数组 
+##### 检测数组
 
 
 ```javascript
@@ -48,7 +48,7 @@ colors.toString();
 // > "red,yellow"
 ```
 
-##### `arr.push(item)` 
+##### `arr.push(item)`
 从数组末尾添加元素，并返回新数组的长度
 
 
@@ -58,7 +58,7 @@ colors.push('pink');
 // > 3
 ```
 
-##### `arr.pop()` 
+##### `arr.pop()`
 从数组末尾删除元素，并返回被删除的元素
 
 
@@ -68,7 +68,7 @@ colors.pop();
 // > 'yellow'
 ```
 
-##### `arr.unshift(item)` 
+##### `arr.unshift(item)`
 从数组头部添加元素，并返回新数组的长度
 
 
@@ -78,7 +78,7 @@ colors.unshift('pink');
 // > 3
 ```
 
-##### `arr.shift()` 
+##### `arr.shift()`
 从数组头部删除元素，并返回被删除的元素
 
 
@@ -88,7 +88,7 @@ colors.shift();
 // > 'yellow'
 ```
 
-##### `arr.reverse()` 
+##### `arr.reverse()`
 反转数组的顺序，并返回重新排序之后的数组， 原数组会被改变
 
 
@@ -166,9 +166,9 @@ arr.splice(2, 3);
 
 ```javascript
 var arr = [2, 4, 6];
-arr.splice(2, 0, 'red', 'green'); 
+arr.splice(2, 0, 'red', 'green');
 // > []
-// arr: [2, 4, "red", "green", 6] 
+// arr: [2, 4, "red", "green", 6]
 ```
 
 - **替换**  
@@ -281,7 +281,7 @@ var values = [1, 2, 3, 4, 5];
 var sum = values.reduce(function(prev, cur, index, array) {
     return prev + cur;
 })
-// > 15 
+// > 15
 //每一次迭代之后的结果分别为
 // [3, 3, 4, 5]
 // [6, 4, 5]
@@ -361,5 +361,8 @@ $.merge($.merge([], arr), arr2);
 过滤DOM数组中重复的元素
 ##### `$.makeArray(obj)`
 将类数组对象转换为数组
-##### `$(elem).toArray()` 
+##### `$(elem).toArray()`
 将jQuery对象集合恢复成DOM数组
+
+<p data-height="268" data-theme-id="0" data-slug-hash="qZBOyz" data-default-tab="result" data-user="LukyVj" class='codepen'>See the Pen <a href='http://codepen.io/LukyVj/pen/qZBOyz/'>French wavy flag</a> by LukyVJ (<a href='http://codepen.io/LukyVj'>@LukyVj</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
