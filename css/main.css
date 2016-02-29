@@ -681,7 +681,6 @@ footer {
 }
 
 .index-content .myself p {
-    font-family: fzlt-qianhei;
     font-size: 12px;
     text-align: center;
 }
@@ -699,7 +698,6 @@ footer {
 }
 
 .index-content .myself .weibo {
-    font-family: fzlt-qianhei;
     font-size: 13px;
     line-height: 32px;
     display: block;
@@ -769,7 +767,6 @@ footer {
 }
 
 .index-content .mylovefile {
-    font-family: fzlt-qianhei;
     background-color: #fff;
 }
 
