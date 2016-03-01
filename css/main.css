@@ -318,6 +318,14 @@ a {
     zoom: 1;
 }
 
+.aninode {
+    visibility: hidden;
+}
+
+.animated .aninode,.animated.aninode {
+    visibility: visible;
+}
+
 header {
     font-size: 14px;
     position: relative;
@@ -665,11 +673,26 @@ footer {
     width: 24%;
 }
 
+.index-content .item .a-flyTopIn {
+    -webkit-animation-name: flyTopIn;
+    -moz-animation-name: flyTopIn;
+    animation-name: flyTopIn;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.index-content .myself .top {
+    padding-top: 2px;
+    background: url(/images/index/index-mingpian.png) 10px center no-repeat;
+    background-size: 18px;
+}
+
 .index-content .myself img {
     display: block;
     width: 120px;
     height: 120px;
-    margin: 40px auto 0;
+    margin: 20px auto 0;
     border-radius: 200px;
 }
 
@@ -771,24 +794,23 @@ footer {
 }
 
 .index-content .mylovefile .top {
-    line-height: 50px;
-    height: 50px;
+    line-height: 40px;
+    height: 40px;
+    padding-top: 2px;
     padding-left: 16px;
     border-bottom: 1px solid #eceff2;
+    background: url(/images/index/index-article.png) 10px center no-repeat;
+    background-size: 18px;
 }
 
 .index-content .mylovefile .list {
-    font-size: 14px;
+    font-size: 13px;
     padding: 16px;
 }
 
 .index-content .mylovefile .list p {
-    padding: 16px 0;
+    padding: 30px 0;
     border-bottom: 1px solid #eceff2;
-}
-
-.index-content .mylovefile .list p:first-child {
-    padding-top: 0;
 }
 
 .index-content .mylovefile .list p a {
@@ -797,10 +819,17 @@ footer {
 
 .index-content .top {
     font-size: 14px;
-    line-height: 43px;
+    line-height: 40px;
     height: 40px;
     padding-left: 16px;
+    text-indent: 18px;
     border-bottom: 1px solid #eceff2;
+}
+
+.index-content .content .top {
+    padding-top: 2px;
+    background: url(/images/index/index-liebiao.png) 10px center no-repeat;
+    background-size: 18px;
 }
 
 .index-content .cards {
@@ -813,8 +842,8 @@ footer {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 25px;
-    padding-bottom: 16px;
+    padding-top: 30px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #eceff2;
 }
 

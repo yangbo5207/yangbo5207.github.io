@@ -4,6 +4,15 @@
 	}
 }
 
+/* @keyframes flyTopIn {
+	0% {
+		transform: translateY(-30px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+} */
+
 .index-content {
 	max-width: 1200px;
 	margin: 10px auto;
@@ -18,15 +27,27 @@
 		&:nth-of-type(1) { width: 24%; }
 		&:nth-of-type(2) { width: 50%; }
 		&:nth-of-type(3) { width: 24%; }
+
+		.a-flyTopIn {
+			animation-name: flyTopIn;
+			animation-duration: 1s;
+		}
+
 	}
 
 	.myself {
+
+		.top {
+			background: url('/images/index/index-mingpian.png') 10px center no-repeat;
+			background-size: 18px;
+			padding-top: 2px;
+		}
 
 		img {
 			display: block;
 			width: 120px;
 			height: 120px;
-			margin: 40px auto 0;
+			margin: 20px auto 0;
 			border-radius: 200px;
 		}
 		h2 {
@@ -115,25 +136,27 @@
 	}
 	.mylovefile {
 		background-color: #fff;
-		/* box-shadow: 0 1px 3px #dfe7eb; */
-		/* font-family: fzlt-qianhei; */
 
 		.top {
-			height: 50px;
+			height: 40px;
 			border-bottom: 1px solid #eceff2;
 			padding-left: 16px;
-			line-height: 50px;
+			line-height: 40px;
+
+			background: url('/images/index/index-article.png') 10px center no-repeat;
+			background-size: 18px;
+			padding-top: 2px;
 		}
 		.list {
 			padding: 16px;
-			font-size: 14px;
+			font-size: 13px;
 
 			p {
 				border-bottom: 1px solid #eceff2;
-				padding: 16px 0;
+				padding: 30px 0;
 
 				&:first-child {
-					padding-top: 0;
+
 				}
 
 				a {
@@ -149,17 +172,25 @@
 		height: 40px;
 		border-bottom: 1px solid #eceff2;
 		padding-left: 16px;
-		line-height: 43px;
+		line-height: 40px;
 		font-size: 14px;
+		text-indent: 18px;
 	}
 
+	.content {
+		.top {
+			background: url('/images/index/index-liebiao.png') 10px center no-repeat;
+			background-size: 18px;
+			padding-top: 2px;
+		}
+	}
 	.cards {
 		padding: 16px;
 
 		.card {
 			border-bottom: 1px solid #eceff2;
-			padding-top: 25px;
-			padding-bottom: 16px;
+			padding-top: 30px;
+			padding-bottom: 20px;
 			display: flex;
 
 			&:first-child {

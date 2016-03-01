@@ -322,6 +322,14 @@ a {
     zoom: 1;
 }
 
+.aninode {
+    visibility: hidden;
+}
+
+.animated .aninode,.animated.aninode {
+    visibility: visible;
+}
+
 header {
     font-size: 14px;
     position: relative;
