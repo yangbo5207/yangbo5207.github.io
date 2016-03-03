@@ -37,7 +37,7 @@ layout: default
 					<div class="card-info">
 						<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-title">{{ post.title }}</div></a>
 						<div class="desc">{{ post.desc }}</div>
-						<div class="time">{{ post.date | date: "%b %-d, %Y" }}</div>
+						<div class="time">{{ post.date }}</div>
 					</div>
 				</div>
 			{% endfor %}

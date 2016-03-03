@@ -4,15 +4,6 @@
 	}
 }
 
-/* @keyframes flyTopIn {
-	0% {
-		transform: translateY(-30px);
-	}
-	100% {
-		transform: translateY(0);
-	}
-} */
-
 .index-content {
 	max-width: 1200px;
 	margin: 10px auto;
@@ -200,7 +191,7 @@
 			.card-img {
 				display: block;
 				flex-grow: 0;
-				width: 90px;
+				width: 65px;
 				height: 65px;
 				margin-right: 16px;
 				img {

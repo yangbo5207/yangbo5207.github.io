@@ -8,3 +8,9 @@
     });
 
 })(jQuery);
+
+
+// 判断是否在Android版微信内
+function isAndroidWinxin() {
+    return /android[\S\s]*micromessenger/gi.test(navigator.userAgent.toLowerCase());
+}

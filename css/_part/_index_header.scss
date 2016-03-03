@@ -43,6 +43,9 @@ header {
 		display: block;
 		width: 20px;
 		height: 20px;
+		border-radius: 100%;
+		overflow: hidden;
+		animation: logoInto 10s linear infinite;
 		img {
 			width: 100%;
 		}
@@ -90,9 +93,30 @@ header {
 		width: 20px;
 		height: 13px;
 		cursor: pointer;
+
+		.line1 {
+			animation: line1 .3s, aline1 .3s .3s forwards;
+		}
+		.line2 {
+			animation: line2 .3s forwards;
+			opacity: 0;
+		}
+		.line3 {
+			animation: line3 .3s, aline3 .3s .3s forwards;
+		}
+
+		.d-line1 {
+			animation: d-aline1 .3s, d-line1 .3s .3s forwards;
+		}
+		.d-line2 {
+			animation: d-line2 0.6s forwards;
+		}
+		.d-line3 {
+			animation: d-aline3 .3s, d-line3 .3s .3s forwards;
+		}
 	}
 
-	.ver {
+	#tips > div {
 		width: 17px;
 		height: 1px;
 		background-color: #38b7ea;
@@ -110,23 +134,6 @@ header {
 			top: 12px;
 		}
 	}
-
-	// 点击时用于改变按钮的状态
-	.active {
-		transform-origin: center center;
-		.ver:nth-of-type(1) {
-			top: 6px;
-			transform: rotate(45deg);
-		}
-		.ver:nth-of-type(2) {
-			top: 6px;
-			opacity: 0;
-		}
-		.ver:nth-of-type(3) {
-			top: 6px;
-			transform: rotate(135deg);
-		}
-	}
 }
 #nav-in-mobile {
 	position: absolute;
@@ -139,16 +146,11 @@ header {
 	opacity: 0;
 
 	&.active {
-		animation: showList .5s ease;
+		animation: showList .6s forwards;
 		display: block;
-		opacity: 1;
-		height: 306px;
 	}
 	&.active2 {
-		animation-name: hideList;
-		animation-duration: .5s;
-		opacity: 0;
-		height: 0;
+		animation: hideList .6s forwards;
 	}
 
 	.item {
@@ -176,6 +178,57 @@ header {
 	}
 }
 
+@keyframes logoInto {
+	0% { transform: rotate(0); }
+	100% { transform: rotate(360deg); }
+
+}
+
+// 展开按钮动画
+@keyframes line1 {
+	0% { top: 0 }
+	100% { top: 6px; }
+}
+@keyframes line2 {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+@keyframes line3 {
+	0% { top: 12px; }
+	100% { top: 6px; }
+}
+@keyframes aline1 {
+	0% { top: 6px; transform: rotate(0); }
+	100% { top: 6px; transform: rotate(45deg); }
+}
+@keyframes aline3 {
+	0% { top: 6px; transform: rotate(0); }
+	100% { top: 6px; transform: rotate(-45deg); }
+}
+
+@keyframes d-line1 {
+	0% { top: 6px; }
+	100% { top: 0 }
+}
+@keyframes d-line2 {
+	0% { opacity: 0; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes d-line3 {
+	0% { top: 6px; }
+	100% { top: 12px; }
+}
+@keyframes d-aline1 {
+	0% { top: 6px; transform: rotate(45deg); }
+	100% { top: 6px; transform: rotate(0); }
+}
+@keyframes d-aline3 {
+	0% { top: 6px; transform: rotate(-45deg); }
+	100% { top: 6px; transform: rotate(0); }
+}
+
+// 列表展开动画
 @keyframes showList {
 	0% {
 		opacity: 0;

@@ -4,7 +4,7 @@ title:  "获取元素的正确样式"
 date:   2015-12-05
 categories: jekyll update
 tags: javascript css html jQuery
-image: http://img.ui.cn/data/file/0/4/4/406440.gif
+image: /images/post/0001.jpg
 desc: 改成中文有效果吗...
 ---
 在学习js初期，就一直有一个疑问，获取元素样式的值，不是直接使用
