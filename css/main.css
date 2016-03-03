@@ -2,7 +2,7 @@
 
 .highlight {
     margin: 16px 0;
-    border: 1px solid #dedede;
+    border: 1px solid #ededed;
     background: #fff;
 }
 
@@ -13,6 +13,7 @@
 
 .highlight code {
     font-family: SourceCodePro;
+    line-height: 1.6;
 }
 
 .highlighter-rouge .highlight {

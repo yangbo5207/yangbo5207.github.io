@@ -4,7 +4,7 @@
 
 .highlight {
     background: #fff;
-    border: 1px solid #dedede;
+    border: 1px solid #ededed;
     margin: 16px 0;
 
     pre {
@@ -12,8 +12,9 @@
         overflow-x: auto;
     }
 
-    code { 
+    code {
         font-family: SourceCodePro;
+        line-height: 1.6;
     }
 
 
