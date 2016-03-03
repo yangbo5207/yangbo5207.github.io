@@ -35,7 +35,7 @@ layout: default
 						<img src="{{ post.image }}" >
 					</a>
 					<div class="card-info">
-						<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-title">{{ post.title }}</div></a>
+						<div class="card-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
 						<div class="desc">{{ post.desc }}</div>
 						<div class="time">{{ post.date }}</div>
 					</div>

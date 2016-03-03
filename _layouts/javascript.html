@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+    <link rel="stylesheet" href="{{ "/css/javascript.css" | prepend: site.baseurl }}">
+<body>
+	{% include header.html %}
+	{{ content }}
+
+	<script src="/js/lib/jquery-2.0.3.js"></script>
+	<script src="/js/lib/lazyload.js"></script>
+	<script src="/js/lib/j2ckf.js"></script>
+	<script src="/js/lib/css3-animation.js"></script>
+	<script src="/js/header.js"></script>
+
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</body>
+</html>

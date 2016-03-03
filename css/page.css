@@ -12,6 +12,7 @@
 
 .highlight pre {
     overflow-x: auto;
+    max-height: 300px;
     padding: 0 16px;
 }
 
