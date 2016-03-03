@@ -4,7 +4,7 @@
 <body>
 	{% include header.html %}
 	{{ content }}
-	
+
 	{% include footer.html %}
 
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
@@ -15,7 +15,7 @@
 			ds.type = 'text/javascript';ds.async = true;
 			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
 			ds.charset = 'UTF-8';
-			(document.getElementsByTagName('head')[0] 
+			(document.getElementsByTagName('head')[0]
 			 || document.getElementsByTagName('body')[0]).appendChild(ds);
 		})();
 		</script>
@@ -23,5 +23,6 @@
 
 	<script src="/js/lib/jquery-2.0.3.js"></script>
 	<script src="/js/post.js"></script>
+	<script src="/js/header.js"></script>
 </body>
 </html>
