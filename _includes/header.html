@@ -4,16 +4,50 @@
 		<div class="item">
 			<a href="/" class="logo"><img src="{{ "/images/logo.png" | prepend: site.baseurl }}"></a>
 		</div>
-		<div class="item tags active"><a href="/html/javascript/">Javascript</a></div>
-		<div class="item tags"><a href="/html/node/">Node</a></div>
-		<div class="item tags"><a href="/html/jquery/">JQuery</a></div>
-		<div class="item tags"><a href="/html/html5/">Html5</a></div>
-		<div class="item tags"><a href="/html/css3/">Css3</a></div>
-		<div class="item tags"><a href="/html/gulp/">Gulp</a></div>
-		<div class="item tags"><a href="/html/git/">Git</a></div>
-		<div class="item tags"><a target="_blank" href="http://www.jianshu.com/users/10ae59f49b13/latest_articles">简</a></div>
-		<div class="item tags"><a target="_blank" href="http://segmentfault.com/u/yangbo">S</a></div>
-		<div class="item tags"><a target="_blank" class="github" href="https://github.com/yangbo5207"></a></div>
+		{% if page.type == 'javascript' %}
+			<div class="item active"><a href="/html/javascript/">Javascript</a></div>
+		{% else %}
+			<div class="item"><a href="/html/javascript/">Javascript</a></div>
+		{% endif %}
+
+		{% if page.type == 'node' %}
+			<div class="item active"><a href="/html/node/">Node</a></div>
+		{% else %}
+			<div class="item"><a href="/html/node/">Node</a></div>
+		{% endif %}
+
+		{% if page.type == 'jquery' %}
+			<div class="item active"><a href="/html/jquery/">JQuery</a></div>
+		{% else %}
+			<div class="item"><a href="/html/jquery/">JQuery</a></div>
+		{% endif %}
+
+		{% if page.type == 'html5' %}
+			<div class="item active"><a href="/html/html5/">Html5</a></div>
+		{% else %}
+			<div class="item"><a href="/html/html5/">Html5</a></div>
+		{% endif %}
+
+		{% if page.type == 'css3' %}
+			<div class="item active"><a href="/html/css3/">Css3</a></div>
+		{% else %}
+			<div class="item"><a href="/html/css3/">Css3</a></div>
+		{% endif %}
+
+		{% if page.type == 'gulp' %}
+			<div class="item active"><a href="/html/gulp/">Gulp</a></div>
+		{% else %}
+			<div class="item"><a href="/html/gulp/">Gulp</a></div>
+		{% endif %}
+		
+		{% if page.type == 'git' %}
+			<div class="item active"><a href="/html/git/">Git</a></div>
+		{% else %}
+			<div class="item"><a href="/html/git/">Git</a></div>
+		{% endif %}
+		<div class="item"><a target="_blank" href="http://www.jianshu.com/users/10ae59f49b13/latest_articles">简</a></div>
+		<div class="item"><a target="_blank" href="http://segmentfault.com/u/yangbo">S</a></div>
+		<div class="item"><a target="_blank" class="github" href="https://github.com/yangbo5207"></a></div>
 	</div>
 	<div class="header-in-mobile">
 		<div id="logo">
