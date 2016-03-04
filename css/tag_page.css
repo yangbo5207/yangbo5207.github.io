@@ -843,9 +843,10 @@ aside {
     margin-top: -30px;
     margin-left: 20px;
     padding: 15px;
-    border: 1px solid rgba(105,167,240,.5);
     border-radius: 100%;
     background-color: #fff;
+    -webkit-box-shadow: 0 1px 3px rgba(150,150,150,.5);
+    box-shadow: 0 1px 3px rgba(150,150,150,.5);
 }
 
 .aside-wrap .avtor img {
