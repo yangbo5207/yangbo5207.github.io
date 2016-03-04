@@ -1,12 +1,17 @@
 ---
 layout: post
-title:  "八一八群的各位，大家好！"
+title:  "鬼故事"
 date:   2015-12-08 18:48:18 +0800
 categories: jekyll update
-tags: git html5 css3
+tags: javascript node jquery html5 css3 gulp git
 image: /images/post/0003.jpg
-desc: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes...
+desc: 这个时候，从远处传来了娜美的呼喊，可是李丽看着眼前的娜美，一阵惊悚，她颤抖着伸出手手想要摸一下对面这个人，可是... ...
 ---
-# 我这2天正在弄一个博客网站，请大家帮帮忙测试一下评论功能 ^_^。
-# 谢谢！
-# 随便留言！
+# 你说什么 ^_^。
+# 什么都没说
+# 可是我刚才听到声音了！
+# 可是我没有听到声音啊
+# 你不会中邪了吧？
+# 你确定你刚才没听到声音？
+
+这个时候，从远处传来了娜美的呼喊，可是李丽看着眼前的娜美，一阵惊悚，她颤抖着伸出手手想要摸一下对面这个人，可是... ...

@@ -288,6 +288,7 @@ body {
     background-color: #f5f8f9;
     -webkit-text-size-adjust: 100%!important;
     -webkit-text-size-adjust: none;
+    -webkit-touch-callout: none;
 }
 
 input {
@@ -371,6 +372,10 @@ header {
 }
 
 .header-in-pc .item a:hover {
+    color: #38b7ea;
+}
+
+.header-in-pc .item.active a {
     color: #38b7ea;
 }
 

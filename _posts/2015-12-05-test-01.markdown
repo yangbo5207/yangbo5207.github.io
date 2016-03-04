@@ -3,7 +3,7 @@ layout: post
 title:  "获取元素的正确样式"
 date:   2015-12-05
 categories: jekyll update
-tags: javascript css html jQuery
+tags: javascript node jquery html5 css3 gulp git
 image: /images/post/0001.jpg
 desc: 改成中文有效果吗...
 ---

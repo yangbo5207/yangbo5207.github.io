@@ -13,6 +13,7 @@ body {
     background-color: #f5f8f9;
     -webkit-text-size-adjust: 100%!important;
     -webkit-text-size-adjust: none;
+    -webkit-touch-callout: none;
 }
 
 input {
@@ -96,6 +97,10 @@ header {
 }
 
 .header-in-pc .item a:hover {
+    color: #38b7ea;
+}
+
+.header-in-pc .item.active a {
     color: #38b7ea;
 }
 
@@ -821,7 +826,7 @@ aside {
 .aside-wrap {
     height: 100%;
     margin-top: 70px;
-    background-color: #68a5ed;
+    background-color: #fff;
 }
 
 .aside-wrap .banner {
@@ -838,6 +843,7 @@ aside {
     margin-top: -30px;
     margin-left: 20px;
     padding: 15px;
+    border: 1px solid rgba(105,167,240,.5);
     border-radius: 100%;
     background-color: #fff;
 }
@@ -853,14 +859,14 @@ aside {
     line-height: 1;
     margin-top: 30px;
     margin-left: 16px;
-    color: #fff;
+    color: #5b5b5b;
 }
 
 .aside-wrap .desc {
     font-size: 12px;
     line-height: 2;
     margin: 20px 16px;
-    color: #fff;
+    color: #5b5b5b;
 }
 
 .content-wrap {
@@ -906,6 +912,10 @@ hgroup .header {
     border-bottom: 1px solid #eceff2;
 }
 
+.card:last-child {
+    border-bottom: none;
+}
+
 .card .card-img {
     display: block;
     width: 65px;
@@ -934,11 +944,12 @@ hgroup .header {
 }
 
 .card .card-info .card-title a {
-    font-weight: 700;
+    line-height: 14px;
     color: #333;
 }
 
 .card .card-info .desc {
+    font-size: 13px;
     line-height: 1.8;
     margin-top: 8px;
     color: #5b5b5b;
@@ -948,6 +959,7 @@ hgroup .header {
     font-family: proxima;
     font-size: 12px;
     line-height: 2;
+    margin-top: 6px;
     color: #ccc;
 }
 

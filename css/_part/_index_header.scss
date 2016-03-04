@@ -38,6 +38,12 @@ header {
 				color: #38b7ea;
 			}
 		}
+
+		&.active {
+			a {
+				color: #38b7ea;
+			}
+		}
 	}
 	.logo {
 		display: block;

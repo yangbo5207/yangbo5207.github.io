@@ -1,36 +1,34 @@
 ---
-layout: default
+layout: tag-page
 ---
-
-<div class="index-content">
-	<div class="wrapper">
-		<div class="top-container clearfix">
-			<div class="details">
-				<h2 class="section-title">Jquery</h2>
-				<p class="section-meta">jQuery是一套跨浏览器的JavaScript库，强化HTML与JavaScript之间的操作。由John Resig在2006年1月的BarCamp NYC上释出第一个版本。目前全球有28%的网站使用jQuery，是目前最受欢迎的JavaScript库。</p>
-			</div>
+<div class="wrapper">
+	<aside>
+		<div class="aside-wrap">
+			<img class="banner" src="/images/jquery/banner.jpg">
+			<div class="avtor"><img src="/images/icon-jq-3.png"></div>
+			<p class="title">JQuery</p>
+			<p class="desc">jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
 		</div>
+	</aside>
 
-		<div class="cards clearfix">
-			<!-- 文章列表 -->
-			{% for post in site.tags.jquery %}
+	<div class="content-wrap">
+		<hgroup>
+			<div class="header">文章列表</div>
+			{% for post in site.tags.javascript %}
 				<div class="card">
 					<a  class="card-img" href="{{ post.url | prepend: site.baseurl }}">
 						<img src="{{ post.image }}" >
 					</a>
 					<div class="card-info">
-						<a href="{{ post.url | prepend: site.baseurl }}"><div class="card-title">{{ post.title }}</div></a>
-						<div class="in">
-							<div class="tags">
-								{% for tag in post.tags %}
-									<span class="{{ tag }}"></span>
-								{% endfor %}
-							</div>
-							<div class="time">{{ post.date | date: "%b %-d, %Y" }}</div>
-						</div>
+						<div class="card-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
+						<div class="desc">{{ post.desc }}</div>
+						<div class="time">{{ post.date }}</div>
 					</div>
 				</div>
 			{% endfor %}
-		</div>
+		</hgroup>
+		<footer>
+			Yangbo Corporation @2016
+		</footer>
 	</div>
 </div>

@@ -3,7 +3,7 @@ layout: post
 title:  "获取元素的正确样式"
 date:   2015-12-05
 categories: jekyll update
-tags: javascript css3 html5 jQuery
+tags: javascript node jquery html5 css3 gulp git
 image: /images/post/0004.jpg
 desc: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes...
 ---

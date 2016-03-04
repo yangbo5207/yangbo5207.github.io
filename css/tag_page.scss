@@ -33,7 +33,7 @@ aside {
 }
 .aside-wrap {
 	margin-top: 70px;
-	background-color: rgb(104, 165, 237);
+	background-color: #fff;
 	height: 100%;
 
 	.banner {
@@ -50,6 +50,7 @@ aside {
 		margin-left: 20px;
 		margin-top: -30px;
 		position: relative;
+		border: 1px solid rgba(105, 167, 240, .5);
 		img {
 			width: 30px;
 			height: 30px;
@@ -57,7 +58,7 @@ aside {
 	}
 
 	.title {
-		color: #fff;
+		color: #5b5b5b;
 		font-size: 18px;
 		font-weight: bold;
 		margin-left: 16px;
@@ -67,7 +68,7 @@ aside {
 
 	.desc {
 		margin: 20px 16px;
-		color: #fff;
+		color: #5b5b5b;
 		font-size: 12px;
 		line-height: 2;
 	}
@@ -105,6 +106,9 @@ hgroup {
 	display: flex;
 	padding: 30px 16px;
 	border-bottom: 1px solid #eceff2;
+	&:last-child {
+		border-bottom: none;
+	}
 
 	.card-img {
 		display: block;
@@ -120,19 +124,21 @@ hgroup {
 		font-size: 14px;
 		line-height: 1;
 		.card-title a {
-			font-weight: bold;
 			color: #333;
+			line-height: 14px;
 		}
 		.desc {
 			margin-top: 8px;
 			color: #5b5b5b;
 			line-height: 1.8;
+			font-size: 13px;
 		}
 		.time {
 			font-size: 12px;
 			font-family: proxima;
 			color: #ccc;
 			line-height: 2;
+			margin-top: 6px;
 		}
 	}
 }

@@ -5,6 +5,7 @@ date:   2015-12-04 18:48:18 +0800
 categories: jekyll update
 desc: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes...
 image: /images/post/0005.jpg
+tags: javascript node jquery html5 css3 gulp git
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

@@ -186,6 +186,9 @@
 			padding-top: 30px;
 			padding-bottom: 20px;
 			display: flex;
+			&:last-child {
+				border-bottom: none;
+			}
 
 			&:first-child {
 				padding-top: 9px;
@@ -207,18 +210,21 @@
 				flex: 1;
 				font-size: 14px;
 				.card-title a {
-					font-weight: bold;
 					color: #333;
-					line-height: 1;
+					line-height: 14px;
+					display: block;
+					font-size: 14px;
 				}
 				.time {
 					font-size: 12px;
 					font-family: proxima;
 					color: #ccc;
+					margin-top: 8px;
 					/* text-align: right; */
 				}
 				.desc {
 					margin-top: 8px;
+					font-size: 13px;
 					color: #5b5b5b;
 					line-height: 1.8;
 				}

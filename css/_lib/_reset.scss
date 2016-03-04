@@ -19,6 +19,7 @@ body {
     -webkit-text-size-adjust: none; /*让谷歌浏览器可是设置字体小于12px*/
     margin: 0;
     background-color: #f5f8f9;
+	-webkit-touch-callout: none;
 }
 
 input {
