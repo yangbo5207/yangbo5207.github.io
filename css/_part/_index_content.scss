@@ -65,6 +65,7 @@
 		.weibo {
 			/* font-family: fzlt-qianhei; */
 			font-size: 13px;
+			color: #fff;
 			text-align: center;
 			display: block;
 			width: 150px;
@@ -74,10 +75,12 @@
 			color: #fff;
 			margin: 15px auto 0;
 			border-radius: 15px;
+
+
 		}
 		.front {
 			text-align: center;
-			margin-top: 20px;
+			margin-top: 30px;
 			font-size: 13px;
 			color: #b3b6b8;
 			border-top: 1px solid #eceff2;
@@ -243,6 +246,116 @@
 				order: 2;
 				margin-top: 20px;
 			}
+		}
+	}
+}
+
+// 关注我按钮动画实现
+.winbtn {
+	margin-top: 20px;
+	position: relative;
+	width: 150px;
+	height: 35px;
+	margin: 0 auto;
+	border-radius: 4px;
+	perspective: 300;
+	box-shadow:  0 -1px 2px #fff, inset 0 1px 2px rgba(0,0,0,.2), inset 0 .25rem 1rem rgba(0,0,0,.1);
+	transition-duration: .6s;
+	box-sizing: border-box;
+	transition-timing-function: ease;
+	div { transition-duration: .6s; }
+
+
+	.button {
+		transition-timing-function: ease;
+		opacity: 0;
+		text-align: center;
+		a {
+			color: #6aadfc;
+			font-size: 12px;
+		}
+	}
+
+	.cover {
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+		transform-origin: center bottom;
+		transform-style: preserve-3d;
+		pointer-events: none;
+		z-index: 100;
+
+		.innie, .outie, .spine {
+			position: absolute;
+			width: 100%;
+		}
+
+		.innie, .outie {
+			height: 100%;
+			background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.1) 100%);
+			border-radius: 4px;
+			color: #fff;
+			font-size: 14px;
+			line-height: 35px;
+			text-align: center;
+		}
+		.innie {
+			background-color: #67e2fe;
+			text-shadow: 0 -2px 4px rgba(0,0,0,.2);
+		}
+		.spine {
+			top: 4px;
+			background: #20C7F3;
+			height: 4px;
+			transform: rotateX(90deg);
+			transform-origin: center top;
+		}
+		.outie {
+		    background-color: #2EC8FA;
+		    transform: translateZ(4px);
+		    text-shadow: 0 2px 4px rgba(0,0,0,.2);
+		}
+	}
+
+	.shadow {
+		position: absolute;
+		width: 100%;
+		top: 100%; left: 0;
+		height: 30px;
+		transform-origin: center top;
+		transform: rotateX(90deg);
+		opacity: 0;
+		z-index: 0;
+		background-image: linear-gradient(to bottom, rgba(0,0,0,.6) 0%, transparent 100%);
+  		border-radius: 6px;
+	}
+
+	&:hover {
+		background: #EBEFF2;
+
+		.button {
+			opacity: 1;
+		}
+
+		.cover, .innie, .spine, .outie {
+			transition-timing-function: cubic-bezier(.2,.7,.1,1.1);
+		}
+
+		.cover {
+			transform: rotateX(-120deg);
+		}
+		.innie {
+			background-color: #3ADAFC;
+		}
+		.spine {
+			background-color: #52B1E0;
+		}
+		.outie {
+			background-color: #2174A0;
+		}
+
+		.shadow {
+			opacity: 1;
+			transform: rotateX(45deg) scale(.95);
 		}
 	}
 }

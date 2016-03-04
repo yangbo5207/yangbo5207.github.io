@@ -1144,6 +1144,7 @@ footer {
     margin: 15px auto 0;
     text-align: center;
     color: #fff;
+    color: #fff;
     border-radius: 15px;
     background-color: #38b7ea;
 }
@@ -1151,7 +1152,7 @@ footer {
 .index-content .myself .front {
     font-size: 13px;
     line-height: 50px;
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
     color: #b3b6b8;
     border-top: 1px solid #eceff2;
@@ -1351,6 +1352,167 @@ footer {
         -ms-flex-order: 2;
         order: 2;
     }
+}
+
+.winbtn {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 150px;
+    height: 35px;
+    margin: 0 auto;
+    margin-top: 20px;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: .6s;
+    -moz-transition-duration: .6s;
+    transition-duration: .6s;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 -1px 2px #fff,inset 0 1px 2px rgba(0,0,0,.2),inset 0 .25rem 1rem rgba(0,0,0,.1);
+    box-shadow: 0 -1px 2px #fff,inset 0 1px 2px rgba(0,0,0,.2),inset 0 .25rem 1rem rgba(0,0,0,.1);
+    -webkit-perspective: 300;
+    -moz-perspective: 300;
+    perspective: 300;
+}
+
+.winbtn div {
+    -webkit-transition-duration: .6s;
+    -moz-transition-duration: .6s;
+    transition-duration: .6s;
+}
+
+.winbtn .button {
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    transition-timing-function: ease;
+    text-align: center;
+    opacity: 0;
+}
+
+.winbtn .button a {
+    font-size: 12px;
+    color: #6aadfc;
+}
+
+.winbtn .cover {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom;
+    pointer-events: none;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.winbtn .cover .innie,.winbtn .cover .outie,.winbtn .cover .spine {
+    position: absolute;
+    width: 100%;
+}
+
+.winbtn .cover .innie,.winbtn .cover .outie {
+    font-size: 14px;
+    line-height: 35px;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    background-image: -webkit-linear-gradient(top,transparent 0,rgba(0,0,0,.1) 100%);
+}
+
+.winbtn .cover .innie {
+    background-color: #67e2fe;
+    text-shadow: 0 -2px 4px rgba(0,0,0,.2);
+}
+
+.winbtn .cover .spine {
+    top: 4px;
+    height: 4px;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: center top;
+    -moz-transform-origin: center top;
+    -ms-transform-origin: center top;
+    transform-origin: center top;
+    background: #20c7f3;
+}
+
+.winbtn .cover .outie {
+    -webkit-transform: translateZ(4px);
+    -moz-transform: translateZ(4px);
+    transform: translateZ(4px);
+    background-color: #2ec8fa;
+    text-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+.winbtn .shadow {
+    position: absolute;
+    z-index: 0;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: center top;
+    -moz-transform-origin: center top;
+    -ms-transform-origin: center top;
+    transform-origin: center top;
+    opacity: 0;
+    border-radius: 6px;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.6)),to(transparent));
+    background-image: -webkit-linear-gradient(top,rgba(0,0,0,.6) 0,transparent 100%);
+    background-image: -moz-linear-gradient(top,rgba(0,0,0,.6) 0,transparent 100%);
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.6) 0,transparent 100%);
+}
+
+.winbtn:hover {
+    background: #ebeff2;
+}
+
+.winbtn:hover .button {
+    opacity: 1;
+}
+
+.winbtn:hover .cover,.winbtn:hover .innie,.winbtn:hover .outie,.winbtn:hover .spine {
+    -webkit-transition-timing-function: cubic-bezier(.2,.7,.1,1.1);
+    -moz-transition-timing-function: cubic-bezier(.2,.7,.1,1.1);
+    transition-timing-function: cubic-bezier(.2,.7,.1,1.1);
+}
+
+.winbtn:hover .cover {
+    -webkit-transform: rotateX(-120deg);
+    -moz-transform: rotateX(-120deg);
+    transform: rotateX(-120deg);
+}
+
+.winbtn:hover .innie {
+    background-color: #3adafc;
+}
+
+.winbtn:hover .spine {
+    background-color: #52b1e0;
+}
+
+.winbtn:hover .outie {
+    background-color: #2174a0;
+}
+
+.winbtn:hover .shadow {
+    -webkit-transform: rotateX(45deg) scale(.95);
+    -moz-transform: rotateX(45deg) scale(.95);
+    transform: rotateX(45deg) scale(.95);
+    opacity: 1;
 }
 
 @font-face {
