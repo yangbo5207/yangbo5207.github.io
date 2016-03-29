@@ -363,6 +363,3 @@ $.merge($.merge([], arr), arr2);
 将类数组对象转换为数组
 ##### `$(elem).toArray()`
 将jQuery对象集合恢复成DOM数组
-
-<p data-height="268" data-theme-id="0" data-slug-hash="qZBOyz" data-default-tab="result" data-user="LukyVj" class='codepen'>See the Pen <a href='http://codepen.io/LukyVj/pen/qZBOyz/'>French wavy flag</a> by LukyVJ (<a href='http://codepen.io/LukyVj'>@LukyVj</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>

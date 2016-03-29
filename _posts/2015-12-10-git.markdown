@@ -1,206 +1,41 @@
 ---
 layout: post
-title:  "git终极指南：在实际场景中的应用"
+title:  如何解决移动端的点击事件？
 date:   2015-12-10 11:18:18 +0800
-categories: jekyll update
-tags: git github git@osc
+tags: javascript
 image: /images/post/0002.jpg
-desc: 一般说来，实际开发中，我们会有三个不同场景的代码。你的本地代码，测试服务器的代码，以及正式服务器的代码。当我们在本地开发好代码，还需要上传到测试服务器进行测试，确保没有问题了，然后才会将代码部署到正式服务器。...
+desc: 本来点击事件不应该成为一个问题，但是很可惜的是，在移动端的浏览器中，`click`事件有300ms左右的响应延迟，因此为了更好的用户体验便不能直接在移动端使用`click`为元素添加点击...
 ---
-看完了前面几篇博客，也许你就能够掌握一些基本的git操作。不过显然在实际开发中，情况并不是这么简单。
 
-一般说来，实际开发中，我们会有三个不同场景的代码。你的本地代码，测试服务器的代码，以及正式服务器的代码。当我们在本地开发好代码，还需要上传到测试服务器进行测试，确保没有问题了，然后才会将代码部署到正式服务器。
-除此之外，我们的开发团队，还有另外一个需求，那就是多人协作开发。同一个项目，不同的人都会参与进来，完成各自负责的部分。
-为了应对上述的需求，git提供给我们的解决方案大致为，找到一个git服务器，这里将会保存我们的代码。当我们在本地将代码开发完成，push到这个git服务器，然后在测试和正式服务器中，只需执行pull操作，就可以将代码部署到测试/正式服务器。是的，通常大家所说的上线，只是执行了一个pull操作。那么实际步骤该如何操作呢？
+本来点击事件不应该成为一个问题，但是很可惜的是，在移动端的浏览器中，`click`事件有300ms左右的响应延迟，因此为了更好的用户体验便不能直接在移动端使用`click`为元素添加点击事件。
 
+`zepto.js`为了解决这个问题，为我们提供了`tap`[轻击]来替换`click`，可是用了一段时间之后，发现`tap`事件存在一个点透问题，即能够触发元素下一层的点击事件，而使得该方案也变得问题多多。
 
-![关系图](http://upload-images.jianshu.io/upload_images/599584-686cb6aa45780f51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+好在目前也有许多的解决方案，让这个简单但是一波三折的问题得到了解决。
 
-##### 第一步 寻找一个适合自己的git服务器
-我们可以自己动手搭建一个git服务器，[参考这里](http://git.oschina.net/progit/)，相信你很快就能掌握搭建自己git服务器的技巧。
-最最出名的[github](https://github.com/)，就是我们十分常用的git服务器，不过想要创建私有项目要给钱。因此，如果你的项目代码公开没有什么问题，又或者你不缺钱的话，github将是不错的选择。
-
-如果你又不想花钱，又想要自己能够创建私有项目，那么你可以去了解一下[gitlab](https://gitlab.com/)。
-而我这里选择了[git.oschina.net](git.oschina.net)，至于为什么选择他，主要还是因为他是中文的吧，便于阅读，而且用户很多，有自己成熟的社区，而且帮助文档都是中文的，对于英语阅读能力欠佳的我来说，用起来还是挺舒服的。
-
-##### 第二步 配置个人信息，确保你能够从git@osc上正常推送和拉取代码
-
-- 使用常用邮箱或者工作邮箱在[git.oschina.net](git.oschina.net)上注册一个账号
-- 在本地电脑安装好git：在mac中，可直接使用终端进行git的操作，在windows中，利用cmd在git安装目录下运行`git-bash.exe`，会弹出专门用于git操作的命令行工具。
-- 使用注册账号的邮箱配置ssh key ，假设我的注册邮箱为`yb_837@163.com`
-  + 首先，输入以下指令查看本地是否已经存在ssh key
+1、 在移动端使用`touchend`事件代替`click`事件，使用方式如下  
 
 ```js
-$ cat ~/.ssh/id_rsa.pub
-```
-
-如果返回结果类似如下，说明你的电脑本地已经有了一个ssh key，可直接使用
-
-```js
-ssh-rsa
-AAAAB3NzaC1yc2EAAAADAQABAAABAQDhVyIw23cuQ5yJVVqi51l
-0xPlcaBy1oFug/D7ELCYwi0qNUmpUsMUg2E81vfHabJrmCKQ/6nb
-39jJE8SjwKmtPKr380CWJ0mJpdngK6S+I/Iv41nJQTRNKsZj0Rw4YU
-/lXCJfJ7bjIzWJpi+HA6co92TGXkTWOh2NdE6/dSNlXZcMsEbjNHn1d
-s6jbrp168W8tExSSLUqPVdGsXmouQ1CmWwmp6sgq7b7ag+gJQA
-knzPlP4HaGURSyMPuS6dkd8iu23geDwJwoYdV+xYFuBKfgzPL1usV
-qGnMfB3+zH87s+XUKlZ2c5ciClnlyr886UBCVQuiIOeuaPidLAKHBpjKd yb_837@163.com
-```
-
-如果没有，或者你想使用另外一个邮箱生成新的ssh key，则需要输入以下指令重新生成。
-
-```js
-$ ssh-keygen -t rsa -C "yb_837@163.com"
-```
-
-然后可能会出现以下提示：
-
-```js
-Enter file in which to save the key (/c/Users/yangbo/.ssh/id_rsa):
-```
-
-输入`id_rsa`点击enter，后面的提示可以直接输入enter跳过，就ok了。
-然后再查看生成的ssh key
-
-```js
-$ cat ~/.ssh/id_rsa.pub
-```
-
-> 一般来说，ssh-key都保存在 `~/.ssh/`目录下的`id_rsa.pub`文件里，如果你在操作过程中发现本地没有.ssh目录，只需要在`~`目录下手动创建即可
-
-```js
-$ mkdir .ssh
+var clickEvent = 'ontouchend' in document ? 'touchend' : 'click';
+$(ele).on(clickEvent, function(event) {
+    // 如果在移动端，一定要记得阻止默认事件
+    event.preventDefault();
+    // do something
+})
 ```
 
 
-   + 然后登陆`git@osc`，点击右上角的个人资料图标
+2、 使用[`fastclick.js`](https://github.com/ftlabs/fastclick)，点击可在github上查看详情  
 
-
-![个人资料图标](http://upload-images.jianshu.io/upload_images/599584-02ca03124c22a7f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-+ 点击左侧的`ssh公钥`
-
-![ssh公钥](http://upload-images.jianshu.io/upload_images/599584-cfc593b7c9a239fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-+ 将你本地文件`~/.ssh/id_rsa.pub`中的内容复制到下图所示的公钥框中，标题会自动填充为邮箱，然后点击确认，ssh-key就已经添加成功了
-
-![添加公钥](http://upload-images.jianshu.io/upload_images/599584-d00a0d2c0793dabe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-公钥是git服务器确认你身份的凭证，公钥添加之后，你不仅可以从git服务器上clone代码下来，还可以将本地修改的内容push到git服务器，你可以根据下面的提示将这个过程简单演示一下。
-
-- 在git@osc上创建一个新的空项目
-- 在项目的页面复制项目的ssh链接
-> 这里的clone地址一般有https与ssh2中协议，具体区别请在gitpro中了解，我们一般使用的是ssh协议，这里一定要注意区分
-
-- 克隆代码到本地
--
-```js
-$ git clone git@git.oschina.net:ybobo/wxinterface.git
-```
-
-- 进入到项目文件夹，对本地代码稍作修改，你可以随时使用`git status`查看代码的状态
-- 修改代码之后，进行提交推送操作，如下
+在jQuery/zepto中，用如下方式使用即可  
 
 ```js
-$ git add .
-$ git commit -m "initial code"
-$ git push origin master
+(function($, undefined) {
+    FastClick.attach(document.body);
+
+    // 然后就可以直接绑定click事件了
+    $(ele).click(function() {
+        // do something
+    });
+})(Zepto);
 ```
-这样，修改的代码就已经提交到了git@osc上
-
-##### 第三步 创建项目组并添加项目成员
-登陆git@osc, 在如图所示的地方，点击创建项目组
-
-
-![创建项目组](http://upload-images.jianshu.io/upload_images/599584-58aad6d77a14debf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-然后按照提示填写项目组相关信息。
-
-进入刚才创建的项目组，点击成员
-
-![成员](http://upload-images.jianshu.io/upload_images/599584-448fcfe6de4ff992.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-添加成员
-
-![添加成员](http://upload-images.jianshu.io/upload_images/599584-e4e1a779e767e369.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-在搜索框中输入其他用户的昵称或者邮箱，都可以找到他
-
-![](http://upload-images.jianshu.io/upload_images/599584-5e4c5bc496d9d7e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-添加的时候，你还可以对每个人设置不同的权限，都是很简单明了的操作。当你将所有将要参与到这个项目中的人都添加进来的之后，大家就可以对同一个项目进行操作了。
-##### 第四步 创建项目
-
-创建项目的操作在git@osc上很简单，我就不多说，项目创建完成之后，将项目拉进你所创建的项目组里面就可以了。
-
-在项目创建之初，只有一个master分支。很显然，当我们在实际开发应用中时，一个分支并不能满足我们所有的要求。
-我们需要有一个线上的稳定版本。
-我们还需要有一个随时可以修改代码的开发版本。
-因此，我们至少需要2个分支。一般说来，线上的稳定版本，都是使用master分支，而我们的开发代码分支，这里我们假设取名为develop.
-
-一般我的习惯是先在git服务器上创建一个只有一个master分支的空repository。然后拉取到本地
-
-```js
-$ git clone git@git.oschina.net:ybobo/wxinterface.git
-```
-创建新的develop分支
-
-```js
-$ git branch develop
-```
-切换到新分支
-
-```js
-$ git checkout develop
-```
-推送新的分支到git服务器
-
-```js
-$ git push origin develop
-```
-
-当我们开发的时候，所有人都只能操作develop分支，都不要直接往master分支上推送任何代码。否则很容易造成混乱。如果你更新了一些内容，并且确认这些内容可以发布上线，就通过develop分支向master提交`pull request`。
-
-首先将开发好的代码推送到develop分支
-
-```js
-$ git pull origin develop
-$ git add .
-$ git commit -m "我开发的新功能"
-$ git push origin develop
-```
-然后在develop分支上创建`pull request`
-
-![首先点击pull request按钮](http://upload-images.jianshu.io/upload_images/599584-71e79b3ccb08aefb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
-创建pull request
-![目标分支为master分支，指派给项目lead，里程碑就是版本标签](http://upload-images.jianshu.io/upload_images/599584-937d06d6410fac50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
-![项目成员提交pull request 给lead之后，lead只需点击接受就可以将代码合并到master分支](http://upload-images.jianshu.io/upload_images/599584-d92f9be991eca01e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-经过这个过程，我们要上线的功能就已经合并到master分支上了。这个时候，我们只需要在测试/正式服务器上执行pull操作，就可以将代码上线到服务器上了。
-
-```js
-$ git pull origin master
-```
-当然，如果我们是第一次操作，我们需要在服务器clone一下
-
-```js
-git clone git@git.oschina.net:ybobo/wxinterface.git
-```
-
-当然，在这之前，你必须要在代码服务器上安装git等必须的软件。具体安装方法不在本文的讨论范围，如果不会的话，大家可以去网上找找资料。
-
-请务必要分清楚，本文所讲的几个概念。
-本地电脑：你用于开发的电脑
-git服务器：你用来管理代码版本的地方，这里是指git@osc
-你项目的服务器：你的代码，数据等存放的地方，你的最终目的就是将代码从本地传到这里来。
-
-如果你在按照我说的步骤操作过程中遇到什么问题，可以在评论里问我。^_^
-
-##### 最后
-尽管搞明白我写的这些已经可以应付很多应用场景了，不过我所说的终究只是一些基础，想要进一步提高，还得细细研读[git pro](http://git.oschina.net/progit/)。
-
-另外，如果你正在使用mac开发代码的话，推荐一款git可视化工具`Tower`。超级棒，也很简单的工具，你值得一试。
