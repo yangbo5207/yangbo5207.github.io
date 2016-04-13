@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box"></div>
+
+</body>
+<script src="/yb.js"></script>
+<script src="/js/lib/animation.js"></script>
+<script type="text/javascript">
+
+(function(ROOT, undefined) {
+        var box = document.getElementById('box');
+
+        // animation(box, 1000, 'width', 300);
+        var xxx = new TouchSlider(box);
+        xxx.slide(2000, 'left', 300);
+
+})(window)
+
+</script>
+</html>
