@@ -8,16 +8,22 @@
         #box {
             width: 100px;
             height: 100px;
+            overflow: hidden;
             background-color: orange;
             position: absolute;
             left: 0;
-            top: 20px;
+            top: 0px;
+            transform: translate(0);
+        }
+        img {
+            display: block;
+            width: 100%;
         }
     </style>
 </head>
 <body>
 
-<div id="box"></div>
+<div id="box"><img src="https://static.tigerbrokers.com/portal/images/index/icon1.c2aa741c.png" alt=""></div>
 
 </body>
 <script src="/yb.js"></script>
@@ -30,11 +36,13 @@
         // animation(box, 1000, 'width', 300);
         var xxx = new TouchSlider(box);
         xxx.slide(1000, {
-            left: 300,
-            top: 200
+            y: 200,
+            x: 300,
+            width: 200,
+            height: 200,
         });
 
-})(window)
+})(window);
 
 </script>
 </html>

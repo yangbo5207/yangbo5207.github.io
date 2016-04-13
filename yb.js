@@ -89,9 +89,21 @@
 
     // 获取/设置元素的属性  当props时一个字符串时，表示获取  当props是一个对象是，表示设置
     yb.css = function(elem, props) {
+        var transform = this.cssTest('transform');
+        var style = window.getComputedStyle && window.getComputedStyle(elem, null) || elem.currentStyle || elem.style;
         if (yb.type(props) == 'string') {
-            var style = window.getComputedStyle && window.getComputedStyle(elem, null) || elem.currentStyle || elem.style;
-            return style[props];
+            switch (props) {
+                case 'translateX':
+                    if (style[transform] == 'none') return 0;
+                    return style[transform].match(/\d+/g)[4];
+                    break;
+                case 'translateY':
+                    if (style[transform] == 'none') return 0;
+                    return style[transform].match(/\d+/g)[5];
+                default:
+                    return style[props];
+
+            }
         } else if(yb.type(props) == 'object') {
             yb.each(props, function(value, key) {
                 var prop;
@@ -100,12 +112,24 @@
                         elem.style.filter = 'alpha(opacity:'+ value +')';
                         elem.style.opacity = value/100;
                         break;
+                    case 'translateX':
+                        var matrix = style[transform];
+                        var prev = matrix.replace(/matrix\(|\)/gi, '').split(',');
+                        prev[4] = value;
+                        var _matrix = 'matrix('+ prev.join(', ') +')';
+                        elem.style[transform] = _matrix;
+                        break;
+                    case 'translateY':
+                        var matrix = style[transform];
+                        var prev = matrix.replace(/matrix\(|\)/gi, '').split(',');
+                        prev[5] = value;
+                        var _matrix = 'matrix('+ prev.join(', ') +')';
+                        elem.style[transform] = _matrix;
+                        break;
                     default:
                         prop = yb.camelCase(key);
+                        elem.style[prop] = value;
                 }
-                try {
-                    elem.style[prop] = value;
-                } catch(e) {}
             })
         }
     }
