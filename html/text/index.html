@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Document</title>
     <style>
         #box {
@@ -10,6 +11,7 @@
             background-color: orange;
             position: absolute;
             left: 0;
+            top: 20px;
         }
     </style>
 </head>
@@ -27,7 +29,10 @@
 
         // animation(box, 1000, 'width', 300);
         var xxx = new TouchSlider(box);
-        xxx.slide(2000, 'left', 300);
+        xxx.slide(1000, {
+            left: 300,
+            top: 200
+        });
 
 })(window)
 

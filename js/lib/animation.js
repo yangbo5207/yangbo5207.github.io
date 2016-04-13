@@ -26,23 +26,29 @@
 
     struct.prototype = {
         constructor: struct,
-        slide: function(duration, key, targVal, callback) {
+        slide: function(duration, props, callback) {
             var stime = +new Date;
             var self = this;
-            var iCur = parseFloat(yb.css(this.elem, key));
-            cancelFrame(self.timer);
+            var icur = {};
+            var cp = {};
 
+            cancelFrame(self.timer);
+            yb.each(props, function(val, key) {
+                icur[key] = parseFloat(yb.css(self.elem, key));
+            })
             ani();
 
             function ani() {
                 var offset = Math.min(duration, +new Date - stime);
                 var s = ease(offset, 0, 1, duration);
-                var cp = (targVal - iCur) * s + iCur;
-                self.elem.style[key] = cp + 'px';
+                yb.each(icur, function(val, key) {
+                    cp[key] = (props[key] - val) * s + val;
+                    self.elem.style[key] = cp[key] + 'px';
+                })
                 if (offset == duration) {
                     callback && callback();
                 } else {
-                    this.timer = nextFrame(ani);
+                    self.timer = nextFrame(ani);
                 }
             }
         }
