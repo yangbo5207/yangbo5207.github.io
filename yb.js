@@ -96,7 +96,6 @@
                 case 'translateX':
                     if (style[transform] == 'none') return 0;
                     return style[transform].match(/\d+/g)[4];
-                    break;
                 case 'translateY':
                     if (style[transform] == 'none') return 0;
                     return style[transform].match(/\d+/g)[5];

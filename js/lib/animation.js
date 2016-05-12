@@ -36,8 +36,6 @@
             var elem = self.elem;
             var style = ROOT.getComputedStyle && ROOT.getComputedStyle(elem, null) || elem.currentStyle || elem.style;
 
-            // alert(transform);
-
             cancelFrame(self.timer);
             yb.each(props, function(val, key) {
                 switch (key) {
