@@ -1,0 +1,20 @@
+.comments {
+	width: 100%;
+	box-sizing: border-box;
+	margin: 30px auto;
+	padding-bottom: 30px;
+
+	.ds-powered-by { display: none; }
+
+	#ds-thread #ds-reset li.ds-post {
+		border-top: 1px solid #ddd;
+	}
+	#ds-thread #ds-reset .ds-comments, #ds-thread #ds-reset .ds-paginator {
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 16px;
+	}
+
+	#ds-thread #ds-reset .ds-comment-actions a.ds-post-repost {
+		display: none;
+	}
+}

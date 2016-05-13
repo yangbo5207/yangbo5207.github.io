@@ -1,0 +1,86 @@
+/* 普通字体颜色 */
+$color-font: #333;
+
+/* 字体：自定义|无衬线|更多 */
+$font-me: proxima;
+$font-en: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fonts: fzlt-qianhei, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+
+a, img {
+	-webkit-touch-callout: none; /*禁止长按链接与图片弹出菜单*/
+}
+
+a,button,input,optgroup,select,textarea {
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /*去掉a、input和button点击时的蓝色外边框和灰色半透明背景*/
+}
+
+body {
+    -webkit-text-size-adjust: 100%!important; /*禁止IOS调整字体大小*/
+    -webkit-text-size-adjust: none; /*让谷歌浏览器可是设置字体小于12px*/
+    margin: 0;
+    background-color: #f5f8f9;
+	-webkit-touch-callout: none;
+}
+
+input {
+	outline: none;
+}
+
+ol, ul, li {
+	padding: 0;
+	list-style: none;
+}
+
+p {
+	margin: 0;
+}
+
+img {
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+/* 透明度 */
+@mixin opacity($opacity:.5) {
+    opacity:$opacity;
+    filter:alpha(opacity=$opacity*100);
+}
+
+/* 宽度适配函数 */
+@mixin screen_pad {
+    @media (max-width: $screen-pad) {
+        @content;
+    }
+}
+@mixin screen_ph {
+    @media (max-width: $screen-ph) {
+        @content;
+    }
+}
+
+/* 清除浮动 */
+.clearfix {
+	content: '';
+	display: block;
+	height: 0;
+	font-size: 0;
+	clear: both;
+}
+.clear {
+	zoom: 1;
+	&:after {
+		@extend .clearfix;
+	}
+}
+.aninode {
+	visibility: hidden;
+}
+.animated {
+	.aninode, &.aninode {
+		visibility: visible;
+	}
+}

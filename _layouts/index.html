@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+<body>
+	{% include header.html %}
+	{{ content }}
+	{% include footer.html %}
+	<script data-main="/static/pages/category/app" src="/static/scripts/libs/require.js"></script>
+</body>
+</html>
