@@ -1,5 +1,9 @@
 @charset 'UTF-8';
 
+@font-face {
+    font-family:SourceCodeProRegular;src:url(/static/fonts/sourceCodePro/SourceCodeProRegular.eot);src:url(/static/fonts/sourceCodePro/SourceCodeProRegular.eot) format('embedded-opentype'),url(/static/fonts/sourceCodePro/SourceCodeProRegular.woff2) format('woff2'),url(/static/fonts/sourceCodePro/SourceCodeProRegular.woff) format('woff'),url(/static/fonts/sourceCodePro/SourceCodeProRegular.ttf) format('truetype'),url(/static/fonts/sourceCodePro/SourceCodeProRegular.svg#SourceCodeProRegular) format('svg');
+}
+
 a,img {
     -webkit-touch-callout: none;
 }
@@ -797,13 +801,12 @@ footer {
 
 .highlight pre {
     overflow-x: auto;
-    max-height: 300px;
     padding: 0 16px;
 }
 
 .highlight code {
-    font-family: SourceCodePro;
-    line-height: 1.6;
+    font-family: SourceCodeProRegular;
+    line-height: 1.2;
 }
 
 .highlighter-rouge .highlight {
@@ -1060,11 +1063,8 @@ footer {
     color: #099;
 }
 
-@font-face {
-    font-family:SourceCodeProRegular;src:url(/static/fonts/sourceCodePro/SourceCodeProRegular.eot);src:url(/static/fonts/sourceCodePro/SourceCodeProRegular.eot) format('embedded-opentype'),url(/static/fonts/sourceCodePro/SourceCodeProRegular.woff2) format('woff2'),url(/static/fonts/sourceCodePro/SourceCodeProRegular.woff) format('woff'),url(/static/fonts/sourceCodePro/SourceCodeProRegular.ttf) format('truetype'),url(/static/fonts/sourceCodePro/SourceCodeProRegular.svg#SourceCodeProRegular) format('svg');
-}
-
 article {
+    line-height: 2;
     width: 90%;
     max-width: 700px;
     margin: 16px auto;
@@ -1084,6 +1084,7 @@ article .post-header {
 
 article .post-content {
     font-size: 14px;
+    margin-bottom: 20px;
 }
 
 article h1,article h2,article h3,article h4,article h5,article h6 {
