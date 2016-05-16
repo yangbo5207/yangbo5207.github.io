@@ -1,0 +1,68 @@
+@import '../../styles/_components/header';
+@import '../../styles/_components/footer';
+@import '../../styles/_libs/highlight';
+@import '../../styles/_libs/sourcecodepro';
+
+article {
+	width: 90%;
+	max-width: 700px;
+	margin: 16px auto;
+	padding: 0 16px;
+	background-color: #fff;
+	box-shadow: 0 1px 3px #dfe7eb;
+
+	.post-header {
+		height: 80px;
+		line-height: 80px;
+		border-bottom: 1px solid #eceff2;
+		font-size: 18px;
+		margin-bottom: 16px;
+	}
+
+	.post-content {
+		font-size: 14px;
+	}
+
+
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 2.0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: bold;
+	}
+
+	h1 { font-size: 20px; }
+	h2 { font-size: 18px; }
+	h3 { font-size: 17px; }
+	h4 { font-size: 16px; }
+	h5 { font-size: 14px; }
+	h6 { font-size: 13px; }
+
+	blockquote {
+		border: 1px solid #ccc;
+		border-left: 4px solid #ccc;
+		margin: 0;
+		color: #8f8f8f;
+		padding: 8px 16px;
+	}
+
+	code {
+		font-family: SourceCodeProRegular;
+		font-size: 12px;
+	}
+
+	img {
+		width: 100%;
+		display: block;
+		margin: 16px 0;
+	}
+
+	p {
+		margin: 8px 0;
+	}
+
+	a {
+		color: #43b0ee;
+	}
+}

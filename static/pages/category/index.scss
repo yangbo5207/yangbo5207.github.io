@@ -1,3 +1,6 @@
+@import "../../styles/_components/_header";
+@import "../../styles/_components/_footer";
+
 body {
 	font-family: proxima;
 	line-height: 1.6;
@@ -367,6 +370,10 @@ body {
 		.shadow {
 			opacity: 1;
 			transform: rotateX(45deg) scale(.95);
+		}
+
+		.box {
+			color: #fff;
 		}
 	}
 }

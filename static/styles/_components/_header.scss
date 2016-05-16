@@ -1,4 +1,5 @@
-@import "../_lib/_reset";
+@import "../_libs/reset";
+@import "../_libs/proxima";
 
 @mixin screen_w768 {
 	@media (max-width: 768px) {

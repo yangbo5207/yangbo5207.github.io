@@ -31,9 +31,9 @@ var
     paths = {
         htmlurl_start: ['**/!(_)*.{html,php}', '!{build, node_modules}/**'],
         htmlurl_watch: ['**/!(_)*.{html,php}'],
-    	cssurl_start: 'css/**/*.{scss, less, sass}',
-    	cssurl_end: 'css',
-        cssurl_watch: 'css/**/*.{scss, less, sass}',
+    	cssurl_start: 'static/pages/**/*.{scss, less, sass}',
+    	cssurl_end: 'static/pages',
+        cssurl_watch: 'static/pages/**/*.{scss, less, sass}',
     	jsurl_start: ['js/**/!(_)*.js', '!js/{node_modules,bower_components}/**/*'],
     	jsurl_end: 'js',
         jsurl_watch: ['js/**/!(_)*.js', '!js/{node_modules,bower_components}/**/*']
