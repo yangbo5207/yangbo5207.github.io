@@ -2,11 +2,11 @@ define(function(require) {
    var $ = require('jquery'),
        tips = $('#tips'),
        nav = $('#nav-in-mobile');
-   
+
    require('libs/jquery.tap');
-   
+
    tips.tap(triggerTips);
-   
+
    function triggerTips() {
         var tag = parseInt(tips.attr('data-tag'));
         if (tag == 0) {
