@@ -9940,10 +9940,10 @@ return jQuery;
 
 ;
 (function ($, undefined) {
-    document.documentElement.style.fontSize = $(document.documentElement).width()/3.75 + 'px';
-    $(window).on('resize', function() {
-        document.documentElement.style.fontSize = $(document.documentElement).width()/3.75 + 'px';
-    })
+    // document.documentElement.style.fontSize = $(document.documentElement).width()/3.75 + 'px';
+    // $(window).on('resize', function() {
+    //     document.documentElement.style.fontSize = $(document.documentElement).width()/3.75 + 'px';
+    // })
 
     // 初始化4个部分 1.剩余多少天 2.商品项目 3.购买记录 4.支付知否成功！
 
