@@ -29,14 +29,14 @@ var
     plumber = require('gulp-plumber'),
 
     paths = {
-        htmlurl_start: ['**/!(_)*.{html,php}', '!{build, node_modules}/**'],
-        htmlurl_watch: ['**/!(_)*.{html,php}'],
+        htmlurl_start: ['**/*.{html,php}', '!{build, node_modules}/**'],
+        htmlurl_watch: ['./**/*.html'],
     	cssurl_start: 'static/pages/**/*.{scss, less, sass}',
     	cssurl_end: 'static/pages',
         cssurl_watch: 'static/pages/**/*.{scss, less, sass}',
-    	jsurl_start: ['js/**/!(_)*.js', '!js/{node_modules,bower_components}/**/*'],
+    	jsurl_start: ['js/**/*.js', '!js/{node_modules,bower_components}/**/*'],
     	jsurl_end: 'js',
-        jsurl_watch: ['js/**/!(_)*.js', '!js/{node_modules,bower_components}/**/*']
+        jsurl_watch: ['js/**/*.js', '!js/{node_modules,bower_components}/**/*']
     },
 
     // 补全css3属性前缀插件，浏览器版本设置
@@ -47,7 +47,7 @@ gulp.task('html', function() {
         .pipe(plumber({
             errorHandler: handleError
         }))
-        .pipe(one())
+        // .pipe(one())
         .pipe(livereload({
             quiet: true
         }))
@@ -109,9 +109,19 @@ gulp.task('js', function() {
 
 gulp.task('watch', function() {
 	livereload.listen();
-    gulp.watch(paths.htmlurl_watch, ['html']);
-	gulp.watch(paths.cssurl_watch, ['css']);
-    gulp.watch(paths.jsurl_watch, ['js']);
+    // gulp.watch(paths.htmlurl_watch, ['html']);
+	// gulp.watch(paths.cssurl_watch, ['css']);
+    // gulp.watch(paths.jsurl_watch, ['js']);
+    gulp.watch(paths.htmlurl_watch, function() {
+        console.log(arguments);
+        console.log('html:', paths.htmlurl_watch);
+    });
+    // gulp.watch(paths.cssurl_watch, function() {
+    //     console.log('css:', paths.cssurl_watch);
+    // })
+    // gulp.watch(paths.jsurl_watch, function() {
+    //     console.log('js:', paths.jsurl_watch);
+    // })
 });
 
 // 默认任务

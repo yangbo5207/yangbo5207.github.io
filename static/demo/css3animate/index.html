@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <style>
+        body, html {
+            margin: 0;
+            height: 100%;
+        }
+        .wrap {
+            width: 100%;
+            max-width: 414px;
+            box-shadow: 0 0 10px #ccc;
+            margin: 0 auto;
+            height: 100%;
+            max-height: 736px;
+            padding-top: 30px;
+        }
+        .show-box {
+            display: block;
+            width: 200px;
+            height: 50px;
+            background-color: orange;
+            text-align: center;
+            margin: 0 auto;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 6px;
+        }
+
+        .box {
+            position: fixed;
+            width: 100%;
+            height: 200px;
+            bottom: 0;
+            transform: translateY(200px);
+            background: orange;
+            /* display: none; */
+        }
+        .active {
+            /* display: block; */
+            animation-name: show;
+            animation-duration: 0.3s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes show {
+            0% { transform: translateY(200px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <a href="javascript:;" class="show-box">Click me</a>
+        <div class="box"></div>
+    </div>
+</body>
+
+<script>
+    var tag = 0;
+    window.onload = function() {
+        var btn = document.querySelector('.show-box'),
+            box = document.querySelector('.box');
+
+        btn.onclick = function() {
+            if (tag == 0) {
+                box.className = 'box active';
+                tag = 1;
+            }
+            else {
+                box.className = 'box';
+                tag = 0;
+            }
+        }
+        box.addEventListener('animationend', function() {
+            console.log('animationend');
+        })
+    }
+</script>
+
+</html>

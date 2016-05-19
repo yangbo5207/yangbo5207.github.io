@@ -42,7 +42,7 @@
         style=doc.createElement('style');
         style.type='text/css';
         doc.getElementsByTagName('head')[0].appendChild(style);
-        
+
         return style.sheet;
     }
 
@@ -75,7 +75,7 @@
     function fixKey(key){
         return {from:'0%',to:'100%'}[key]||(key+'').replace('%','')+'%';
     }
-    
+
     function getKeyframesStyle(keys,name){
         var cssText="";
         if(typeof keys=='string'){
@@ -195,7 +195,7 @@
             return this.extract();
         }
     }
-            
+
     var extend={
         vendor:cssVendor,
         get:function(name){
@@ -218,7 +218,7 @@
     }
 
     if(typeof Object.defineProperties=='function'){
-        
+
         "name duration timing-function delay iteration-count direction play-state fill-mode".split(" ").forEach(function(prop){
             var name='animation-'+prop,
                 caseName=camelCase(name);
@@ -256,7 +256,7 @@
             return struct;
         });
     }else ROOT.JS2CSSKeyframes=struct;
-    
+
 })(window, function(name, keys){
     if(!(this instanceof arguments.callee)){
         return new arguments.callee(name, keys);
