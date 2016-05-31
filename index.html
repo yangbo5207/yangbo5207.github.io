@@ -1,69 +1,94 @@
 ---
-layout: index
+layout: new-index
 ---
 
-<div class="index-content">
-
-	<div class="item myself">
-		<div class="top">
-			<div class="name">我的名片</div>
+<section class="banner">
+	<img src="/static/images/index/bg1.jpg" alt="" class="block-img">
+	<div class="full">
+		<div class="full-bg"></div>
+		{% include new-header.html %}
+		<div class="view">
+			<div class="view-logo"></div>
+			<p class="slog-top">我想遇见你 我能遇见你</p>
+			<p class="slog-down">welcome</p>
+			<!-- <a class="click-me" href="#">了解我</a> -->
 		</div>
-		<img src="/images/myself/me.png" />
-		<h2>阳波</h2>
-		<p class="desc1">我在<a href="https://www.tigerbrokers.com/">老虎证劵</a></p>
-		<p class="desc2">毕业于四川师范大学</p>
-		<section class="winbtn">
-			<div class="button"><a href="#">Fllow @Ormie</a></div>
-			<div class="cover">
-				<div class="innie">Fllow me</div>
-				<div class="spine"></div>
-				<div class="outie">Fllow me</div>
+	</div>
+</section>
+
+<section class="object">
+	<div class="main">
+		<div class="title">要优雅不要污</div>
+		<img class="code-img" src="/static/images/index/section-object.png" alt="">
+	</div>
+</section>
+
+<section class="type">
+	<div class="main">
+		<div class="title">不总结的学习都是耍流氓</div>
+		<div class="items">
+			<div class="item">
+				<div class="icon"></div>
+				<h2 class="title">CSS 不简单</h2>
+				<p class="desc">Css对我的困扰一直就没有减少过。总会在工作中遇到更多的布局问题。</p>
 			</div>
-			<div class="shadow"></div>
-		</section>
-		<div class="front clear">
-			<div class="year">设计/前端</div>
-			<div class="worki">3年</div>
+			<div class="item">
+				<div class="icon"></div>
+				<h2 class="title">Javascript 从杂乱到优雅</h2>
+				<p class="desc">反正就是有很多内容，随便怎么说，变一变就好。 具有开阔的视野和良好的大局观善于从宏观的政治经济等大处着手全盘把脉从而抓住美股大盘的走势， 动能板块的风向标，发掘具有巨大发展潜力的黑马股。</p>
+			</div>
+			<div class="item">
+				<div class="icon"></div>
+				<h2 class="title">自动化 前端魔法师</h2>
+				<p class="desc">反正就是有很多内容，随便怎么说，变一变就好。 具有开阔的视野和良好的大局观善于从宏观的政治经济等大处着手全盘把脉从而抓住美股大盘的走势， 动能板块的风向标，发掘具有巨大发展潜力的黑马股。</p>
+			</div>
+			<div class="item">
+				<div class="icon"></div>
+				<h2 class="title">React 一看就懂</h2>
+				<p class="desc">反正吹牛又不给钱</p>
+			</div>
+			<div class="item">
+				<div class="icon"></div>
+				<h2 class="title">日记：安放空虚的心灵</h2>
+				<p class="desc">反正就是有很多内容，随便怎么说，变一变就好。 具有开阔的视野和良好的大局观善于从宏观的政治经济等大处着手全盘把脉从而抓住美股大盘的走势， 动能板块的风向标，发掘具有巨大发展潜力的黑马股。</p>
+			</div>
+			<div class="item">
+				<div class="icon"></div>
+				<h2 class="title">其他：</h2>
+				<p class="desc">反正就是有很多内容，随便怎么说，变一变就好。 具有开阔的视野和良好的大局观善于从宏观的政治经济等大处着手全盘把脉从而抓住美股大盘的走势， 动能板块的风向标，发掘具有巨大发展潜力的黑马股。</p>
+			</div>
 		</div>
-		<div class="otherlike">
-			<div class="qq">1832064870</div>
-			<div class="github">https://github.com/yangbo5207</div>
-		</div>
-		<img class="ercode" src="/images/myself/ercode.png" />
 	</div>
+</section>
 
-	<div class="item content aninode" >
-		<div class="top" data-animation="a-flyTopIn">
-			<div class="name">文章列表</div>
-		</div>
-		<div class="cards">
-			{% for post in site.posts %}
-				<div class="card" data-animation="a-flyTopIn">
-					<a  class="card-img" href="{{ post.url | prepend: site.baseurl }}">
-						<img src="{{ post.image }}" >
-					</a>
-					<div class="card-info">
-						<div class="card-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
-						<div class="desc">{{ post.desc }}</div>
-						<div class="time">{{ post.date }}</div>
-					</div>
-				</div>
-			{% endfor %}
+<section class="ofen">
+	<div class="main">
+		<div class="title">xxxxx清时明月</div>
+		<div class="items">
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
+			<div class="item"><a href="#"><img src="/static/images/index/weixin.png"></a></div>
 		</div>
 	</div>
+</section>
 
-	<div class="item mylovefile">
-		<div class="top">
-			<div class="name">我爱的鸡汤文</div>
-		</div>
-		<div class="list">
-			<p><a href="http://www.jianshu.com/p/e63fa4ffd610">别闹，你真以为早起早睡每天跑步能改变你的生活？</a></p>
-			<p><a href="http://www.jianshu.com/p/0ca1b4e0f56f">单身狗过好情人节详细攻略（恋人勿进，切记）</a></p>
-			<p><a href="http://www.jianshu.com/p/4ae0370638ed">请不要打扰一个正在走弯路的人</a></p>
-			<p><a href="http://www.jianshu.com/p/948c03338be9">恭喜你，终于变成了自己讨厌的样子</a></p>
-			<p><a href="http://www.jianshu.com/p/cd8137316327">你有什么资格不努力</a></p>
-			<p><a href="http://www.jianshu.com/p/9bf2472acd0b">你不是人长的丑 而是你心无一物</a></p>
-			<p><a href="http://www.jianshu.com/p/f9bf49aad151">生命无需退缩：不要羞怯、勇敢尝试、然后收获和成长</a></p>
-		</div>
+<section class="concatme">
+	<div class="main">
+		<div class="title">xxxxxxxxxxxxxxxxxxx</div>
+		<div class="desc">ddddddddddddddddddddddddddddddddddddddddddddddddd</div>
+		<a href="#" class="concat">练习练习</a>
 	</div>
-</div>
+</section>

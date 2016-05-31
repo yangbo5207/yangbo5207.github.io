@@ -1,17 +1,22 @@
+@import '../../styles/_libs/_reset';
 @import '../../styles/_libs/sourcecodepro';
-@import '../../styles/_components/header';
 @import '../../styles/_components/footer';
 @import '../../styles/_libs/highlight';
 
+body {
+	background-color: #fff;
+	color: #747783;
+}
+
+
+
 article {
 	width: 90%;
-	max-width: 700px;
+	max-width: 620px;
 	margin: 16px auto;
-	padding: 0 16px;
-	background-color: #fff;
-	box-shadow: 0 1px 3px #dfe7eb;
-
+	padding: 16px 0;
 	line-height: 2.0;
+	text-align: justify;
 
 	.post-header {
 		height: 80px;
@@ -19,6 +24,7 @@ article {
 		border-bottom: 1px solid #eceff2;
 		font-size: 18px;
 		margin-bottom: 16px;
+		font-weight: bold;
 	}
 
 	.post-content {
@@ -26,13 +32,14 @@ article {
 		margin-bottom: 20px;
 	}
 
-
-	h1, h2, h3, h4, h5, h6 {
-		line-height: 2.0;
+	p {
+		margin: 20px 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: bold;
+		margin: 20px auto;
+		color: #fe5d3c;
 	}
 
 	h1 { font-size: 20px; }
@@ -43,11 +50,14 @@ article {
 	h6 { font-size: 13px; }
 
 	blockquote {
-		border: 1px solid #ccc;
-		border-left: 4px solid #ccc;
+		border-left: 6px solid #ccc;
 		margin: 0;
 		color: #8f8f8f;
-		padding: 8px 16px;
+		padding: 10px 16px;
+		background-color: #f5f7fc;
+		p {
+			margin: 0 10px;
+		}
 	}
 
 	code {
@@ -61,11 +71,43 @@ article {
 		margin: 16px 0;
 	}
 
-	p {
-		margin: 8px 0;
-	}
-
 	a {
-		color: #43b0ee;
+		color: #5c5f68;
+		transition: 0.3s;
+		&:hover {
+			color: #a67065;
+		}
+	}
+}
+
+.comments {
+	.ds-thread {
+		width: 100%;
+		max-width: 620px;
+		margin: 20px auto;
+	}
+	.ds-add-emote,
+	.ds-powered-by,
+	.ds-sync,
+	.ds-more-services {
+		display: none!important;
+	}
+	#ds-thread #ds-reset a.ds-like-thread-button {
+		background: none;
+		box-shadow: none;
+		border: 1px solid #ccc;
+		height: 30px!important;
+		width: 90px!important;
+		display: inline-block;
+		border-radius: 20px;
+		text-align: center;
+		line-height: 30px;
+	}
+	#ds-reset .ds-icon {
+		background: transparent url("/static/pages/posts/images/like.png") no-repeat;
+		background-position: 0 0!important;
+		width: 25px!important;
+		height: 25px!important;
+		background-size: contain;
 	}
 }

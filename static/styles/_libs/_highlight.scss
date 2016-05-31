@@ -3,18 +3,17 @@
  */
 
 .highlight {
-    background: #fff;
-    border: 1px solid #ededed;
-    margin: 16px 0;
+    background: #eff1f6;
+    padding: 10px;
 
     pre {
         padding: 0 16px;
         overflow-x: auto;
+        line-height: 1.6;
     }
 
     code {
         font-family: SourceCodeProRegular;
-        line-height: 1.2;
     }
 
 
@@ -57,7 +56,7 @@
     .ne    { color: #900; font-weight: bold } // Name.Exception
     .nf    { color: #900; font-weight: bold } // Name.Function
     .nn    { color: #555 } // Name.Namespace
-    .nt    { color: #000080 } // Name.Tag
+    .nt    { color: #fe5d3c; font-weight: bold; } // Name.Tag
     .nv    { color: #008080 } // Name.Variable
     .ow    { font-weight: bold } // Operator.Word
     .w     { color: #bbb } // Text.Whitespace
@@ -74,7 +73,7 @@
     .si    { color: #d14 } // Literal.String.Interpol
     .sx    { color: #d14 } // Literal.String.Other
     .sr    { color: #009926 } // Literal.String.Regex
-    .s1    { color: #d14 } // Literal.String.Single
+    .s1    { color: #fe5d3c } // Literal.String.Single
     .ss    { color: #990073 } // Literal.String.Symbol
     .bp    { color: #999 } // Name.Builtin.Pseudo
     .vc    { color: #008080 } // Name.Variable.Class

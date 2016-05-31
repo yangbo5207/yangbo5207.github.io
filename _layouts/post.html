@@ -3,20 +3,30 @@
 	{% include head.html %}
 	<link rel="stylesheet" href="{{ "/static/pages/posts/posts.css" | prepend: site.baseurl }}">
 <body>
-	{% include header.html %}
-	<article class="post">
-		<div class="post-header">{{ page.title }}</div>
-		<div class="post-content">
-			{{ content }}
-		</div>
-		<div id="uyan_frame"></div>
-	</article>
+	<section class="article">
+		<article class="post">
+			<div class="post-header">{{ page.title }}</div>
+			<div class="post-content">
+				{{ content }}
+			</div>
+			<div id="uyan_frame"></div>
+		</article>
+	</section>
 
-	<!-- UY BEGIN -->
-	<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2100302"></script>
-	<!-- UY END -->
-
+	<section class="comments">
+		<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
+	</section>
 	{% include footer.html %}
-	<script data-main="/static/pages/posts/app" src="/static/scripts/libs/require.js"></script>
+	<script type="text/javascript">
+		var duoshuoQuery = {short_name:"ybobo"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0]
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+	</script>
 </body>
 </html>

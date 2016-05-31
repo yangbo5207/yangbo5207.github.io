@@ -33,7 +33,7 @@ var
         htmlurl_watch: ['./**/*.html'],
     	cssurl_start: 'static/pages/**/*.{scss, less, sass}',
     	cssurl_end: 'static/pages',
-        cssurl_watch: 'static/pages/**/*.{scss, less, sass}',
+        cssurl_watch: 'static/**/*.{scss, less, sass}',
     	jsurl_start: ['js/**/*.js', '!js/{node_modules,bower_components}/**/*'],
     	jsurl_end: 'js',
         jsurl_watch: ['js/**/*.js', '!js/{node_modules,bower_components}/**/*']
@@ -95,9 +95,9 @@ gulp.task('js', function() {
 		errorHandler: handleError
 	}))
     .pipe(one())
-	// .pipe(concat('core.js'))
-    // .pipe(uglify())
-	// .pipe(gulp.dest(paths.jsurl_end))
+	.pipe(concat('core.js'))
+    .pipe(uglify())
+	.pipe(gulp.dest(paths.jsurl_end))
 	.pipe(livereload({
 		quiet: true
 	}))
@@ -109,19 +109,17 @@ gulp.task('js', function() {
 
 gulp.task('watch', function() {
 	livereload.listen();
-    // gulp.watch(paths.htmlurl_watch, ['html']);
-	// gulp.watch(paths.cssurl_watch, ['css']);
-    // gulp.watch(paths.jsurl_watch, ['js']);
+    gulp.watch(paths.htmlurl_watch, ['html']);
+	gulp.watch(paths.cssurl_watch, ['css']);
+    gulp.watch(paths.jsurl_watch, ['js']);
     gulp.watch(paths.htmlurl_watch, function() {
-        console.log(arguments);
-        console.log('html:', paths.htmlurl_watch);
     });
-    // gulp.watch(paths.cssurl_watch, function() {
-    //     console.log('css:', paths.cssurl_watch);
-    // })
-    // gulp.watch(paths.jsurl_watch, function() {
-    //     console.log('js:', paths.jsurl_watch);
-    // })
+    gulp.watch(paths.cssurl_watch, function() {
+        console.log('css:', paths.cssurl_watch);
+    })
+    gulp.watch(paths.jsurl_watch, function() {
+        console.log('js:', paths.jsurl_watch);
+    })
 });
 
 // 默认任务
