@@ -572,6 +572,10 @@ article a:hover {
     background: #fff;
 }
 
+.comments #ds-thread #ds-reset .ds-gradient-bg {
+    display: none;
+}
+
 .comments #ds-thread #ds-reset .ds-post-toolbar {
     margin-top: 10px;
 }
@@ -581,7 +585,7 @@ article a:hover {
     border-radius: 4px;
 }
 
-.comments #ds-thread.ds-narrow #ds-reset .ds-post-button {
+.comments #ds-thread #ds-reset .ds-post-button,.comments #ds-thread.ds-narrow #ds-reset .ds-post-button {
     line-height: 30px;
     position: static;
     float: none;
@@ -605,4 +609,15 @@ article a:hover {
     line-height: 1;
     position: relative;
     top: 3px;
+}
+
+.comments #ds-thread #ds-reset li.ds-tab a.ds-current {
+    font-size: 12px;
+    border: 0;
+    background: 0 0;
+}
+
+.comments #ds-thread #ds-reset .ds-user-name {
+    font-size: 12px;
+    font-weight: 700;
 }

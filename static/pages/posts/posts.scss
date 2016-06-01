@@ -192,6 +192,9 @@ article {
 		background: #fff;
 		display: none;
 	}
+	#ds-thread #ds-reset .ds-gradient-bg {
+		display: none;
+	}
 	#ds-thread #ds-reset .ds-post-toolbar {
 		margin-top: 10px;
 	}
@@ -199,7 +202,8 @@ article {
 		border: 1px solid #cfcfcf;
 		border-radius: 4px;
 	}
-	#ds-thread.ds-narrow #ds-reset .ds-post-button {
+	#ds-thread.ds-narrow #ds-reset .ds-post-button,
+	#ds-thread #ds-reset .ds-post-button {
 		border-radius: 2px;
 		height: 30px;
 		line-height: 30px;
@@ -220,5 +224,14 @@ article {
 		position: relative;
 		line-height: 1;
 		top: 3px;
+	}
+	#ds-thread #ds-reset li.ds-tab a.ds-current {
+		background:none;
+		border: 0;
+		font-size: 12px;
+	}
+	#ds-thread #ds-reset .ds-user-name {
+		font-size: 12px;
+		font-weight: bold;
 	}
 }
