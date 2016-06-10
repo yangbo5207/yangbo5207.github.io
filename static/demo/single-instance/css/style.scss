@@ -134,11 +134,11 @@ input:focus {
     border: 1px solid orange;
 }
 
-.add.active, .delete.active {
+.adds.active, .deletes.active {
     animation-name: show;
     animation-duration: 0.5s;
 }
-.add.disabled, .delete.disabled {
+.adds.disabled, .deletes.disabled {
     animation-name: hide;
     animation-duration: 0.5s;
 }

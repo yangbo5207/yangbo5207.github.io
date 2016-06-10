@@ -110,10 +110,6 @@ header .nav-l .index i {
     background-size: 24px;
 }
 
-header .nav-l-small {
-    display: none;
-}
-
 header .nav-r {
     position: absolute;
     top: 0;
@@ -155,6 +151,44 @@ header .wechart {
     background-image: url(/static/images/index/weixin.png);
 }
 
+header .nav-phone {
+    display: none;
+}
+
+@media (max-width:580px) {
+    header .nav-l {
+        display: none;
+    }
+
+    header .nav-r {
+        display: none;
+    }
+
+    header .nav-phone {
+        display: block;
+    }
+
+    header .nav-l-small {
+        display: none;
+    }
+}
+
+header .nav-phone {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+}
+
+header .icon {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
 footer {
     font-family: proxima;
     font-size: 12px;
@@ -167,6 +201,7 @@ footer {
 
 body {
     font-family: fzlt-qianhei,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
+    background-color: #fff;
 }
 
 section.banner {
@@ -257,9 +292,24 @@ section.banner .click-me:hover {
     background-color: #fa6666;
 }
 
+@media (max-width:580px) {
+    section.banner .slog-top {
+        font-size: 18px;
+    }
+
+    section.banner .view-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    section.banner .view {
+        top: 55%;
+    }
+}
+
 section.object {
     height: 370px;
-    margin-top: 72px;
+    margin-top: 150px;
 }
 
 section.object .main {
@@ -278,7 +328,7 @@ section.object .title {
 
 section.object .code-img {
     position: absolute;
-    bottom: -200px;
+    top: 20%;
     left: 50%;
     display: block;
     width: 80%;
@@ -298,41 +348,9 @@ section.object .code-img:hover {
     transform: translateX(-50%) translateY(-20px);
 }
 
-section.type {
-    margin-top: 150px;
-}
-
-section.type .main {
-    width: 100%;
-    max-width: 1020px;
-    margin: 0 auto;
-}
-
-section.type .title {
-    font-size: 20px;
-    text-align: center;
-}
-
-section.type .items {
-    text-align: justify;
-}
-
-section.type .items::after {
-    font-size: 100;
-    display: inline-block;
-    width: 100%;
-    height: 0;
-    content: '';
-}
-
-section.type .item {
-    display: inline-block;
-    width: 270px;
-    margin-top: 40px;
-}
-
 section.ofen {
     margin-top: 150px;
+    padding-bottom: 150px;
 }
 
 section.ofen .main {
@@ -354,15 +372,58 @@ section.ofen .items {
 section.ofen .item {
     display: inline-block;
     width: 100px;
-    height: 40px;
-    margin: 10px 20px;
-    background: #ccc;
+    height: 50px;
+    margin: 30px 50px;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    transition-duration: .2s;
 }
 
 section.ofen .item a {
     display: block;
     width: 100%;
     height: 100%;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    transition-duration: .2s;
+    background: url(/static/images/index/icon-sp.jpg) no-repeat;
+    background-size: cover;
+}
+
+section.ofen .item a.sf {
+    background-position: 0 -50px;
+}
+
+section.ofen .item a.jobbole {
+    background-position: 0 -100px;
+}
+
+section.ofen .item a.ui {
+    background-position: 0 -150px;
+}
+
+section.ofen .item a.dribbble {
+    background-position: 0 -200px;
+}
+
+section.ofen .item a.xina {
+    background-position: 0 -250px;
+}
+
+section.ofen .item a.weixin {
+    background-position: 0 -298px;
+}
+
+section.ofen .item a.w3cfuns {
+    background-position: 0 -350px;
+}
+
+section.ofen .item a.lolduowan {
+    background-position: 0 -400px;
+}
+
+section.ofen .item a.zhihu {
+    background-position: 0 -450px;
 }
 
 section.ofen .item img {
@@ -371,32 +432,14 @@ section.ofen .item img {
     margin: 0 auto;
 }
 
-section.concatme {
-    margin-top: 150px;
+section.ofen .item:hover {
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0,.3);
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
 }
 
-section.concatme .main {
-    width: 100%;
-    max-width: 1020px;
-    margin: 0 auto;
-}
-
-section.concatme .title {
-    font-size: 20px;
-    text-align: center;
-}
-
-section.concatme .desc {
-    margin-top: 40px;
-    text-align: center;
-}
-
-section.concatme .concat {
-    line-height: 50px;
-    display: block;
-    width: 200px;
-    height: 50px;
-    margin: 60px auto;
-    text-align: center;
-    background-color: #ccc;
+section.ofen .item:hover a {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }

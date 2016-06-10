@@ -177,7 +177,7 @@ input:focus {
     border: 1px solid orange;
 }
 
-.add.active,.delete.active {
+.adds.active,.deletes.active {
     -webkit-animation-name: show;
     -moz-animation-name: show;
     animation-name: show;
@@ -186,7 +186,7 @@ input:focus {
     animation-duration: .5s;
 }
 
-.add.disabled,.delete.disabled {
+.adds.disabled,.deletes.disabled {
     -webkit-animation-name: hide;
     -moz-animation-name: hide;
     animation-name: hide;

@@ -56,8 +56,8 @@ a {
         @content;
     }
 }
-@mixin screen_ph {
-    @media (max-width: $screen-ph) {
+@mixin screen_small {
+    @media (max-width: 580px) {
         @content;
     }
 }

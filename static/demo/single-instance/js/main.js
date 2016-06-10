@@ -10706,154 +10706,147 @@ var initialData = [
 FastClick.attach(document.body);
 
 var Product = (function() {
-    var productInstance;
-    var $area = $('.product');
-    var $table = $area.find('.table');
+    var instance,
+        $area = $('.product'),
+        $table = $area.find('.table');
 
-    function init() {
-        return {
-            table: $table,
-            init: function() {
-                var self = this;
-                self.render();
-                $table.on('click', '.add', function() {
-                    self.target = $(this).parent().parent();
-                    self.target.attr('data-status', 'add');
-                    AddDialog.show();
-                });
-                $table.on('click', '.delete', function() {
-                    self.target = $(this).parent().parent();
-                    self.target.attr('data-status', 'del');
-                    DelDialog.show();
-                })
-            },
-            render: function() {
-                $.each(initialData, function(i, val) {
-                    var elementstr =
-                    '<div class="item">' +
-                        '<div class="t1">'+ val.product +'</div>' +
-                        '<div class="t2">'+ val.price +'</div>' +
-                        '<div class="t3"><a class="add" href="javascript:;">Insert</a><a class="delete" href="javascript:;">Delete</a></div>' +
-                    '</div>';
-                    $(elementstr).appendTo($table);
-                })
-            },
-            delete: function() {
-                var self = this;
-                self.target.addClass('disabled').on('animationend', function() {
-                    self.target.remove();
-                });
+    function struct() {
+        return new struct.fn.init();
+    }
+    struct.prototype = struct.fn = {
+        constructor: struct,
+        init: function() {
+            var self = this;
+            self.render();
+            $table.on('click', '.add', function() {
+                self.target = $(this).parent().parent();
+                self.target.attr('data-status', 'add');
+                AddDialog.show();
+            });
+            $table.on('click', '.delete', function() {
+                self.target = $(this).parent().parent();
+                self.target.attr('data-status', 'del');
+                DelDialog.show();
+            });
+        },
+        render: function() {
+            $.each(initialData, function(i, val) {
+                var elementstr =
+                '<div class="item">' +
+                    '<div class="t1">'+ val.product +'</div>' +
+                    '<div class="t2">'+ val.price +'</div>' +
+                    '<div class="t3"><a class="add" href="javascript:;">Insert</a><a class="delete" href="javascript:;">Delete</a></div>' +
+                '</div>';
+                $(elementstr).appendTo($table);
+            })
+        },
+        delete: function() {
+            var self = this;
+            self.target.addClass('disabled').on('animationend', function() {
+                self.target.remove();
+            });
 
-            },
-            insertAfter: function(str) {
-                $(str).insertAfter(this.target).addClass('active');
-                this.target.attr('data-status', '');
-            }
+        },
+        insertAfter: function(str) {
+            $(str).insertAfter(this.target).addClass('active');
+            this.target.attr('data-status', '');
         }
     }
-
-    return (function() {
-        if (!productInstance) {
-            productInstance = init();
-        }
-        return productInstance;
-    })();
+    struct.fn.init.prototype = struct.fn;
+    return ins(struct, instance);
 })();
 
 var AddDialog = (function() {
-    var addInstance;
-    var $area = $('.add');
-    function init() {
-        return {
-            init: function() {
-                var self = this;
-                $area.find('.cancel').on('click', function() {
-                    self.close();
-                })
-                $area.find('.sure').on('click', function() {
-                    var eProduct = $area.find('.product-name'),
-                        ePrice = $area.find('.product-price'),
-                        product = eProduct.val(),
-                        price = ePrice.val();
+    var instance,
+        $area = $('.adds');
+    function Add() {
+        return new Add.fn.init();
+    }
+    Add.prototype = Add.fn = {
+        constructor: Add,
+        init: function() {
+            var self = this;
+            $area.find('.cancel').on('click', function() {
+                self.close();
+            })
+            $area.find('.sure').on('click', function() {
+                var eProduct = $area.find('.product-name'),
+                    ePrice = $area.find('.product-price'),
+                    product = eProduct.val(),
+                    price = ePrice.val();
 
-                    if (product == '' || price == '') {
-                        alert('xxxbuneg')
-                        return;
-                    }
+                if (product == '' || price == '') {
+                    alert('xxxbuneg')
+                    return;
+                }
 
-                    var elementstr =
-                    '<div class="item">' +
-                        '<div class="t1">'+ product +'</div>' +
-                        '<div class="t2">'+ price +'</div>' +
-                        '<div class="t3"><a class="add" href="javascript:;">Insert</a><a class="delete" href="javascript:;">Delete</a></div>' +
-                    '</div>';
-                    Product.insertAfter(elementstr);
-                    eProduct.val('');
-                    ePrice.val('');
-                    self.close();
-                })
-            },
-            show: function() {
-                $area.show().addClass('active');
-            },
-            close: function() {
-                $area.addClass('disabled').on('animationend', function() {
-                    $area.removeClass('active disabled');
-                    $area.hide();
-                    $area.off('animationend');
-                })
-            }
+                var elementstr =
+                '<div class="item">' +
+                    '<div class="t1">'+ product +'</div>' +
+                    '<div class="t2">'+ price +'</div>' +
+                    '<div class="t3"><a class="add" href="javascript:;">Insert</a><a class="delete" href="javascript:;">Delete</a></div>' +
+                '</div>';
+                Product.insertAfter(elementstr);
+                eProduct.val('');
+                ePrice.val('');
+                self.close();
+            })
+        },
+        show: function() {
+            $area.show().addClass('active');
+        },
+        close: function() {
+            $area.addClass('disabled');
+            $area.addClass('disabled').on('animationend', function() {
+                console.log($area);
+                $area.removeClass('active disabled');
+                $area.hide();
+                $area.off('animationend');
+            })
         }
     }
-
-    return (function() {
-        if (!addInstance) {
-            addInstance = init();
-        }
-        return addInstance;
-    })()
-
+    Add.fn.init.prototype = Add.fn;
+    return ins(Add, instance);
 })();
 
 var DelDialog = (function() {
-    var deleteInstance;
-    var $area = $('.delete');
-    function init() {
-        return {
-            init: function() {
-                var self = this;
-                $area.find('.cancel').on('click', function() {
-                    self.close();
-                });
-                $area.find('.sure').on('click', function() {
-                    Product.delete();
-                    self.close();
-                })
-            },
-            show: function()  {
-                $area.show().addClass('active');
-            },
-            close: function() {
-                $area.addClass('disabled').on('animationend', function() {
-                    $area.removeClass('active disabled');
-                    $area.hide();
-                    $area.off('animationend');
-                })
-            }
+    var instance,
+        $area = $('.deletes');
+    function struct() {
+        return new struct.fn.init();
+    }
+    struct.prototype = struct.fn = {
+        constructor: struct,
+        init: function() {
+            var self = this;
+            $area.find('.cancel').on('click', function() {
+                self.close();
+            });
+            $area.find('.sure').on('click', function() {
+                Product.delete();
+                self.close();
+            })
+        },
+        show: function()  {
+            $area.show().addClass('active');
+        },
+        close: function() {
+            $area.addClass('disabled').on('animationend', function() {
+            $area.removeClass('active disabled');
+            $area.hide();
+            $area.off('animationend');
+            })
         }
     }
-    return (function(){
-        if (!deleteInstance) {
-            deleteInstance = init();
-        }
-        return deleteInstance;
-    })();
+    struct.fn.init.prototype = struct.fn;
+    return ins(struct, instance);
 })();
 
-+function init() {
-    Product.init();
-    AddDialog.init();
-    DelDialog.init();
-}();
+function ins(struct, ins) {
+    if (!ins) {
+        ins = struct();
+    }
+    return ins;
+}
 
 })(jQuery);

@@ -43,9 +43,6 @@ header {
 			}
 		}
 	}
-	.nav-l-small {
-		display: none;
-	}
 
 	.nav-r {
 		position: absolute;
@@ -78,5 +75,37 @@ header {
 	}
 	.wechart {
 		background-image: url('/static/images/index/weixin.png');
+	}
+
+	.nav-phone { display: none; }
+
+	@include screen_small {
+		.nav-l {
+			display: none;
+		}
+		.nav-r {
+			display: none;
+		}
+		.nav-phone {
+			display: block;
+		}
+		.nav-l-small {
+			display: none;
+		}
+	}
+	.nav-phone {
+		height: 70px;
+		width: 100%;
+		position: fixed;
+
+	}
+	.icon {
+		position: absolute;
+		color: #fff;
+		width: 50px;
+		height: 50px;
+		border: 1px solid #fff;
+		top: 10px;
+		left: 16px;
 	}
 };

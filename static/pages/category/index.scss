@@ -3,6 +3,7 @@
 
 body {
 	font-family: $fonts;
+	background-color: #fff;
 }
 
 section.banner {
@@ -79,10 +80,22 @@ section.banner {
 			background-color: #fa6666;
 		}
 	}
+	@include screen_small {
+		.slog-top {
+			font-size: 18px;
+		}
+		.view-logo {
+			width: 80px;
+			height: 80px;
+		}
+		.view {
+			top: 55%;
+		}
+	}
 }
 
 section.object {
-	margin-top: 72px;
+	margin-top: 150px;
 	height: 370px;
 	.main {
 		width: 100%;
@@ -102,7 +115,7 @@ section.object {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
-		bottom: -200px;
+		top: 20%;
 		transition-duration: 0.3s;
 		&:hover {
 			transform: translateX(-50%) translateY(-20px);
@@ -110,37 +123,9 @@ section.object {
 	}
 }
 
-section.type {
-	margin-top: 150px;
-
-	.main {
-		width: 100%;
-		max-width: 1020px;
-		margin: 0 auto;
-	}
-	.title {
-		text-align: center;
-		font-size: 20px;
-	}
-	.items {
-		text-align: justify;
-		&::after {
-			content: '';
-			display: inline-block;
-			width: 100%;
-			height: 0;
-			font-size: 100;
-		}
-	}
-	.item {
-		width: 270px;
-		display: inline-block;
-		margin-top: 40px;
-	}
-}
-
 section.ofen {
 	margin-top: 150px;
+	padding-bottom: 150px;
 	.main {
 		width: 100%;
 		max-width: 1020px;
@@ -156,45 +141,56 @@ section.ofen {
 	}
 	.item {
 		display: inline-block;
-		height: 40px;
+		height: 50px;
 		width: 100px;
-		background: #ccc;
-		margin: 10px 20px;
+		margin: 30px 50px;
+		transition-duration: 0.2s;
+		/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 		a {
+			transition-duration: 0.2s;
 			display: block;
 			width: 100%;
 			height: 100%;
+			background: url('/static/images/index/icon-sp.jpg') no-repeat;
+			background-size: cover;
+			&.sf {
+				background-position: 0 -50px;
+			}
+			&.jobbole {
+				background-position: 0 -100px;
+			}
+			&.ui {
+				background-position: 0 -150px;
+			}
+			&.dribbble {
+				background-position: 0 -200px;
+			}
+			&.xina {
+				background-position: 0 -250px;
+			}
+			&.weixin {
+				background-position: 0 -298px;
+			}
+			&.w3cfuns {
+				background-position: 0 -350px;
+			}
+			&.lolduowan {
+				background-position: 0 -400px;
+			}
+			&.zhihu {
+				background-position: 0 -450px;
+			}
 		}
 		img {
 			height: 100%;
 			display: block;
 			margin: 0 auto;
 		}
-	}
-}
-
-section.concatme {
-	margin-top: 150px;
-	.main {
-		width: 100%;
-		max-width: 1020px;
-		margin: 0 auto;
-	}
-	.title {
-		text-align: center;
-		font-size: 20px;
-	}
-	.desc {
-		text-align: center;
-		margin-top: 40px;
-	}
-	.concat {
-		display: block;
-		width: 200px;
-		height: 50px;
-		margin: 60px auto;
-		background-color: #ccc;
-		text-align: center;
-		line-height: 50px;
+		&:hover {
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+			a {
+				transform: scale(1.2);
+			}
+		}
 	}
 }
