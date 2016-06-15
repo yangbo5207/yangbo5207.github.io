@@ -350,18 +350,28 @@ article {
     line-height: 2;
     width: 90%;
     max-width: 620px;
-    margin: 16px auto;
-    padding: 16px 0;
+    margin: 0 auto;
+    padding-bottom: 16px;
     text-align: justify;
 }
 
 article .post-header {
     font-size: 18px;
     font-weight: 700;
-    line-height: 80px;
+    line-height: 30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
     height: 80px;
     margin-bottom: 16px;
     border-bottom: 1px solid #eceff2;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 article .post-content {
@@ -371,6 +381,7 @@ article .post-content {
 
 article p {
     margin: 20px 0;
+    word-wrap: break-word;
 }
 
 article h1,article h2,article h3,article h4,article h5,article h6 {
@@ -404,7 +415,7 @@ article h6 {
 }
 
 article blockquote {
-    margin: 0;
+    margin: 20px auto;
     padding: 10px 16px;
     color: #8f8f8f;
     border-left: 6px solid #ccc;
