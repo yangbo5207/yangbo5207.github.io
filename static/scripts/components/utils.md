@@ -94,13 +94,3 @@ Utils.isCSS('transition');    // MozTransition
 
 ##### Utils.removeClass
 传入id与类名，删除该类名
-
-
-
-
-
-
-
-
-
-
