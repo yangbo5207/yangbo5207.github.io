@@ -1,0 +1,64 @@
+---
+layout: index
+---
+
+<div class="content">
+    {% for post in site.posts %}
+        <div class="essay">
+            <div class="tags">
+                {% for tag in post.categories %}
+                    <span class="{{ tag }}">{{ tag | upcase }}</span>
+                {% endfor %}
+            </div>
+            <div class="special">
+                <div class="article">
+                    <div class="title-box">
+                        <div class="title">{{ post.title }}</div>
+                        <div class="stars">
+                            {% for i in site.star_array %}
+                                {% if i < post.star %}
+                                    <span class="star active">&#xe603;</span>
+                                {% else %}
+                                    <span class="star">&#xe603;</span>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="description">{{ post.desc }}</div>
+                </div>
+                <div class="img-box">
+                    <img src="{{ post.image }}" />
+                </div>
+            </div>
+            <div class="more">
+                <div class="icon read-more"><span><a class="a-target" href="{{post.url}}">Read More +</a></span></div>
+                <div class="icon comment-count">
+                    <span>&#xe607;</span>
+                    <span class="count">0</span>
+                </div>
+                <div class="icon likes-count">
+                    <span>&#xe606;</span>
+                    <span class="count">0</span>
+                </div>
+                <div class="icon share-count">
+                    <span>&#xe605;</span>
+                    <span class="count">0</span>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<span class="ds-thread-count" data-thread-key="{{page.id}}" data-count-type="comments"></span>
+<!-- 多说js加载开始，一个页面只需要加载一次 -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"ybobo"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- 多说js加载结束，一个页面只需要加载一次 -->

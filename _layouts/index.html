@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
 	{% include head.html %}
-	<link rel="stylesheet" href="{{ "/static/pages/category/index.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="/static/css/pages/index.css">
 <body>
 	{% include header.html %}
-	{{ content }}
-	{% include footer.html %}
-	<script data-main="/static/pages/category/app" src="/static/scripts/libs/require.js"></script>
+	<div class="container">
+		<div class="main">
+			{{ content }}
+			{% include side.html %}
+		</div>
+	</div>
+
+	<script src="../js/core.js"></script>
+	<script>
+		require(['pages/market']);
+	</script>
 </body>
 </html>

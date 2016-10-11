@@ -1,0 +1,235 @@
+@import "../components/header";
+
+* {
+    -webkit-text-size-adjust: none; /*让谷歌浏览器可是设置字体小于12px*/
+}
+
+body {
+    background-color: #f7f8fb;
+    font-family: $font-en;
+}
+
+.container {
+    margin-top: 25px;
+}
+
+.main {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    width: 740px;
+    height: 800px;
+    background-color: #f7f8fb;
+
+    .essay {
+        transition: 0.4s;
+        width: 100%;
+        margin-bottom: 50px;
+
+        &:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    .tags {
+        height: 50px;
+        font-size: 10px;
+        padding-left: 60px;
+        display: flex;
+        align-items: center;
+
+        span {
+            height: 20px;
+            padding: 0 15px 0 20px;
+            border-radius: 10px;
+            background-color: #38b7ea;
+            line-height: 20px;
+            color: #fff;
+            margin-right: 15px;
+            display: block;
+            position: relative;
+            &.javascript {
+                background-color: #897fe6;
+            }
+            &.es6 {
+                background-color: #ea909b;
+            }
+            &.angular {
+                background-color: #8be594;
+            }
+            &.css {
+                background-color: #e5c68b;
+            }
+            &:before {
+                content: '';
+                display: block;
+                width: 3px;
+                height: 3px;
+                background-color: #fff;
+                border-radius: 100%;
+                position: absolute;
+                top: 9px;
+                left: 10px;
+            }
+        }
+    }
+
+    .special {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding-left: 60px;
+        padding-right: 20px;
+        padding-top: 30px;
+        /* padding-bottom: 25px; */
+        font-size: 12px;
+        line-height: 2.0;
+    }
+
+    .description {
+        color: #7f8489;
+    }
+
+    .star {
+        font-family: iconfont;
+        font-size: 14px;
+        color: #cacdcf;
+
+        &.active {
+            color: #8a92db;
+        }
+    }
+
+    .article {
+        width: 400px;
+        border-bottom: 1px solid #f7f8fb;
+        padding-bottom: 15px;
+    }
+
+    .title-box {
+        margin-bottom: 10px;
+    }
+    .title {
+        font-size: 16px;
+    }
+
+    .img-box {
+        width: 180px;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .more {
+        height: 100px;
+        background-color: #fff;
+        padding-left: 60px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+
+        a {
+            color: #7f8489;
+        }
+    }
+
+    .icon {
+        margin-right: 65px;
+        color: #7f8489;
+        font-family: iconfont;
+
+        span {
+            padding-right: 4px;
+        }
+    }
+
+    .read-more {
+        height: 40px;
+        line-height: 40px;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .share-count {
+        span:nth-of-type(1) {
+            font-size: 14px;
+        }
+    }
+}
+
+aside {
+    width: 400px;
+    padding-top: 50px;
+
+    .main {
+        width: 100%;
+        display: block;
+    }
+
+    .wb-news {
+        padding: 25px 40px 0 40px;
+        box-sizing: border-box;
+        background-color: #fff;
+        font-size: 12px;
+        color: #7f8489;
+        transition: 0.4s;
+        margin-bottom: 50px;
+
+        &:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    .title-box {
+        height: 80px;
+        display: flex;
+
+        img {
+            width: 80px;
+            height: 80px;
+            margin-right: 25px;
+        }
+
+        .nickname {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .title {
+            font-size: 14px;
+            line-height: 2.0;
+        }
+    }
+
+    .message {
+        line-height: 2.0;
+        margin-top: 20px;
+    }
+
+    .more {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .icon {
+            margin-left: 35px;
+            font-family: 'iconfont';
+
+            span:nth-of-type(1) {
+                margin-right: 15px;
+            }
+            span:nth-of-type(2) {
+                font-size: 10px;
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	{% include head.html %}
-	<link rel="stylesheet" href="{{ "/static/pages/posts/posts.css" | prepend: site.baseurl }}">
+	<!--<link rel="stylesheet" href="{{ "/static/pages/posts/posts.css" | prepend: site.baseurl }}">-->
 <body>
 	<section class="article">
 		<article class="post">
@@ -13,16 +13,29 @@
 		</article>
 	</section>
 
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style_24x24">
+		<a class="jiathis_button_qzone"></a>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_tqq"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_renren"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+		<a class="jiathis_counter_style"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+
 	<section class="comments">
 		<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
 	</section>
 	{% include footer.html %}
 	<script type="text/javascript">
-		var duoshuoQuery = {short_name:"ybobo"};
+	var duoshuoQuery = {short_name:"ybobo"};
 		(function() {
 			var ds = document.createElement('script');
 			ds.type = 'text/javascript';ds.async = true;
-			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
 			ds.charset = 'UTF-8';
 			(document.getElementsByTagName('head')[0]
 			 || document.getElementsByTagName('body')[0]).appendChild(ds);

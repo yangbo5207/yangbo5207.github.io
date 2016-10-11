@@ -1,76 +1,61 @@
-<header class="site-header clear">
+<header>
+	<div class="main">
+		<a href="/" class="logo"><img src="../images/index/avator.jpg" /></a>
+		<div class="search">
+			<div class="search-box">
+				<div class="tags">
+					<span class="default">DEMO<div class="close">&#xe615;</div></span>
+		            <span class="purple">ECMASCRIPT<div class="close">&#xe615;</div></span>
+		            <span class="light-red">MICHELA<div class="close">&#xe615;</div></span>
+		            <span class="light-green">REACT<div class="close">&#xe615;</div></span>
+		            <span class="light-orange">TYPESCRIPT<div class="close">&#xe615;</div></span>
+				</div>
+				<div class="down-arrow"><span>&#xe60e;</span></div>
+				<a class="search-btn" href="javascript:;"><span>&#xe60d;</span></a>
+			</div>
 
-	<div class="header-in-pc">
-		<div class="item">
-			<a href="/" class="logo"><img src="{{ "/images/logo.png" | prepend: site.baseurl }}"></a>
+			<div class="search-select">
+				<div class="card">
+					<div class="type javascript">Javascript</div>
+					<input type="checkbox" />
+				</div>
+
+				<div class="card">
+					<div class="type gulp">Gulp</div>
+					<input type="checkbox" />
+				</div>
+
+				<div class="card">
+					<div class="type require">Require</div>
+					<input type="checkbox" />
+				</div>
+
+				<div class="card">
+					<div class="type angular">Angular</div>
+					<input type="checkbox" />
+				</div>
+
+				<div class="card">
+					<div class="type typescript">Typescript</div>
+					<input type="checkbox" />
+				</div>
+
+				<div class="card">
+					<div class="type react">React</div>
+					<input type="checkbox" />
+				</div>
+
+				<div class="card">
+					<div class="type es6">ES6</div>
+					<input type="checkbox" />
+				</div>
+			</div>
 		</div>
-		{% if page.type == 'javascript' %}
-			<div class="item active"><a href="/html/javascript/">Javascript</a></div>
-		{% else %}
-			<div class="item"><a href="/html/javascript/">Javascript</a></div>
-		{% endif %}
-
-		{% if page.type == 'node' %}
-			<div class="item active"><a href="/html/node/">Node</a></div>
-		{% else %}
-			<div class="item"><a href="/html/node/">Node</a></div>
-		{% endif %}
-
-		{% if page.type == 'jquery' %}
-			<div class="item active"><a href="/html/jquery/">JQuery</a></div>
-		{% else %}
-			<div class="item"><a href="/html/jquery/">JQuery</a></div>
-		{% endif %}
-
-		{% if page.type == 'html5' %}
-			<div class="item active"><a href="/html/html5/">Html5</a></div>
-		{% else %}
-			<div class="item"><a href="/html/html5/">Html5</a></div>
-		{% endif %}
-
-		{% if page.type == 'css3' %}
-			<div class="item active"><a href="/html/css3/">Css3</a></div>
-		{% else %}
-			<div class="item"><a href="/html/css3/">Css3</a></div>
-		{% endif %}
-
-		{% if page.type == 'gulp' %}
-			<div class="item active"><a href="/html/gulp/">Gulp</a></div>
-		{% else %}
-			<div class="item"><a href="/html/gulp/">Gulp</a></div>
-		{% endif %}
-		
-		{% if page.type == 'git' %}
-			<div class="item active"><a href="/html/git/">Git</a></div>
-		{% else %}
-			<div class="item"><a href="/html/git/">Git</a></div>
-		{% endif %}
-		<div class="item"><a target="_blank" href="http://www.jianshu.com/users/10ae59f49b13/latest_articles">简</a></div>
-		<div class="item"><a target="_blank" href="http://segmentfault.com/u/yangbo">S</a></div>
-		<div class="item"><a target="_blank" class="github" href="https://github.com/yangbo5207"></a></div>
-	</div>
-	<div class="header-in-mobile">
-		<div id="logo">
-			<a href="/" class="logo"><img src="{{ "/images/logo.png" | prepend: site.baseurl }}"></a>
-		</div>
-		<div id="tips" data-tag="0">
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-
-		<div id="nav-in-mobile">
-			<div class="item"><a class="javascript" href="/html/javascript/">Javascript</a></div>
-			<div class="item"><a href="/html/node/">Node</a></div>
-			<div class="item"><a href="/html/jquery/">JQuery</a></div>
-			<div class="item"><a href="/html/html5/">Html5</a></div>
-			<div class="item"><a href="/html/css3/">Css3</a></div>
-			<div class="item"><a href="/html/gulp/">Gulp</a></div>
-			<div class="item"><a href="/html/git/">Git</a></div>
-			<div class="item"><a href="http://www.jianshu.com/users/10ae59f49b13/latest_articles">简</a></div>
-			<div class="item"><a href="http://segmentfault.com/u/yangbo">S</a></div>
-			<div class="item"><a class="github" href="https://github.com/yangbo5207"></a></div>
-			<div class="san"></div>
+		<div class="show-position">
+			<a href="#">&#xe60c;</a>
+			<a href="#">&#xe611;</a>
+			<a href="#">&#xe610;</a>
+			<a href="#">&#xe60f;</a>
 		</div>
 	</div>
 </header>
