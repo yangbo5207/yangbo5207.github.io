@@ -1,10 +1,77 @@
 <!DOCTYPE html>
 <html>
-<body>
-	<h1>loading...</h1>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<style>
+		.loading{
+            width: 100px;
+            height: 10px;
+            margin: 0 auto;
+            margin-top:100px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .loading span{
+            display: inline-block;
+            width: 10px;
+            height: 100%;
+            margin-right: 5px;
+            opacity: 0;
+            background: lightgreen;
+            -webkit-transform-origin: right bottom;
+            -webkit-animation: load .5s ease infinite;
+        }
+        .loading span:last-child{
+            margin-right: 0px; 
+    	}
+        @-webkit-keyframes load{
+            0%{
+                opacity: 1;
+                -webkit-transform: scale(1);
+            }
+            100%{
+                opacity: 0;
+                -webkit-transform: rotate(90deg) scale(.3);
+            }
+        }
+        .loading span:nth-child(1){
+            -webkit-animation-delay:0.13s;
+        }
+        .loading span:nth-child(2){
+            -webkit-animation-delay:0.26s;
+        }
+        .loading span:nth-child(3){
+            -webkit-animation-delay:0.39s;
+        }
+        .loading span:nth-child(4){
+            -webkit-animation-delay:0.52s;
+        }
+        .loading span:nth-child(5){
+            -webkit-animation-delay:0.65s;
+        }
 
+        .desc {
+        	text-align: center;
+        	margin-top: 10px;
+        	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+     		font-size: 12px;
+        }
+	</style>
+</head>
+<body>
+	<div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+	</div>
+	<div class="desc">loading...</div>
 	<script>
-		window.location = '/static/category/all.html';
+		setTimeout(function() {
+			window.location = '/static/category/all.html';
+		}, 500);
 	</script>
 </body>
 </html>
