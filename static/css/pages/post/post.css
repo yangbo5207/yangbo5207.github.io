@@ -605,13 +605,12 @@ body {
 }
 
 .a-content .content blockquote code,.a-content .content h1 code,.a-content .content h2 code,.a-content .content h3 code,.a-content .content h4 code,.a-content .content h5 code,.a-content .content h6 code,.a-content .content p code {
-    font-family: source code pro;
     font-size: 12px;
     margin: 0 4px;
     padding: 3px 10px;
     color: #5c5f68;
-    border-radius: 4px;
-    background-color: #dbdcdf;
+    border-radius: 2px;
+    background-color: #eff1f6;
 }
 
 .a-content .content h1 {
