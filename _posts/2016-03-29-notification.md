@@ -2,8 +2,8 @@
 layout: post
 title:  HTML5桌面通知 Notification
 date:   2016-03-29
-tags: html5
-image: /images/post/0012.jpg
+tags: html important
+image: /static/images/post/essay-15.jpg
 desc: 现在html5中可以实现桌面提醒的功能。不过在手机端，也仅仅只有Blackberry browser实现了，实现这一功能的浏览器均是webkit内核。应用范围还很有限。不过针对某些特定的场景，能够实现出来还是非常的不错。
 ---
 

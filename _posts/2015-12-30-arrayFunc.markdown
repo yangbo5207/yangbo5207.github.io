@@ -4,7 +4,7 @@ title:  "回归基础系列之数组"
 date:   2015-12-30
 categories: javascript array
 tags: javascript
-image: /images/post/0001.jpg
+image: /static/images/post/essay-21.jpg
 desc: 本文主要是针对自己复习的时候浏览使用，如果要查看详细说明，请阅读`javascript高级编程`
 ---
 

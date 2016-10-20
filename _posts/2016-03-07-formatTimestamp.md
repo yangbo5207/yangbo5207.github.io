@@ -3,7 +3,7 @@ layout: post
 title: "Javascript: 时间戳格式化方法以及常用的时间相关方法总结"
 date: 2016-03-08 15:51:00
 tags: javascript js
-image: /images/post/0007.jpg
+image: /static/images/post/essay-20.jpg
 desc: Javascript中的`Date()`是一个强大的时间处理对象。通过使用该对象的相应方法，我们能够很轻松的对时间进行处理。Date类型保存的日期能够精确到1970年1月1日之前或者之后的285616年
 ---
 

@@ -1,0 +1,42 @@
+.main {
+	@include screen_pad {
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+.content {
+	@include screen_pad {
+		width: 100%;
+
+		.essay {
+			margin-bottom: 20px;
+		}
+
+		.tags {
+			padding-left: 16px;
+		}
+
+		.special {
+			padding-left: 16px;
+		}
+
+		.article {
+			flex: 1;
+		}
+
+		.img-box {
+			margin-left: 50px;
+		}
+
+		.more {
+			padding-left: 16px;
+		}
+	}
+}
+
+aside {
+	@include screen_pad {
+		display: none;
+	}
+}

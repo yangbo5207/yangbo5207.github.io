@@ -6,7 +6,8 @@ header {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
 
 	.main {
-		width: 1200px;
+		width: 100%;
+		max-width: 1200px;
 		height: 100%;
 		margin: 0 auto;
 		display: flex;
@@ -21,104 +22,6 @@ header {
 		img {
 			width: 100%;
 		}
-	}
-
-	.search {
-		width: 670px;
-		margin-left: 30px;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		position: relative;
-	}
-
-	.search-box {
-		width: 100%;
-		height: 40px;
-		background-color: #f7f8fb;
-		border-radius: 35px;
-		display: flex;
-		align-items: center;
-	}
-
-	.tags {
-        height: 50px;
-        font-size: 10px;
-		padding-left: 20px;
-        display: flex;
-        align-items: center;
-
-        span {
-            padding: 0 2px 0 15px;
-            border-radius: 10px;
-            background-color: #38b7ea;
-            color: #fff;
-            margin-right: 15px;
-            display: flex;
-			align-items: center;
-            position: relative;
-            &.purple {
-                background-color: #897fe6;
-            }
-            &.light-red {
-                background-color: #ea909b;
-            }
-            &.light-green {
-                background-color: #8be594;
-            }
-            &.light-orange {
-                background-color: #e5c68b;
-            }
-        }
-    }
-
-	.close {
-		cursor: pointer;
-		width: 20px;
-		height: 20px;
-		font-family: iconfont;
-		color: #fff;
-		display: flex;
-		font-size: 12px;
-		justify-content: center;
-		align-items: center;
-		margin-left: 5px;
-	}
-
-	.tags {
-		flex: 1;
-		height: 25px;
-	}
-
-	.search-select {
-		position: absolute;
-		top: 70px;
-		left: 0;
-		border: 1px solid #ccc;
-		display: flex;
-		width: 100%;
-		display: none;
-	}
-
-	.down-arrow {
-		width: 35px;
-		height: 25px;
-		font-family: iconfont;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: #c5c5c4;
-	}
-
-	.search-btn {
-		width: 40px;
-		height: 25px;
-		font-family: iconfont;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-left: 1px solid #f0f0f0;
-		color: #c5c5c4;
 	}
 
 	.show-position {
@@ -143,5 +46,16 @@ header {
 				color: #84a6d3;
 			}
 		}
+	}
+
+	@include screen_pad {
+		.main {
+			padding: 0 16px;
+			box-sizing: border-box;
+		}
+	}
+
+	@include screen_small {
+		height: 50px;
 	}
 }

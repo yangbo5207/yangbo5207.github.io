@@ -1,0 +1,36 @@
+.container {
+	@include screen_pad {
+		margin-top: 20px;
+	}
+}
+
+.main {
+	@include screen_pad {
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+.a-content {
+	@include screen_pad {
+		width: 100%;
+	}
+
+	.tags {
+		padding-left: 16px;
+	}
+
+	.wrapper {
+		padding: 30px 16px;
+	}
+
+	section.comments {
+		padding: 30px 16px;
+	}
+}
+
+aside {
+	@include screen_pad {
+		display: none;
+	}
+}

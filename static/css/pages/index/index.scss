@@ -1,8 +1,4 @@
-@import "../components/header";
-
-* {
-    -webkit-text-size-adjust: none; /*让谷歌浏览器可是设置字体小于12px*/
-}
+@import "../../components/header";
 
 body {
     background-color: #f7f8fb;
@@ -22,7 +18,6 @@ body {
 
 .content {
     width: 740px;
-    height: 800px;
     background-color: #f7f8fb;
 
     .essay {
@@ -115,7 +110,7 @@ body {
         margin-bottom: 10px;
     }
     .title {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .img-box {
@@ -141,9 +136,10 @@ body {
     }
 
     .icon {
-        margin-right: 65px;
+        margin-right: 84px;
         color: #7f8489;
         font-family: iconfont;
+        cursor: pointer;
 
         span {
             padding-right: 4px;
@@ -173,7 +169,7 @@ aside {
         display: block;
     }
 
-    .wb-news {
+    .tag-important {
         padding: 25px 40px 0 40px;
         box-sizing: border-box;
         background-color: #fff;
@@ -199,13 +195,23 @@ aside {
 
         .nickname {
             display: flex;
+            flex: 1;
             flex-direction: column;
             justify-content: center;
         }
 
         .title {
-            font-size: 14px;
+            font-size: 12px;
+            width: 220px;
             line-height: 2.0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .time {
+            font-size: 10px;
+            margin-top: 6px;
         }
     }
 
@@ -223,6 +229,11 @@ aside {
         .icon {
             margin-left: 35px;
             font-family: 'iconfont';
+            cursor: pointer;
+
+            a {
+                color: #7f8489;
+            }
 
             span:nth-of-type(1) {
                 margin-right: 15px;
@@ -233,3 +244,6 @@ aside {
         }
     }
 }
+
+@import "m_index";
+@import "s_index";

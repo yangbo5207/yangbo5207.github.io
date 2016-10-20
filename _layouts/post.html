@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html>
 	{% include head.html %}
-	<!--<link rel="stylesheet" href="{{ "/static/pages/posts/posts.css" | prepend: site.baseurl }}">-->
+	<link rel="stylesheet" href="/static/css/pages/post/post.css" />
 <body>
-	<section class="article">
-		<article class="post">
-			<div class="post-header">{{ page.title }}</div>
-			<div class="post-content">
-				{{ content }}
+	{% include header.html %}
+	<div class="container">
+		<div class="main">
+			<div class="a-content">
+				<div class="tags">
+	                {% for tag in page.categories %}
+	                    <span class="{{ tag }}">{{ tag | upcase }}</span>
+	                {% endfor %}
+	            </div>
+	            <div class="wrapper">
+	            	<div class="header">
+						<div class="title">{{ page.title }}</div>
+						<div class="stars">
+	                            {% for i in site.star_array %}
+	                                {% if i < page.star %}
+	                                    <span class="star active">&#xe603;</span>
+	                                {% else %}
+	                                    <span class="star">&#xe603;</span>
+	                                {% endif %}
+	                            {% endfor %}
+	                        </div>
+					</div>
+					<div class="content">
+						{{ content }}
+					</div>
+	            </div>
+
+	            <section class="comments">
+					<!-- JiaThis Button BEGIN -->
+					<div class="jiathis_style_24x24">
+						<a class="jiathis_button_qzone"></a>
+						<a class="jiathis_button_tsina"></a>
+						<a class="jiathis_button_tqq"></a>
+						<a class="jiathis_button_weixin"></a>
+						<a class="jiathis_button_renren"></a>
+						<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+						<a class="jiathis_counter_style"></a>
+					</div>
+					<!-- JiaThis Button END -->
+					<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
+				</section>
 			</div>
-			<div id="uyan_frame"></div>
-		</article>
-	</section>
-
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style_24x24">
-		<a class="jiathis_button_qzone"></a>
-		<a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_tqq"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_renren"></a>
-		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-		<a class="jiathis_counter_style"></a>
+			{% include side.html %}
+		</div>
 	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
 
-	<section class="comments">
-		<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
-	</section>
-	{% include footer.html %}
+	<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
 	<script type="text/javascript">
 	var duoshuoQuery = {short_name:"ybobo"};
 		(function() {

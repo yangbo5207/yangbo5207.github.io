@@ -1,0 +1,15 @@
+.content {
+	@include screen_small {
+		.img-box {
+			display: none;
+		}
+
+		.more {
+			height: 70px;
+		}
+
+		.icon {
+			margin-right: auto;
+		}
+	}
+}

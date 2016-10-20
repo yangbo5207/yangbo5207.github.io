@@ -8,15 +8,19 @@ $fonts: fzlt-qianhei, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Libe
 
 @font-face {
   font-family: 'iconfont';
-  src: url('//at.alicdn.com/t/font_1476083174_172304.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/font_1476083174_172304.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/font_1476083174_172304.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/font_1476083174_172304.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/font_1476083174_172304.svg#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('//at.alicdn.com/t/font_1476272598_007398.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1476272598_007398.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1476272598_007398.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1476272598_007398.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1476272598_007398.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
                     
 a, img {
 	-webkit-touch-callout: none; /*禁止长按链接与图片弹出菜单*/
+}
+
+* {
+    -webkit-text-size-adjust: none; /*让谷歌浏览器可是设置字体小于12px*/
 }
 
 a,button,input,optgroup,select,textarea {
@@ -61,7 +65,7 @@ a {
 
 /* 宽度适配函数 */
 @mixin screen_pad {
-    @media (max-width: $screen-pad) {
+    @media (max-width: 780px) {
         @content;
     }
 }

@@ -3,8 +3,8 @@ layout: post
 title:  如何解决移动端的点击事件？
 date:   2015-12-10 11:18:18 +0800
 categories: javascript gulp
-tags: javascript
-image: /images/post/0002.jpg
+tags: javascript important
+image: /static/images/post/essay-22.jpg
 desc: 本来点击事件不应该成为一个问题，但是很可惜的是，在移动端的浏览器中，`click`事件有300ms左右的响应延迟，因此为了更好的用户体验便不能直接在移动端使用`click`为元素添加点击...
 ---
 

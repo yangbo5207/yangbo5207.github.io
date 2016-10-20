@@ -1,0 +1,237 @@
+@import "../../components/header";
+@import "../../libs/highlight";
+@import "../../libs/sourcecodepro";
+@import "../../components/comments";
+
+body {
+    background-color: #f7f8fb;
+    font-family: $font-en;
+}
+
+.container {
+	margin-top: 40px;
+}
+
+.main {
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.a-content {
+	width: 740px;
+	box-sizing: broder-box;
+	// margin-right: 40px;
+
+	font-size: 14px;
+	color: #747783;
+	line-height: 2.0;
+
+	.tags {
+        height: 50px;
+        font-size: 10px;
+        padding-left: 60px;
+        display: flex;
+        align-items: center;
+
+        span {
+            height: 20px;
+            padding: 0 15px 0 20px;
+            border-radius: 10px;
+            background-color: #38b7ea;
+            line-height: 20px;
+            color: #fff;
+            margin-right: 15px;
+            display: block;
+            position: relative;
+            &.javascript {
+                background-color: #897fe6;
+            }
+            &.es6 {
+                background-color: #ea909b;
+            }
+            &.angular {
+                background-color: #8be594;
+            }
+            &.css {
+                background-color: #e5c68b;
+            }
+            &:before {
+                content: '';
+                display: block;
+                width: 3px;
+                height: 3px;
+                background-color: #fff;
+                border-radius: 100%;
+                position: absolute;
+                top: 9px;
+                left: 10px;
+            }
+        }
+    }
+
+    .star {
+        font-family: iconfont;
+        font-size: 14px;
+        color: #cacdcf;
+
+        &.active {
+            color: #8a92db;
+        }
+    }
+
+	.wrapper {
+		padding: 0 60px;
+		background-color: #fff;
+		padding-top: 40px;
+		padding-bottom: 50px;
+	}
+
+	.title {
+		color: #4c4c4d;
+		font-size: 18px;
+	}
+
+	.content {
+		margin-top: 30px;
+
+		p {
+			margin: 20px 0;
+		}
+
+		blockquote {
+			margin: 20px 0;
+			padding: 4px 30px;
+			background-color: #f5f7fc;
+			border-left: 6px solid #eff1f6;
+			color: #a0a2a9;
+			font-size: 12px;
+		}
+
+		.highlight {
+			font-size: 12px;
+			margin: 20px 0;
+		}
+
+		p, h1, h2, h3, h4, h5, h6, blockquote {
+			code {
+				margin: 0 4px;
+				color: #5c5f68;
+				font-family: source code pro;
+				background-color: #dbdcdf;
+				padding: 3px 10px;
+				border-radius: 4px;
+				font-size: 12px;
+			}
+		}
+
+		h1 {
+			font-size: 16px;
+			color: #fe5d3c;
+			margin: 40px 0 20px;
+			font-weight: normal;
+		}
+
+		h2, h3, h4, h5, h6 {
+			font-size: 14px;
+			color: #484848;
+			font-weight: normal;
+			margin: 40px 0 20px;
+		}
+	}
+
+	section.comments {
+		background-color: #fff;
+		padding: 30px 60px;
+		margin-bottom: 0;
+	}
+}
+
+aside {
+    width: 400px;
+    padding-top: 50px;
+
+    .main {
+        width: 100%;
+        display: block;
+    }
+
+    .tag-important {
+        padding: 25px 40px 0 40px;
+        box-sizing: border-box;
+        background-color: #fff;
+        font-size: 12px;
+        color: #7f8489;
+        transition: 0.4s;
+        margin-bottom: 50px;
+
+        &:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    .title-box {
+        height: 80px;
+        display: flex;
+
+        img {
+            width: 80px;
+            height: 80px;
+            margin-right: 25px;
+        }
+
+        .nickname {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .title {
+            font-size: 12px;
+            width: 220px;
+            line-height: 2.0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .time {
+            font-size: 10px;
+            margin-top: 6px;
+        }
+    }
+
+    .message {
+        line-height: 2.0;
+        margin-top: 20px;
+    }
+
+    .more {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .icon {
+            margin-left: 35px;
+            font-family: 'iconfont';
+            cursor: pointer;
+
+            a {
+                color: #7f8489;
+            }
+
+            span:nth-of-type(1) {
+                margin-right: 15px;
+            }
+            span:nth-of-type(2) {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@import "m_post";
+@import "s_post";
