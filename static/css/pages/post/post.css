@@ -797,3 +797,14 @@ aside .more .icon span:nth-of-type(2) {
         display: none;
     }
 }
+
+@media (max-width:580px) {
+    .a-content .content blockquote {
+        padding: 4px 16px;
+    }
+
+    .a-content .content .highlight {
+        margin: 0;
+        padding: 10px 0;
+    }
+}

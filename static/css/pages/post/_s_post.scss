@@ -1,0 +1,14 @@
+.a-content {
+	@include screen_small {
+		.content {
+			blockquote {
+				padding: 4px 16px;
+			}
+
+			.highlight {
+				margin: 0;
+				padding: 10px 0;
+			}
+		}
+	}
+}
