@@ -458,7 +458,7 @@ header .show-position a:hover {
 }
 
 .comments #ds-thread #ds-reset li.ds-post {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #f2f4f9;
 }
 
 .comments #ds-thread #ds-reset .ds-comments,.comments #ds-thread #ds-reset .ds-paginator {
