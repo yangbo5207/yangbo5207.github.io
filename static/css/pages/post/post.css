@@ -66,6 +66,8 @@ a {
 }
 
 header {
+    width: 100%;
+    min-width: 1200px;
     height: 75px;
     background-color: #fff;
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,.05);
@@ -78,8 +80,7 @@ header .main {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
-    max-width: 1200px;
+    width: 1200px;
     height: 100%;
     margin: 0 auto;
     -webkit-box-align: center;
@@ -156,10 +157,15 @@ header .show-position a:hover {
 }
 
 @media (max-width:780px) {
+    header {
+        min-width: auto;
+    }
+
     header .main {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+        width: 100%;
         padding: 0 16px;
     }
 }
@@ -571,9 +577,7 @@ body {
 }
 
 .a-content .wrapper {
-    padding: 0 60px;
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding: 40px 60px 50px;
     background-color: #fff;
 }
 
@@ -777,18 +781,18 @@ aside .more .icon span:nth-of-type(2) {
     .a-content {
         width: 100%;
     }
-}
 
-.a-content .tags {
-    padding-left: 16px;
-}
+    .a-content .tags {
+        padding-left: 16px;
+    }
 
-.a-content .wrapper {
-    padding: 30px 16px;
-}
+    .a-content .wrapper {
+        padding: 30px 16px;
+    }
 
-.a-content section.comments {
-    padding: 30px 16px;
+    .a-content section.comments {
+        padding: 30px 16px;
+    }
 }
 
 @media (max-width:780px) {

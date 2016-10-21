@@ -1,15 +1,23 @@
-;
-(function(ROOT, undefined) {
-
+define(function(require) {
     var root = this,
-            doc = window.document,
-            divstyle = doc.createElement('div').style,
-            toString = Object.prototype.toString,
-            slice = Array.prototype.slice.call,
-            class2type = {},
-            event2code = {};
+        doc = window.document,
+        divstyle = doc.createElement('div').style,
+        toString = Object.prototype.toString,
+        slice = Array.prototype.slice.call,
+        class2type = {},
+        event2code = {};   
+    
+    function camelCase(str) {
+        return (str + '').replace(/^-ms-/, 'ms-').replace(/-([a-z]|[0-9])/ig, function(all, letter) {
+            return (letter + '').toUpperCase();
+        })
+    }
 
-    var K = {
+    function uncamelCase(str) {
+        return str.replace(/([A-Z]|^ms)/g, "-$1").toLowerCase();
+    }
+
+    return {
         VERSION: '1.0.0',
         camelCase: camelCase,
         uncamelCase: uncamelCase,
@@ -149,24 +157,5 @@
             //更新样式
             elem.className = cur.trim();
         }
-    }
-
-    function camelCase(str) {
-        return (str + '').replace(/^-ms-/, 'ms-').replace(/-([a-z]|[0-9])/ig, function(all, letter) {
-            return (letter + '').toUpperCase();
-        })
-    }
-
-    function uncamelCase(str) {
-        return str.replace(/([A-Z]|^ms)/g, "-$1").toLowerCase();
-    }
-
-    if (typeof define === 'function' && define.amd) {
-        define('Utils', [], function() {
-            return Utils;
-        });
-    } else {
-        ROOT.Utils = K;
-    }
-
-})(window);
+    } 
+});

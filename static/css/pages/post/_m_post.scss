@@ -14,18 +14,18 @@
 .a-content {
 	@include screen_pad {
 		width: 100%;
-	}
 
-	.tags {
-		padding-left: 16px;
-	}
+		.tags {
+			padding-left: 16px;
+		}
 
-	.wrapper {
-		padding: 30px 16px;
-	}
+		.wrapper {
+			padding: 30px 16px;
+		}
 
-	section.comments {
-		padding: 30px 16px;
+		section.comments {
+			padding: 30px 16px;
+		}
 	}
 }
 

@@ -1,13 +1,14 @@
 @import "../libs/reset";
 
 header {
+	width: 100%;
+	min-width: 1200px;
     height: 75px;
     background-color: #fff;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
 
 	.main {
-		width: 100%;
-		max-width: 1200px;
+		width: 1200px;
 		height: 100%;
 		margin: 0 auto;
 		display: flex;
@@ -49,7 +50,9 @@ header {
 	}
 
 	@include screen_pad {
+		min-width: auto;
 		.main {
+			width: 100%;
 			padding: 0 16px;
 			box-sizing: border-box;
 		}
