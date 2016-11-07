@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  
+title:  background
 date: 2016-11-31 15:08:00 +0800
 categories: css
 categories_array: css
 tags: css
 image: /static/images/post/essay-23.jpg
-desc: 
+desc:
 ---
 
 我也不知道为什么要把高度设置这么高，只能先这样了。可能是移动端需要先调整一下适配吧。
@@ -93,9 +93,11 @@ desc:
 scroll:  默认值，背景图片会随着页面其余部分的滚动而移动  
 fixed:   当页面的其余部分滚动时，背景图片不会移动  
 inherit: 规定从父级继承值  
-``` 
+```
 
-使用background-attachment，还可以做一个简单的视差效果，
+使用background-attachment，还可以做一个简单的视差效果，demo如下
+
+
 
 ### 5、background-position
 
@@ -108,7 +110,7 @@ inherit: 规定从父级继承值
 
 ### 9、background 缩写形式
 
-缩写顺序为 
+缩写顺序为
 
 ```js
 .target {

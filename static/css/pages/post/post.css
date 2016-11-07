@@ -485,6 +485,11 @@ body {
     margin-top: 40px;
 }
 
+img {
+    display: block;
+    width: 100%;
+}
+
 .main {
     display: -webkit-box;
     display: -webkit-flex;
